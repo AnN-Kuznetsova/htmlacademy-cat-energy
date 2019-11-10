@@ -39,7 +39,8 @@
       <section class="promo">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <b class="promo__slogan">Занялся собой? Займись котом!</b>
-        <img class="promo__image" src="https://via.placeholder.com/150x150" width="280" height="271" alt="Фотография функционального питания с курицей.">
+        <img class="promo__image" src="https://via.placeholder.com/150x150" width="280" height="271" alt="Фотография функционального питания с
+          курицей.">
         <a class="button promo__button" href="form.html">Подобрать программу</a>
       </section>
 
@@ -49,12 +50,14 @@
         <ul class="categories__list">
           <li class="categories__item">
             <h3 class="categories__title categories__title--slim">Похудение</h3>
-            <p class="categories__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="categories__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
+              Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="categories__link" href="slim.html">Каталог Slim</a>
           </li>
           <li class="categories__item">
             <h3 class="categories__title categories__title--pro">Набор массы</h3>
-            <p class="categories__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="categories__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
+              нарастить необходимые мышцы!</p>
             <a class="categories__link" href="pro.html">Каталог Pro</a>
           </li>
         </ul>
@@ -74,8 +77,43 @@
 
       <!-- Живой пример -->
       <section class="living-example">
-        <h2 class="living-example__title">Живой пример</h2>
+        <div class="living-example__info-wrapper">
+          <h2 class="living-example__title">Живой пример</h2>
+          <p class="living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p class="living-example__widget  widget">
+            <span class="widget__value">5 кг</span>
+            <span class="widget__caption">снижение веса</span>
+          </p>
+          <p class="living-example__widget  widget">
+            <span class="widget__value">60 дней</span>
+            <span class="widget__caption">затрачено времени</span>
+          </p>
+          <b class="living-example__attention">Затраты на питание: 15 000 руб.</b>
+        </div>
 
+        <!-- Слайдер с котом -->
+        <section class="living-example__cat-slider  slider">
+          <h3 class="visually-hidden">Слайдер с котом</h3>
+
+          <ul class="slider__list">
+            <li class="slider__item">
+              <img class="slider__photo" src="https://via.placeholder.com/150x150" width="320" height="240" alt="Фотография очень пухлого кота.">
+            </li>
+            <li class="slider__item">
+              <img class="slider__photo" src="https://via.placeholder.com/150x150" width="320" height="240" alt="Фотография стройного кота.">
+            </li>
+          </ul>
+
+          <div class="slider__controls">
+            <label class="slider__label" for="fat-cat-toggle">Было</label>
+            <div class="slider__controls-wrapper">
+              <input class="slider__toggle visually-hidden" id="fat-cat-toggle" type="radio" name="toggle" checked>
+              <input class="slider__toggle visually-hidden" id="slim-cat-toggle" type="radio" name="toggle">
+            </div>
+            <label class="slider__label" for="slim-cat-toggle">Стало</label>
+          </div>
+        </section>
       </section>
 
       <!-- Контакты -->
