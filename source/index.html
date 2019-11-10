@@ -9,12 +9,10 @@
     <header class="page-header">
 
       <!-- Логотип -->
-      <a class="page-header__logo">
-        <figure class="header-logo">
-          <figcaption class="visually-hidden">Логотип сайта «Кэт энерджи».</figcaption>
-          <img class="header-logo__image" src="https://via.placeholder.com/150x150" width="33" height="38" alt="">
-          <img class="header-logo__text" src="https://via.placeholder.com/150x150" width="101" height="18" alt="">
-        </figure>
+      <a class="page-header__logo  logo">
+        <span class="visually-hidden">Логотип сайта «Кэт энерджи».</span>
+        <img class="logo__image" src="https://via.placeholder.com/150x150" width="33" height="38" alt="">
+        <img class="logo__text" src="https://via.placeholder.com/150x150" width="101" height="18" alt="">
       </a>
 
       <!-- Главное меню -->
@@ -82,8 +80,21 @@
 
       <!-- Контакты -->
       <section class="contacts">
-        <h2 class="visually-hidden">Наши контакты</h2>
+        <h2 class="visually-hidden">Контакты и связь с нами</h2>
 
+        <!-- Контакты-инфо -->
+        <section class="contacts__info  contacts-info  contacts-info--white">
+          <h3 class="visually-hidden">Контакты</h3>
+          <b class="contacts-info__intro">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </section>
+
+        <!-- Карта -->
+        <section class="contacts__map map">
+          <h3 class="visually-hidden">Мы на карте</h3>
+          <img class="map__image" src="https://via.placeholder.com/150x150" width="1345" height="645" alt="Отображение адреса «Кэт энерджи» на карте.">
+          <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.8531060829388!2d30.322084562522807!3d59.93873797249862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573381817003!5m2!1sru!2sru" width="1345" height="645"></iframe>
+        </section>
       </section>
     </main>
 
@@ -93,28 +104,26 @@
         <img class="footer-logo__text" src="https://via.placeholder.com/150x150" width="128" height="24" alt="Cat energy.">
       </div>
 
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__btn social__btn--vk" href="" target="_blank">
-              <span class="visually-hidden">«Кэт энерджи» во Вконтакте.</span>
-              <svg width="22" height="12"></svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__btn social__btn--instagram" href="" target="_blank">
-              <span class="visually-hidden">«Кэт энерджи» в Инстаграме.</span>
-              <svg width="16" height="16"></svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__btn social__btn--fb" href="" target="_blank">
-              <span class="visually-hidden">«Кэт энерджи» в Фейсбуке.</span>
-              <svg width="10" height="19"></svg>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__btn social__btn--vk" href="" target="_blank">
+            <span class="visually-hidden">«Кэт энерджи» во Вконтакте.</span>
+            <svg width="22" height="12"></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__btn social__btn--instagram" href="" target="_blank">
+            <span class="visually-hidden">«Кэт энерджи» в Инстаграме.</span>
+            <svg width="16" height="16"></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__btn social__btn--fb" href="" target="_blank">
+            <span class="visually-hidden">«Кэт энерджи» в Фейсбуке.</span>
+            <svg width="10" height="19"></svg>
+          </a>
+        </li>
+      </ul>
 
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="copyright__name">HTML Academy</span>
