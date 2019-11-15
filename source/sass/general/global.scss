@@ -13,7 +13,7 @@ html {
 body {
   width: 320px;
 
-  @include font-options($font-family-regular, 14px, 18px, $text-base-color);
+  @include font-options($font-base, 14px, 18px, $text-base-color);
   font-weight: normal;
 
   background-color: $bg-color-base;
