@@ -1,0 +1,29 @@
+/*  catalog-promo  */
+
+.catalog-promo {
+  width: 280px;
+  height: 289px;
+
+  background-color: $bg-color-promo;
+  background-image:
+    url("../../img/icon-gift.svg"),
+    url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-size:
+    55px 59px,
+    280px 289px;
+  background-position:
+    center 65px,
+    center center;
+  border-top: 1px solid transparent;
+}
+
+.catalog-promo__description {
+  width: 170px;
+  margin: 186px auto 0;
+
+  @include font-options($font-text, 16px, 20px, $text-second-color);
+  text-align: center;
+}

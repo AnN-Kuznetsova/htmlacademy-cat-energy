@@ -1,0 +1,57 @@
+/*  Промо  */
+
+.promo {
+  background-color: $bg-color-third;
+  background-image:
+    url("../../img/index-background-mobile@1x.jpg"),
+    linear-gradient($bg-color-promo 305px, $bg-color-base 305px);
+  background-position:
+    center top,
+    center top;
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-size:
+    320px 305px,
+    auto auto;
+  border-top: 1px solid transparent;
+}
+
+.promo__title {
+  width: 280px;
+  margin: 25px auto;
+  padding: 0 15px;
+
+  @include font-options(inherit, 36px, 36px, $text-second-color);
+  font-weight: normal;
+  text-align: center;
+}
+
+.promo__slogan {
+  display: block;
+
+  margin: 25px auto 29px;
+  padding: 0 20px;
+
+  @include font-options(inherit, 14px, 14px, $text-second-color);
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo__image {
+  display: block;
+
+  width: 280px;
+  height: 271px;
+
+  margin: auto;
+}
+
+.promo__button {
+  margin-bottom: 22px;
+  padding: 11px 20px 12px;
+
+  font-size: 14px;
+  line-height: 18px;
+}

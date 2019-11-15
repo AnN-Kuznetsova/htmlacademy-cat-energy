@@ -1,0 +1,39 @@
+/*  copyright  */
+
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover .copyright__name,
+  &:focus .copyright__name {
+    color: $text-base-color;
+  }
+
+  &:hover .copyright__image,
+  &:focus .copyright__image {
+    fill: $social-color-hover;
+  }
+
+  &:active .copyright__name {
+    opacity: 0.3;
+  }
+
+  &:active .copyright__image {
+    fill: $social-color-active;
+  }
+}
+
+.copyright__name {
+  display: block;
+
+  @include font-options($font-text, 16px, 16px, $text-base-color);
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
+
+  fill: $social-color-base;
+}

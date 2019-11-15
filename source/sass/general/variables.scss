@@ -1,0 +1,46 @@
+/*  ПЕРЕМЕННЫЕ */
+
+/*  Шрифт  */
+$font-family-regular: "Oswald-regular", "Arial", sans-serif;
+$font-family-medium: "Oswald-medium", "Arial", sans-serif;
+$font-text: "Arial", sans-serif;
+
+/*  ЦВЕТА  */
+//  Текст
+$text-base-color: #444444;
+$text-second-color: #ffffff;
+$header-color: #111111;
+$header-small-color: #222222;
+
+//  Фон
+$bg-color-base: #ffffff;
+$bg-color-second: #f2f2f2;
+$bg-color-third: #68b738;
+$bg-color-promo: #64a83b;//#65a93c; //#63a73a;
+
+//  Кнопки
+//  основные
+$btn-color-base: #68b738;
+$btn-color-base-hover: #5eaa2f;
+$btn-color-base-active: #5eaa2f;
+$btn-text-color-base: #ffffff;
+$btn-text-color-hover: #ffffff;
+$btn-text-color-active: rgba(255, 255, 255, 0.3);
+//  второй вариант
+$btn-color-second: #f2f2f2;
+$btn-color-second-hover: #ebebeb;
+$btn-color-second-active: #ebebeb;
+$btn-text-color-second-base: #444444;
+$btn-text-color-second-hover: #444444;
+$btn-text-color-second-active: rgba(68, 68, 68, 0.3);
+
+//  Социальные кнопки и Копирайт
+$social-color-base: #666666;
+$social-color-hover: #68b738;
+$social-color-active: rgba(104, 183, 56, 0.3);
+
+//  Рамки
+$border-color-var: #e6e6e6;
+$border-color-var-second: #d9d9d9;
+$border-color-third: #ededed;
+$border-color-fourth: #cdcdcd;

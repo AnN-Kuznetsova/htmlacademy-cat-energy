@@ -1,0 +1,36 @@
+/*  additional-product  */
+
+.additional-product__title {
+  margin-top: 13px;
+  margin-bottom: 15px;
+
+  @include font-options(inherit, 16px, 16px, $header-small-color);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.additional-product__info {
+  width: 100%;
+  padding: 0;
+
+  @include font-options($font-text, 14px, 14px, inherit);
+
+  border-collapse: collapse;
+}
+
+.additional-product__data {
+  margin: 0;
+  padding: 0;
+}
+
+.additional-product__info-title {
+  text-align: left;
+}
+
+.additional-product__info-value {
+  text-align: right;
+}
+
+.additional-product__button {
+  margin-top: 15px;
+}

@@ -1,3 +1,14 @@
-.page-header {
-  background-color: lightyellow;
+/*  page-header  */
+
+.page-header__logo-wrapper {
+  border-bottom: 1px solid $border-color-var;
+}
+
+.page-header__logo {
+  display: block;
+
+  padding-top: 13px;
+  padding-bottom: 11px;
+
+  //border-bottom: 1px solid $border-color-var;
 }
