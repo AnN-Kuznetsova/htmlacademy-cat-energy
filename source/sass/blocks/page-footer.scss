@@ -1,0 +1,19 @@
+/*  Подвал  */
+
+.page-footer {
+  /*display: flex;*/
+
+  background-color: $bg-color-second;
+}
+
+.page-footer__logo {
+  width: 100%;
+  min-height: 95px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+.page-footer__copyright {
+  width: 100%;
+  min-height: 80px;
+}

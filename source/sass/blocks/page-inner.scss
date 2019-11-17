@@ -1,0 +1,9 @@
+/*  page-inner  */
+
+.page-inner__title {
+  margin-top: 15px;
+  margin-bottom: 29px;
+
+  @include font-options(inherit, 36px, 60px, $header-color);
+  font-weight: normal;
+}

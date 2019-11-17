@@ -1,0 +1,47 @@
+/*  Преимущества  */
+
+.advantages {
+  border-top: 1px solid transparent;
+}
+
+.advantages__intro {
+  margin: 15px 0;
+
+  font-size: 36px;
+  line-height: 60px;
+  color: $header-color;
+}
+
+.advantages__list {
+  margin: 29px 0;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+
+  margin: 20px 0;
+
+  @include font-options($font-text, 14px, 18px, inherit);
+
+  &::before {
+    flex-shrink: 0;
+    position: relative;
+    content: "";
+    left: 0;
+    top: 0;
+
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: $bg-color-third;
+  }
+
+  /*&--leaf::before {
+    background-image: url(../../img/advantage-leaf@1x.png);
+    background-repeat: no-repeat;
+    background-size:
+    background-position: center center;
+  }*/
+}

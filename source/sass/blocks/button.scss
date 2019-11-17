@@ -1,0 +1,43 @@
+/*  КНОПКИ  */
+
+.button {
+  display: block;
+
+  padding: 10px 20px;
+
+  @include font-options(inherit, 16px, 20px, $btn-text-color-base);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $btn-color-base;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-color-base-hover;
+    color: $btn-text-color-hover;
+  }
+
+  &:active {
+    background-color: $btn-color-base-active;
+    color: $btn-text-color-active;
+  }
+
+  &--grey {
+    background-color: $btn-color-second;
+    color: $btn-text-color-second-base;
+  }
+
+  &--grey:hover,
+  &--grey:focus {
+    background-color: $btn-color-second-hover;
+    color: $btn-text-color-second-hover;
+  }
+
+  &--grey:active {
+    background-color: $btn-color-second-active;
+    color: $btn-text-color-second-active;
+  }
+}

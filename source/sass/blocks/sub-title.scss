@@ -1,0 +1,6 @@
+/*  sub-title  */
+
+.sub-title {
+  @include font-options(inherit, 24px, 24px, $header-color);
+  font-weight: normal;
+}
