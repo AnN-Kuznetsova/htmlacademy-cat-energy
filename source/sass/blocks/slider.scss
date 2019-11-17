@@ -39,24 +39,24 @@ $slider-controls-width: 280px;
   display: block;
 
   width: 50%;
-}
 
-//  неактивный
-.slider__label:first-child {
-  @include custom-radio($radio-width, $radio-height, "radio-slider");
+  //  неактивный
+  &:first-child {
+    @include custom-radio($radio-width, $radio-height, "radio-slider");
 
-  padding-left: 0;
-  padding-right: $radio-width + 18px;
+    padding-left: 0;
+    padding-right: $radio-width + 18px;
 
-  text-align: right;
+    text-align: right;
 
-  &::before {
-    left: ($slider-controls-width / 2 - $radio-width);
+    &::before {
+      left: ($slider-controls-width / 2 - $radio-width);
+    }
   }
-}
 
-.slider__label:nth-child(2) {
-  @include custom-radio($radio-width, $radio-height, "radio-slider--reverse");
+  &:nth-child(2) {
+     @include custom-radio($radio-width, $radio-height, "radio-slider--reverse");
+  }
 }
 
 //  фокус

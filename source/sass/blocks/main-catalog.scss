@@ -4,8 +4,8 @@
   padding-bottom: 24px;
 
   border-top: 1px solid $border-color-third;
-}
 
-.main-catalog__item:last-child {
-  border-bottom: 1px solid $border-color-third;
+  &:last-child {
+    border-bottom: 1px solid $border-color-third;
+  }
 }

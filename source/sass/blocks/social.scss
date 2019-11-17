@@ -13,15 +13,16 @@
 
 .social__item {
   margin: 11px 7px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.social__item:first-child {
-  margin-left: 0;
-}
-
-.social__item:last-child {
-  margin-right: 0;
-}
 
 .social__btn {
   display: flex;
