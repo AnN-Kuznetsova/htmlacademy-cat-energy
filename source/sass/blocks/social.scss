@@ -1,6 +1,8 @@
 /*  social  */
 
 .social {
+  @include list-style-none();
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,7 +24,6 @@
     margin-right: 0;
   }
 }
-
 
 .social__btn {
   display: flex;

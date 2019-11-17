@@ -1,5 +1,9 @@
 /*  main-catalog  */
 
+.main-catalog__list {
+  @include list-style-none();
+}
+
 .main-catalog__item {
   padding-bottom: 24px;
 

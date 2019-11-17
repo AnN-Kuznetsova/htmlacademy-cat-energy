@@ -17,6 +17,7 @@
 }
 
 .advantages__list {
+  @include list-style-none();
   margin: 29px 0 42px;
 }
 

@@ -9,6 +9,10 @@
   margin-bottom: 33px;
 }
 
+.additional-catalog__list {
+  @include list-style-none();
+}
+
 .additional-catalog__item {
   padding-bottom: 16px;
 

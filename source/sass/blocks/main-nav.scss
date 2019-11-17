@@ -4,6 +4,10 @@
   @include container(320px, 20px);
 }
 
+.main-nav__list {
+  @include list-style-none();
+}
+
 .main-nav__item {
   border-bottom: 1px solid $border-color-var;
 }

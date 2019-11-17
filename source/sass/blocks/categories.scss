@@ -4,6 +4,10 @@
   @include container(320px, 20px);
 }
 
+.categories__list {
+  @include list-style-none();
+}
+
 .categories__item {
   margin-top: 20px;
 
