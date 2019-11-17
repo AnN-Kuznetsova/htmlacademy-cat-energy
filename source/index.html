@@ -93,46 +93,48 @@
 
       <!-- Живой пример -->
       <section class="living-example">
-        <div class="container">
-          <div class="living-example__info-wrapper">
-            <h2 class="living-example__title">Живой пример</h2>
-            <p class="living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без
-              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <div class="living-example__widgets">
-              <p class="widget">
-                <span class="widget__value">5 кг</span>
-                <span class="widget__caption">снижение веса</span>
-              </p>
-              <p class="widget">
-                <span class="widget__value">60 дней</span>
-                <span class="widget__caption">затрачено времени</span>
-              </p>
-            </div>
-            <b class="living-example__attention">Затраты на питание: 15 000 руб.</b>
+        <div class="living-example__info-wrapper  container">
+          <h2 class="living-example__title">Живой пример</h2>
+          <p class="living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="living-example__widgets">
+            <p class="widget">
+              <span class="widget__value">5 кг</span>
+              <span class="widget__caption">снижение веса</span>
+            </p>
+            <p class="widget">
+              <span class="widget__value">60 дней</span>
+              <span class="widget__caption">затрачено времени</span>
+            </p>
           </div>
-
-          <!-- Слайдер с котом -->
-          <section class="living-example__cat-slider  slider">
-            <h3 class="visually-hidden">Слайдер с котом</h3>
-
-            <input class="slider__toggle visually-hidden" id="fat-cat-toggle" type="radio" name="toggle" checked>
-            <input class="slider__toggle visually-hidden" id="slim-cat-toggle" type="radio" name="toggle">
-
-            <ul class="slider__list  list-style-none">
-              <li class="slider__item">
-                <img class="slider__photo" src="mg/before-mobile@1x.png" width="320" height="240" alt="Фотография очень пухлого кота.">
-              </li>
-              <li class="slider__item">
-                <img class="slider__photo" src="mg/after-mobile@1x.png" width="320" height="240" alt="Фотография стройного кота.">
-              </li>
-            </ul>
-
-            <div class="slider__controls">
-              <label class="slider__label" for="fat-cat-toggle">Было</label>
-              <label class="slider__label" for="slim-cat-toggle">Стало</label>
-            </div>
-          </section>
+          <b class="living-example__attention">Затраты на питание: 15 000 руб.</b>
         </div>
+
+        <!-- Слайдер с котом -->
+        <section class="living-example__cat-slider  slider">
+          <h3 class="visually-hidden">Слайдер с котом</h3>
+
+          <input class="slider__toggle visually-hidden" id="fat-cat-toggle" type="radio" name="toggle" checked>
+          <input class="slider__toggle visually-hidden" id="slim-cat-toggle" type="radio" name="toggle">
+
+          <ul class="slider__list  list-style-none">
+            <li class="slider__item">
+              <div class="slider__photo-wrapper">
+                <img class="slider__photo" src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография очень пухлого кота.">
+              </div>
+            </li>
+            <li class="slider__item">
+                <div class="slider__photo-wrapper">
+                  <img class="slider__photo" src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография стройного кота.">
+                </div>
+            </li>
+          </ul>
+
+          <div class="slider__controls">
+            <label class="slider__label" for="fat-cat-toggle">Было</label>
+            <label class="slider__label" for="slim-cat-toggle">Стало</label>
+          </div>
+        </section>
       </section>
 
       <!-- Контакты -->

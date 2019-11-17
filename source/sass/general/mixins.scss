@@ -36,7 +36,7 @@
 
 @mixin custom-radio($radio-width: 40px, $radio-height: 40px, $radio-style: "") {
   position: relative;
-  padding-left: $radio-width +  20px;
+  padding-left: $radio-width +  18px;
 
   &::before {
     position: absolute;

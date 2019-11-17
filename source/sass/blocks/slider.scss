@@ -1,20 +1,42 @@
 /*  Слайдер с котом  */
-$radio-width: 41px;
+$radio-width: 42px;
 $radio-height: 14px;
-$slider-controls-width: 200px;
+$slider-controls-width: 280px;
+
+.slider__controls {
+  overflow: hidden;
+}
+
+.slider__list {
+  margin-top: 35px;
+}
 
 .slider__item {
   display: none;
+}
+
+.slider__photo-wrapper {
+  width: 320px;
+  height: 240px;
+}
+
+.slider__photo {
+  width: 100%;
+  height: auto;
 }
 
  .slider__controls {
   display: flex;
 
   width: $slider-controls-width;
+  margin: 32px auto 0;
+
+  @include font-options(inherit, 16px, 20px, $header-color);
+  text-transform: uppercase;
 }
 
 .slider__label {
-  display: flex;
+  display: block;
 
   width: 50%;
 }
@@ -23,9 +45,10 @@ $slider-controls-width: 200px;
 .slider__label:first-child {
   @include custom-radio($radio-width, $radio-height, "radio-slider");
 
-  justify-content: flex-start;
   padding-left: 0;
-  padding-right: $radio-width +  20px;
+  padding-right: $radio-width + 18px;
+
+  text-align: right;
 
   &::before {
     left: ($slider-controls-width / 2 - $radio-width);
@@ -34,8 +57,6 @@ $slider-controls-width: 200px;
 
 .slider__label:nth-child(2) {
   @include custom-radio($radio-width, $radio-height, "radio-slider--reverse");
-
-  justify-content: flex-end;
 }
 
 //  фокус
