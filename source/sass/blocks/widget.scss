@@ -1,0 +1,35 @@
+/*  widget  */
+
+.widget {
+  display: block;
+
+  width: 123px;
+  margin: 0;
+}
+
+.widget__value {
+  display: block;
+
+  padding: 14px 10px 17px;
+
+  @include font-options(inherit, 24px, 24px, $header-color);
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 1px solid $border-color-fourth;
+  border-radius: 3px;
+}
+
+.widget__caption {
+  display: block;
+
+  margin: 0 18px;
+  padding: 0 16px;
+
+  @include font-options($font-text, 12px, 12px, inherit);
+  text-align: center;
+
+  background-color: $bg-color-second;
+
+  transform: translateY(-50%);
+}

@@ -30,3 +30,85 @@
   line-height: $line;
   color: $font-color;
 }
+
+
+/*  Радиокнопки  */
+
+@mixin custom-radio($radio-width: 40px, $radio-height: 40px, $radio-style: "") {
+  position: relative;
+  padding-left: $radio-width +  20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $radio-width;
+    height: $radio-height;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    @if ($radio-style == "radio-slider") or ($radio-style == "radio-slider--reverse") {
+      border-radius: ($radio-height / 2) 0 0 ($radio-height / 2);
+      border-right: none;
+    }
+
+    @if ($radio-style == "radio-slider--reverse") {
+      transform: rotate(180deg) translateY(50%);
+    }
+
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin custom-radio--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+@mixin custom-radio--checed($radio-width: 40px, $radio-height: 40px, $radio-style: "") {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: ($radio-width / 2);
+
+    width: ($radio-width / 2);//($radio-width - $radio-width / 8);
+    height: ($radio-height / 2);
+
+    background-color: $bg-color-third;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+     @if ($radio-style == "radio-slider") or ($radio-style == "radio-slider--reverse") {
+      left: $radio-width;
+
+      width: ($radio-width - $radio-width / 8);
+
+      border-radius: ($radio-height / 4);
+      transform: translate(-100%, -50%);
+    }
+
+    @if ($radio-style == "radio-slider--reverse") {
+      left: 0;
+
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+/*  ************  */
