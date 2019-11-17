@@ -1,5 +1,9 @@
 /*  page-inner  */
 
+.page-inner__container {
+  @include container(320px, 20px);
+}
+
 .page-inner__title {
   margin-top: 15px;
   margin-bottom: 29px;

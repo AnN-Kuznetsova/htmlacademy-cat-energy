@@ -1,5 +1,9 @@
 /*  Категории  */
 
+.categories__container {
+  @include container(320px, 20px);
+}
+
 .categories__item {
   margin-top: 20px;
 

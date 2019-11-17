@@ -1,5 +1,9 @@
 /*  main-nav  */
 
+.main-nav__container {
+  @include container(320px, 20px);
+}
+
 .main-nav__item {
   border-bottom: 1px solid $border-color-var;
 }

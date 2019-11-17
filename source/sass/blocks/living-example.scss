@@ -1,5 +1,9 @@
 /*  Живой пример  */
 
+.living-example__container {
+  @include container(320px, 20px);
+}
+
 .living-example {
   padding: 17px 0 36px;
 

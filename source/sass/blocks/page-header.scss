@@ -4,6 +4,10 @@
   border-bottom: 1px solid $border-color-var;
 }
 
+.page-header__container {
+  @include container(320px, 20px);
+}
+
 .page-header__logo {
   display: block;
 

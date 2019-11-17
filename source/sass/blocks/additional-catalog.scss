@@ -1,5 +1,9 @@
 /*  Дополнительные товары  */
 
+.additional-catalog__container {
+  @include container(320px, 20px);
+}
+
 .additional-catalog__title {
   margin-top: 29px;
   margin-bottom: 33px;

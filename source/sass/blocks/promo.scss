@@ -1,5 +1,9 @@
 /*  Промо  */
 
+.promo__container {
+  @include container(320px, 20px);
+}
+
 .promo {
   background-color: $bg-color-third;
   background-image:

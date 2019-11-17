@@ -1,0 +1,5 @@
+/*  contacts-info  */
+
+.contacts-info__container {
+  @include container(320px, 20px);
+}

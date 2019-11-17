@@ -1,5 +1,9 @@
 /*  Подвал  */
 
+.page-footer__container {
+  @include container(320px, 20px);
+}
+
 .page-footer {
   /*display: flex;*/
 

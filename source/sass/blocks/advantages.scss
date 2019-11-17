@@ -1,5 +1,9 @@
 /*  Преимущества  */
 
+.advantages__container {
+  @include container(320px, 20px);
+}
+
 .advantages {
   border-top: 1px solid transparent;
 }
