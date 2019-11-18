@@ -3,10 +3,6 @@ $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px;
 
-.slider__controls {
-  overflow: hidden;
-}
-
 .slider__list {
   @include list-style-none();
   margin-top: 35px;
@@ -26,7 +22,7 @@ $slider-controls-width: 280px;
   height: auto;
 }
 
- .slider__controls {
+.slider__controls {
   display: flex;
 
   width: $slider-controls-width;
@@ -34,6 +30,8 @@ $slider-controls-width: 280px;
 
   @include font-options(inherit, 16px, 20px, $header-color);
   text-transform: uppercase;
+
+  overflow: hidden;
 }
 
 .slider__label {
@@ -41,22 +39,29 @@ $slider-controls-width: 280px;
 
   width: 50%;
 
+  @include custom-radio($radio-width);
+
+  &::before {
+    left: ($slider-controls-width / 2 - $radio-width);
+
+    width: $radio-width;
+    height: $radio-height;
+
+    border-radius: ($radio-height / 2) 0 0 ($radio-height / 2);
+    border-right: none;
+  }
+
   //  неактивный
   &:first-child {
-    @include custom-radio($radio-width, $radio-height, "radio-slider");
-
     padding-left: 0;
     padding-right: $radio-width + 18px;
 
     text-align: right;
-
-    &::before {
-      left: ($slider-controls-width / 2 - $radio-width);
-    }
   }
 
-  &:nth-child(2) {
-     @include custom-radio($radio-width, $radio-height, "radio-slider--reverse");
+  &:nth-child(2)::before {
+    left: 0;
+    transform: rotate(180deg) translateY(50%);
   }
 }
 
@@ -67,16 +72,25 @@ $slider-controls-width: 280px;
 }
 
 //  активный
-.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child {
-  @include custom-radio--checed($radio-width, $radio-height, "radio-slider");
+.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child,
+.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2) {
+  @include custom-radio--checed($radio-width);
 
   &::after {
-    left: ($slider-controls-width / 2);
+    width: ($radio-width - $radio-width / 8);
+    height: ($radio-height / 2);
+    border-radius: ($radio-height / 4);
   }
 }
 
-.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2) {
-  @include custom-radio--checed($radio-width, $radio-height, "radio-slider--reverse");
+.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child::after {
+  left: ($slider-controls-width / 2);
+  transform: translate(-100%, -50%);
+}
+
+.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2)::after {
+  left: 0;
+  transform: translate(0, -50%);
 }
 
 .slider__toggle:first-of-type:checked ~ .slider__list .slider__item:first-child,
