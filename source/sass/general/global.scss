@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   width: 320px;
 
   @include font-options($font-base, 14px, 18px, $text-base-color);

@@ -43,104 +43,139 @@
     </header>
 
     <main class="page-inner">
-      <h1 class="page-inner__title">Подбор программы</h1>
+      <div class="page-inner__container">
+        <h1 class="page-inner__title">Подбор программы</h1>
+      </div>
 
       <section class="program-selection">
-        <h2 class="visually-hidden">Анкета</h2>
-        <p class="program-selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="program-selection__container">
+          <h2 class="visually-hidden">Анкета</h2>
+          <p class="program-selection__description">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
+        </div>
 
         <form class="program-selection__form  profile-form" action="https://echo.htmlacademy.ru" method="post">
 
           <!-- Данные о коте -->
-          <fieldset class="profile-form__cat-details  form-fieldset">
-            <legend class="visually-hidden">Данные о коте</legend>
-            <ul class="form-fieldset__list">
-              <li class="form-fieldset__item">
-                <label class="form-fieldset__label">Имя:
-                  <input class="form-fieldset__input" type="text" name="cat-name" value="" placeholder="Барсик" required>
-                </label>
-              </li>
-              <li class="form-fieldset__item">
-                <label class="form-fieldset__label">Вес (кг):
-                  <input class="form-fieldset__input" type="text" name="cat-weight" value="" placeholder="7" pattern="[0-9]{1,2}" required>
-                </label>
-              </li>
-              <li class="form-fieldset__item">
-                <label class="form-fieldset__label">Возраст (лет):
-                  <input class="form-fieldset__input" type="text" name="cat-age" value="" placeholder="7" pattern="[0-9]{1,2}">
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="profile-form__cat-details">
+            <div class="profile-form__container">
+              <fieldset class="form-fieldset">
+                <legend class="visually-hidden">Данные о коте</legend>
+                <ul class="form-fieldset__list">
+                  <li class="form-fieldset__item">
+                    <label class="form-fieldset__label" for="cat-name">Имя:<sup>*</sup></label>
+                    <input class="form-fieldset__input" id="cat-name" type="text" name="cat-name" value="" placeholder="Барсик" required>
+                  </li>
+                  <li class="form-fieldset__item">
+                    <label class="form-fieldset__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+                    <input class="form-fieldset__input" id="cat-weight" type="text" name="cat-weight" value="" placeholder="7" pattern="[0-9]{1,2}" required>
+                  </li>
+                  <li class="form-fieldset__item">
+                    <label class="form-fieldset__label" for="cat-age">Возраст (лет):</label>
+                    <input class="form-fieldset__input" id="cat-age" type="text" name="cat-age" value="" placeholder="7" pattern="[0-9]{1,2}">
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
 
           <!-- Выбор программы -->
-          <fieldset class="profile-form__program-select  form-fieldset">
-            <legend class="visually-hidden">Выберите программу</legend>
-            <ul class="form-fieldset__list">
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__radio" id="slim-select" type="radio" name="program-select" value="slim" checked>
-                <label class="form-fieldset__label" for="slim-select">Похудение</label>
-              </li>
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__radio" id="pro-select" type="radio" name="program-select" value="pro">
-                <label class="form-fieldset__label" for="pro-select">Набор массы</label>
-              </li>
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__radio" id="need-advice-select" type="radio" name="program-select" value="need-advice">
-                <label class="form-fieldset__label" for="need-advice-select">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="profile-form__program-select">
+            <div class="profile-form__container">
+              <fieldset class="form-fieldset">
+                <legend class="visually-hidden">Выберите программу</legend>
+                <ul class="form-fieldset__list">
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__radio" id="slim-select" type="radio" name="program-select" value="slim" checked> -->
+                    <!-- <label class="form-fieldset__radio-label" for="slim-select">Похудение</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="slim-select" type="radio" name="program-select" value="slim" checked>
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--radio" for="slim-select">Похудение</label>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__radio" id="pro-select" type="radio" name="program-select" value="pro"> -->
+                    <!-- <label class="form-fieldset__radio-label" for="pro-select">Набор массы</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="pro-select" type="radio" name="program-select" value="pro">
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--radio" for="pro-select">Набор массы</label>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__radio" id="need-advice-select" type="radio" name="program-select" value="need-advice"> -->
+                    <!-- <label class="form-fieldset__radio-label" for="need-advice-select">Не знаю (Нужен ваш совет)</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="need-advice-select" type="radio" name="program-select" value="need-advice">
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--radio" for="need-advice-select">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
 
           <!-- Данные владельца кота -->
-          <fieldset class="profile-form__cat-owner  form-fieldset">
-            <legend class="form-fieldset__legend">Контактные данные (владельца кота)</legend>
-            <ul class="form-fieldset__list">
-              <li class="form-fieldset__item">
-                <label class="form-fieldset__label">e-mail:
-                  <input class="form-fieldset__input" type="email" name="owner-email" value="" placeholder="kuklachev@gmail.com" required>
-                </label>
-              </li>
-              <li class="form-fieldset__item">
-                <label class="form-fieldset__label">Телефон:
-                  <input class="form-fieldset__input" type="tel" name="owner-tel" value="" placeholder="8 (960) 900-60-90" pattern="8 [(]{1}[0-9]{3}[)]{1} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="profile-form__cat-owner">
+            <div class="profile-form__container">
+              <fieldset class="form-fieldset">
+                <legend class="form-fieldset__legend">Контактные данные (владельца&nbsp;кота)</legend>
+                <ul class="form-fieldset__list">
+                  <li class="form-fieldset__item  form-fieldset__item--email">
+                    <label class="form-fieldset__label" for="owner-email">e-mail:<sup class="form-fieldset__label-required">*</sup></label>
+                    <input class="form-fieldset__input  form-fieldset__input--email" id="owner-email" type="email" name="owner-email" value="" placeholder="kuklachev@gmail.com" required>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--tel">
+                    <label class="form-fieldset__label" for="owner-tel">Телефон:<sup class="form-fieldset__label-required">*</sup></label>
+                    <input class="form-fieldset__input  form-fieldset__input--tel" id="owner-tel" type="tel" name="owner-tel" value="" placeholder="8 (960) 900-60-90" pattern="8 [(]{1}[0-9]{3}[)]{1} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
 
           <!-- Комментарий -->
-          <div class="profile-form__comment  form-fieldset">
-            <label class="form-fieldset__label" for="comment">Комментарий</label>
-            <textarea class="form-fieldset__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="6"></textarea>
+          <div class="profile-form__comment">
+            <div class="profile-form__container">
+              <div class="form-fieldset">
+                <label class="form-fieldset__legend" for="comment">Комментарий</label>
+                <textarea class="form-fieldset__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="6"></textarea>
+              </div>
+            </div>
           </div>
 
           <!-- Дополнительно -->
-          <fieldset class="profile-form__additionally  form-fieldset">
-            <legend class="form-fieldset__legend">Дополнительно</legend>
-            <ul class="form-fieldset__list">
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__checkbox" id="sweetener-select" type="checkbox" name="sweetener-select" checked>
-                <label for="sweetener-select">Сахарозаменитель</label>
-              </li>
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__checkbox" id="drinking-water-select" type="checkbox" name="drinking-water-select">
-                <label for="drinking-water-select">Питьевая вода</label>
-              </li>
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__checkbox" id="milk-select" type="checkbox" name="milk-select">
-                <label for="milk-select">Молоко</label>
-              </li>
-              <li class="form-fieldset__item">
-                <input class="visually-hidden form-fieldset__checkbox" id="vitamins-select" type="checkbox" name="vitamins-select">
-                <label for="vitamins-select">Витамины</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="profile-form__additionally">
+            <div class="profile-form__container">
+              <fieldset class="form-fieldset">
+                <legend class="form-fieldset__legend">Дополнительно</legend>
+                <ul class="form-fieldset__list   form-fieldset__list--choice">
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__checkbox" id="sweetener-select" type="checkbox" name="sweetener-select" checked> -->
+                    <!-- <label class="form-fieldset__checkbox-label" for="sweetener-select">Сахарозаменитель</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="sweetener-select" type="checkbox" name="sweetener-select" checked>
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="sweetener-select">Сахарозаменитель</label>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__checkbox" id="drinking-water-select" type="checkbox" name="drinking-water-select"> -->
+                    <!-- <label class="form-fieldset__checkbox-label" for="drinking-water-select">Питьевая вода</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="drinking-water-select" type="checkbox" name="drinking-water-select">
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="drinking-water-select">Питьевая вода</label>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__checkbox" id="milk-select" type="checkbox" name="milk-select"> -->
+                    <!-- <label class="form-fieldset__checkbox-label" for="milk-select">Молоко</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="milk-select" type="checkbox" name="milk-select">
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="milk-select">Молоко</label>
+                  </li>
+                  <li class="form-fieldset__item  form-fieldset__item--choice">
+                    <!-- <input class="visually-hidden form-fieldset__checkbox" id="vitamins-select" type="checkbox" name="vitamins-select"> -->
+                    <!-- <label class="form-fieldset__checkbox-label" for="vitamins-select">Витамины</label> -->
+                    <input class="visually-hidden form-fieldset__choice-input" id="vitamins-select" type="checkbox" name="vitamins-select">
+                    <label class="form-fieldset__choice-label  form-fieldset__choice-label--checkbox" for="vitamins-select">Витамины</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
 
-          <button class="button profile-form__button" type="submit">Отправить заявку</button>
+          <div class="profile-form__container">
+            <button class="button profile-form__button" type="submit">Отправить заявку</button>
 
-          <small>- Обязательные поля</small>
+            <small class="profile-form__required"><sup class="form-fieldset__label-required">*</sup> — Обязательные поля</small>
+          </div>
         </form>
       </section>
 
@@ -149,17 +184,24 @@
         <h2 class="visually-hidden">Контакты и связь с нами</h2>
 
         <!-- Контакты-инфо -->
-        <section class="contacts__info  contacts-info  contacts-info--white">
-          <h3 class="visually-hidden">Контакты</h3>
-          <b class="contacts-info__intro">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <section class="contacts__info  contacts-info  contacts-info--gray">
+          <div class="contacts-info__container">
+            <h3 class="visually-hidden">Контакты</h3>
+            <b class="contacts-info__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+            <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </section>
 
         <!-- Карта -->
         <section class="contacts__map map">
-          <h3 class="visually-hidden">Мы на карте</h3>
-          <img class="map__image" src="https://via.placeholder.com/150x150" width="1345" height="645" alt="Отображение адреса «Кэт энерджи» на карте.">
-          <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.8531060829388!2d30.322084562522807!3d59.93873797249862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573381817003!5m2!1sru!2sru" width="1345" height="645"></iframe>
+          <div class="map__container">
+            <h3 class="visually-hidden">Мы на карте</h3>
+            <div class="map__wrapper">
+              <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Отображение адреса
+              «Кэт энерджи» на карте.">
+              <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
+            </div>
+          </div>
         </section>
       </section>
     </main>

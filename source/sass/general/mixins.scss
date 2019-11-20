@@ -32,11 +32,94 @@
 }
 
 
-/*  Радиокнопки  */
+/*  Кастомные поля выбора   */
+/*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
 
+@mixin custom-choice($choice-size: 40px) {
+  position: relative;
+  padding-left: $choice-size +  16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+
+    transform: translateY(-50%);
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+//  фокус
+@mixin custom-choice--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+// активный
+@mixin custom-choice--checked($choice-size: 40px) {
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  //  радиокнопки
+  &--radio::after {
+    top: 50%;
+    left: ($choice-size / 2);
+
+    width: ($choice-size / 2.3);
+    height: ($choice-size / 2.3);
+
+    background-color: $bg-color-third;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  //  чекбоксы
+  &--checkbox::after {
+    top: 50%;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 16px;
+    background-position: center center;
+
+    transform: translateY(-50%);
+  }
+}
+
+/*  ************  */
+
+
+/*  Радиокнопки  */
+/*
 @mixin custom-radio($radio-size: 40px) {
   position: relative;
-  padding-left: $radio-size +  18px;
+  padding-left: $radio-size +  16px;
 
   &::before {
     position: absolute;
@@ -69,7 +152,7 @@
   }
 }
 
-@mixin custom-radio--checed($radio-size: 40px) {
+@mixin custom-radio--checked($radio-size: 40px) {
   &::after {
     position: absolute;
     content: "";
@@ -85,5 +168,63 @@
     transform: translate(-50%, -50%);
   }
 }
+ */
+/*  ************  */
 
+
+/*  Чекбоксы  */
+/*
+@mixin custom-checkbox($checkbox-size: 40px) {
+  position: relative;
+  padding-left: $checkbox-size +  16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin custom-checkbox--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+@mixin custom-checkbox--checked($checkbox-size: 40px) {
+  &::after {
+     position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 16px;//($checkbox-size * 0.525) ($checkbox-size * 0.4);
+    background-position: center center;
+
+    transform: translateY(-50%);
+  }
+}
+ */
 /*  ************  */

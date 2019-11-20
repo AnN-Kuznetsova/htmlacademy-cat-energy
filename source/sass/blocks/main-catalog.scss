@@ -1,5 +1,9 @@
 /*  main-catalog  */
 
+.main-catalog {
+  margin-top: 29px;
+}
+
 .main-catalog__list {
   @include list-style-none();
 }

@@ -1,0 +1,19 @@
+/*  Подбор программы  */
+
+.program-selection__container {
+  @include container(320px, 20px);
+}
+
+.program-selection__description {
+  margin: 0;
+  margin-top: 25px;
+
+  color: $header-color;
+  text-transform: uppercase;
+}
+
+.program-selection__form {
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 31px;
+}

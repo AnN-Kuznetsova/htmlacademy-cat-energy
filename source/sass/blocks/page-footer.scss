@@ -13,8 +13,9 @@
 .page-footer__logo {
   width: 100%;
   min-height: 95px;
-  margin-top: 5px;
-  margin-bottom: -5px;
+  padding-top: 9px;
+
+  outline: none;
 }
 
 .page-footer__copyright {

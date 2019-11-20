@@ -1,0 +1,70 @@
+/*  Карта  */
+
+$map-height: 362px;
+
+.map__container {
+  @include container(320px, 0);
+}
+
+.map {
+  position: relative;
+
+  height: $map-height;
+
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.map-wrapper {
+  position: relative;
+
+  max-height: $map-height;
+
+  overflow: hidden;
+
+  //  маркер местоположения на карте
+  /*&::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 113px;
+    height: 106px;
+
+    background-image: url("../img/map-pin.svg");
+    background-repeat: no-repeat;
+    background-size: 113px 106px;
+    background-position: center center;
+
+    outline: 1px solid red;
+  } */
+}
+
+.map__image {
+  $map-image-height: 400px;
+  $translateY-var: (($map-image-height - $map-height) / 2);
+
+  display: block;
+
+  width: 320px;
+  height: $map-image-height;
+  margin: 0 auto;
+
+  transform: translateY(-$translateY-var);
+}
+
+.map__interactive {
+  $interactive-height: 645px;
+  $translateY-var: (($interactive-height - $map-height) / 2);
+
+  position: relative;
+  left: 50%;
+  top: -402px;
+
+  width: 1345px;
+  height: $interactive-height;
+
+  transform: translate(-50%, -$translateY-var);
+}

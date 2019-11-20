@@ -29,7 +29,7 @@
             </a>
           </li>
           <li class="main-nav__item  main-nav__item--active">
-            <a class="main-nav__link  main-nav__container" href="catalog.html">
+            <a class="main-nav__link  main-nav__container">
               <span class="main-nav__link-text">Каталог продукции</span>
             </a>
           </li>
@@ -43,7 +43,9 @@
     </header>
 
     <main class="page-inner">
-      <h1 class="page-inner__title  page-inner__container">Каталог продукции</h1>
+      <div class="page-inner__container">
+        <h1 class="page-inner__title">Каталог продукции</h1>
+      </div>
 
       <!-- Список товаров -->
       <section class="main-catalog">
@@ -278,56 +280,58 @@
       </section>
 
       <!-- Дополнительные товары -->
-      <section class="additional-catalog  additional-catalog__container">
-        <h2 class="additional-catalog__title  sub-title">Дополнительные товары</h2>
-        <ul class="additional-catalog__list">
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Сахарозаменитель</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 упаковка (100 г)</td>
-                <td class="additional-product__data  additional-product__info-value">200 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Питьевая вода</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">5 литров</td>
-                <td class="additional-product__data  additional-product__info-value">50 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Молоко</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 литр</td>
-                <td class="additional-product__data  additional-product__info-value">100 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Витамины</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 упаковка (30 г)</td>
-                <td class="additional-product__data  additional-product__info-value">300 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-        </ul>
+      <section class="additional-catalog">
+        <div class="additional-catalog__container">
+          <h2 class="additional-catalog__title  sub-title">Дополнительные товары</h2>
+          <ul class="additional-catalog__list">
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Сахарозаменитель</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 упаковка (100 г)</td>
+                  <td class="additional-product__data  additional-product__info-value">200 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Питьевая вода</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">5 литров</td>
+                  <td class="additional-product__data  additional-product__info-value">50 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Молоко</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 литр</td>
+                  <td class="additional-product__data  additional-product__info-value">100 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Витамины</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 упаковка (30 г)</td>
+                  <td class="additional-product__data  additional-product__info-value">300 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+          </ul>
 
-        <!-- Промо-акция (каталог) -->
-        <section class="additional-catalog__promo  catalog-promo">
-          <h3 class="visually-hidden">Промо-акция</h3>
-          <p class="catalog-promo__description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-        </section>
+          <!-- Промо-акция (каталог) -->
+          <section class="additional-catalog__promo  catalog-promo">
+            <h3 class="visually-hidden">Промо-акция</h3>
+            <p class="catalog-promo__description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+          </section>
+        </div>
       </section>
 
 
@@ -336,18 +340,24 @@
         <h2 class="visually-hidden">Контакты и связь с нами</h2>
 
         <!-- Контакты-инфо -->
-        <section class="contacts__info  contacts-info  contacts-info--white  contacts-info__container">
-          <h3 class="visually-hidden">Контакты</h3>
-          <b class="contacts-info__intro">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <section class="contacts__info  contacts-info  contacts-info--gray">
+          <div class="contacts-info__container">
+            <h3 class="visually-hidden">Контакты</h3>
+            <b class="contacts-info__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+            <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </section>
 
         <!-- Карта -->
         <section class="contacts__map map">
-          <h3 class="visually-hidden">Мы на карте</h3>
-          <img class="map__image" src="https://via.placeholder.com/150x150" width="1345" height="645" alt="Отображение адреса «Кэт энерджи»
-            на карте.">
-          <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.8531060829388!2d30.322084562522807!3d59.93873797249862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573381817003!5m2!1sru!2sru" width="1345" height="645"></iframe>
+          <div class="map__container">
+            <h3 class="visually-hidden">Мы на карте</h3>
+            <div class="map__wrapper">
+              <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Отображение адреса
+              «Кэт энерджи» на карте.">
+              <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
+            </div>
+          </div>
         </section>
       </section>
     </main>
