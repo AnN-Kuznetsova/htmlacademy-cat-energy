@@ -1,5 +1,9 @@
 /*  Промо  */
 
+.promo__container {
+  @include container(320px, 20px);
+}
+
 .promo {
   background-color: $bg-color-third;
   background-image:
@@ -49,7 +53,8 @@
 }
 
 .promo__button {
-  margin-bottom: 22px;
+  margin-top: 3px;
+  margin-bottom: 21px;
   padding: 11px 20px 12px;
 
   font-size: 14px;

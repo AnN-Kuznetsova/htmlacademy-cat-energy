@@ -1,5 +1,13 @@
 /*  main-nav  */
 
+.main-nav__container {
+  @include container(320px, 20px);
+}
+
+.main-nav__list {
+  @include list-style-none();
+}
+
 .main-nav__item {
   border-bottom: 1px solid $border-color-var;
 }
@@ -18,14 +26,16 @@
   text-align: center;
   text-transform: uppercase;
 
-  cursor: pointer;
+  cursor: default;
+  outline: none;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
+    cursor: pointer;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }

@@ -1,11 +1,19 @@
 /*  main-catalog  */
 
+.main-catalog {
+  margin-top: 29px;
+}
+
+.main-catalog__list {
+  @include list-style-none();
+}
+
 .main-catalog__item {
   padding-bottom: 24px;
 
   border-top: 1px solid $border-color-third;
-}
 
-.main-catalog__item:last-child {
-  border-bottom: 1px solid $border-color-third;
+  &:last-child {
+    border-bottom: 1px solid $border-color-third;
+  }
 }

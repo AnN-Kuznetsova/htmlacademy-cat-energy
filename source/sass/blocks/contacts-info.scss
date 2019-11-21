@@ -1,0 +1,42 @@
+/*  contacts-info  */
+
+.contacts-info {
+
+  background-color: $bg-color-base;
+
+  &--gray {
+    background-color: $bg-color-second;
+  }
+}
+
+.contacts-info__container {
+  @include container(320px, 20px);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-top: 29px;
+  padding-bottom: 24px;
+}
+
+.contacts-info__intro {
+  display: block;
+
+  width: 140px;
+  padding: 0 15px 0 0;
+
+  @include font-options(inherit, 16px, 20px, $header-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contacts-info__content {
+  display: block;
+
+  width: 140px;
+  padding: 0;
+  margin: 0;
+
+  @include font-options($font-text, 14px, 20px, inherit);
+}

@@ -1,6 +1,8 @@
 /*  social  */
 
 .social {
+  @include list-style-none();
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,14 +15,14 @@
 
 .social__item {
   margin: 11px 7px;
-}
 
-.social__item:first-child {
-  margin-left: 0;
-}
+  &:first-child {
+    margin-left: 0;
+  }
 
-.social__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__btn {
@@ -30,6 +32,8 @@
 
   width: 40px;
   height: 40px;
+
+  outline: none;
 
   &:hover .social__image,
   &:focus .social__image {

@@ -1,5 +1,9 @@
 /*  Подвал  */
 
+.page-footer__container {
+  @include container(320px, 20px);
+}
+
 .page-footer {
   /*display: flex;*/
 
@@ -9,8 +13,9 @@
 .page-footer__logo {
   width: 100%;
   min-height: 95px;
-  margin-top: 5px;
-  margin-bottom: -5px;
+  padding-top: 9px;
+
+  outline: none;
 }
 
 .page-footer__copyright {

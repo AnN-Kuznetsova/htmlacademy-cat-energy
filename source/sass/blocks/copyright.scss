@@ -6,6 +6,8 @@
   justify-content: space-between;
   align-items: center;
 
+  outline: none;
+
   &:hover .copyright__name,
   &:focus .copyright__name {
     color: $text-base-color;
@@ -32,8 +34,8 @@
 }
 
 .copyright__image {
-  width: 27px;
-  height: 34px;
+  width: 27px * 1.5;
+  height: 34px * 1.5;
 
   fill: $social-color-base;
 }

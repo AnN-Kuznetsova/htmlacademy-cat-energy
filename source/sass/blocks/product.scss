@@ -1,5 +1,9 @@
 /*  product  */
 
+.product__container {
+  @include container(320px, 20px);
+}
+
 .product__wrapper {
   display: flex;
 }
@@ -22,6 +26,7 @@
   height: 144px;
 
   overflow: hidden;
+  //outline: none;
 }
 
 .product__photo {

@@ -1,0 +1,214 @@
+/*  form-fieldset  */
+
+/* $form-radio-size: 30px;
+$form-checkbox-size: 30px; */
+$form-choice-size: 30px;  //  ширина/высота кастомных радио/чекбоксовы
+$input-height: 45px;  //  высота инпутов
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.form-fieldset__legend {
+  display: block;
+
+  margin-bottom: 9px;
+
+  @include font-options(inherit, 24px, 24px, $header-color);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.form-fieldset__list {
+  margin: 25px 0;
+  padding: 0;
+
+  list-style: none;
+
+  &--choice {
+    margin-top: 31px;
+  }
+}
+
+.form-fieldset__item {
+  display: flex;
+  //justify-content: space-between;
+  position: relative;
+
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--choice {
+    margin-bottom: 25px;
+  }
+
+  &--email::after,
+  &--tel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+
+    width: $input-height;
+    height: $input-height;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    //  временно
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 17px 13px;
+  }
+
+  &--tel::after {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 20px 20px;
+  }
+}
+
+.form-fieldset__label {
+  flex-shrink: 0;
+
+  margin: auto 15px auto 0;
+}
+
+.form-fieldset__label-required {
+  top: 0.01em;
+  font-size: 1.05em;
+}
+
+.form-fieldset__input {
+  //flex-shrink: 1;
+
+  vertical-align: middle;
+  width: 100%;
+  height: $input-height;
+  margin: 0;
+  padding: 13px 15px;
+
+  @include font-options(inherit, 16px, 18px, $text-base-color);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background: none;
+  border: 1px solid $border-color-var;
+
+  outline: none;
+
+  &--email,
+  &--tel {
+    padding-right: $input-height;
+  }
+
+  &:hover {
+    border-color: $border-color-fourth;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $border-color-input-active;
+    border-width: 2px;
+  }
+
+  &--error {
+    border-color: $border-color-input-error;
+    border-width: 2px;
+  }
+}
+
+.form-fieldset__textarea {
+  width: 100%;
+  min-height: 150px;
+  margin: 0;
+  margin-top: 24px;
+  padding: 13px;
+
+  @include font-options(inherit, 16px, 18px, $text-base-color);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background: none;
+  border: 1px solid $border-color-var;
+  resize: none;
+  overflow: auto;
+  outline: none;
+
+  &:hover {
+    border-color: $border-color-fourth;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $border-color-input-active;
+    border-width: 2px;
+  }
+}
+
+//  Радиокнопки
+/* .form-fieldset__radio-label {
+  display: block;
+  @include custom-radio($form-radio-size);
+}
+
+//  фокус
+.form-fieldset__radio:hover ~ .form-fieldset__radio-label,
+.form-fieldset__radio:focus ~ .form-fieldset__radio-label {
+  @include custom-radio--focus();
+}
+
+//  активный
+.form-fieldset__radio:checked ~ .form-fieldset__radio-label {
+  @include custom-radio--checked($form-radio-size);
+} */
+
+//////////////////
+
+
+//  Чекбоксы
+/* .form-fieldset__checkbox-label {
+  display: block;
+  @include custom-checkbox($form-checkbox-size);
+}
+
+//  фокус
+.form-fieldset__checkbox:hover ~ .form-fieldset__checkbox-label,
+.form-fieldset__checkbox:focus ~ .form-fieldset__checkbox-label {
+  @include custom-checkbox--focus();
+}
+
+//  активный
+.form-fieldset__checkbox:checked ~ .form-fieldset__checkbox-label {
+  @include custom-checkbox--checked($form-checkbox-size);
+} */
+
+//////////////////
+
+
+/*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
+
+.form-fieldset__choice-label {
+  display: block;
+
+  @include custom-choice($form-choice-size);
+}
+
+//  фокус
+.form-fieldset__choice-input:hover ~ .form-fieldset__choice-label,
+.form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
+  @include custom-choice--focus();
+}
+
+//  активный
+.form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
+  @include custom-choice--checked($form-choice-size);
+}

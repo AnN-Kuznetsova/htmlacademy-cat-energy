@@ -1,0 +1,48 @@
+/*  profile-form  */
+
+.profile-form {
+  @include font-options($font-base, 16px, 18px, $header-small-color);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border-top: 1px solid transparent;
+
+  //outline: 1px solid red;
+}
+
+.profile-form__container {
+  @include container(320px, 20px);
+
+  //outline: 1px solid green;
+}
+
+.profile-form__program-select {
+  border: 1px solid $border-color-third;
+}
+
+.profile-form__cat-owner {
+  margin-top: 30px;
+}
+
+.profile-form__comment {
+  margin-top: 4px;
+}
+
+.profile-form__additionally {
+  margin-top: 28px;
+}
+
+.profile-form__button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.profile-form__required {
+  display: block;
+
+  margin-top: 21px;
+
+  @include font-options($font-text, 14px, 16px, $text-base-color);
+  text-transform: none;
+  text-align: center;
+}

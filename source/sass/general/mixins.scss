@@ -1,11 +1,5 @@
 /*  МИКСИНЫ  */
 
-.container {
-  margin: 0 auto;
-  width: 320px;
-  padding: 0 20px;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -17,7 +11,13 @@
   overflow: hidden;
 }
 
-.list-style-none {
+@mixin container($container-width: 320px, $container-padding: 20px) {
+  margin: 0 auto;
+  width: $container-width;
+  padding: 0 $container-padding;
+}
+
+@mixin list-style-none() {
   margin: 0;
   padding: 0;
 
@@ -30,3 +30,201 @@
   line-height: $line;
   color: $font-color;
 }
+
+
+/*  Кастомные поля выбора   */
+/*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
+
+@mixin custom-choice($choice-size: 40px) {
+  position: relative;
+  padding-left: $choice-size +  16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+
+    transform: translateY(-50%);
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+//  фокус
+@mixin custom-choice--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+// активный
+@mixin custom-choice--checked($choice-size: 40px) {
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  //  радиокнопки
+  &--radio::after {
+    top: 50%;
+    left: ($choice-size / 2);
+
+    width: ($choice-size / 2.3);
+    height: ($choice-size / 2.3);
+
+    background-color: $bg-color-third;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  //  чекбоксы
+  &--checkbox::after {
+    top: 50%;
+    left: 0;
+
+    width: $choice-size;
+    height: $choice-size;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 16px;
+    background-position: center center;
+
+    transform: translateY(-50%);
+  }
+}
+
+/*  ************  */
+
+
+/*  Радиокнопки  */
+/*
+@mixin custom-radio($radio-size: 40px) {
+  position: relative;
+  padding-left: $radio-size +  16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $radio-size;
+    height: $radio-size;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin custom-radio--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+@mixin custom-radio--checked($radio-size: 40px) {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: ($radio-size / 2);
+
+    width: ($radio-size / 2);
+    height: ($radio-size / 2);
+
+    background-color: $bg-color-third;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+ */
+/*  ************  */
+
+
+/*  Чекбоксы  */
+/*
+@mixin custom-checkbox($checkbox-size: 40px) {
+  position: relative;
+  padding-left: $checkbox-size +  16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    background-color: $bg-color-base;
+    border: 1px solid $border-color-fourth;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    border-color: $border-color-fifth;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin custom-checkbox--focus() {
+  &::before {
+    border-color: $border-color-fifth;
+  }
+}
+
+@mixin custom-checkbox--checked($checkbox-size: 40px) {
+  &::after {
+     position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 16px;//($checkbox-size * 0.525) ($checkbox-size * 0.4);
+    background-position: center center;
+
+    transform: translateY(-50%);
+  }
+}
+ */
+/*  ************  */

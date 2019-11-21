@@ -1,1 +1,42 @@
 /*  Живой пример  */
+
+.living-example__info-container {
+  @include container(320px, 20px);
+}
+
+.living-example {
+  padding: 17px 0 36px;
+
+  background-color: $bg-color-second;
+}
+
+.living-example__title {
+  margin: 0;
+
+  @include font-options(inherit, 36px, 60px, $header-color);
+  font-weight: 400;
+}
+
+.living-example__text {
+  margin: 25px 0;
+
+  @include font-options($font-text, 14px, 18px, inherit);
+}
+
+.living-example__widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.living-example__attention {
+  display: block;
+
+  margin: 9px 0;
+  padding: 0 20px;
+
+  @include font-options(inherit, 14px, 20px, $header-color);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}

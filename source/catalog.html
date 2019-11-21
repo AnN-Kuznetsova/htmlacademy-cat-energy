@@ -12,7 +12,7 @@
 
       <!-- Логотип -->
       <div class="page-header__logo-wrapper">
-        <div class="container">
+        <div class="page-header__container">
           <a class="page-header__logo  logo"  href="index.html">
             <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
           </a>
@@ -22,19 +22,19 @@
       <!-- Главное меню -->
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list  list-style-none">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link  container" href="index.html">
+            <a class="main-nav__link  main-nav__container" href="index.html">
               <span class="main-nav__link-text">Главная</span>
             </a>
           </li>
           <li class="main-nav__item  main-nav__item--active">
-            <a class="main-nav__link container" href="catalog.html">
+            <a class="main-nav__link  main-nav__container">
               <span class="main-nav__link-text">Каталог продукции</span>
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link  container" href="form.html">
+            <a class="main-nav__link  main-nav__container" href="form.html">
               <span class="main-nav__link-text">Подбор программы</span>
             </a>
           </li>
@@ -43,15 +43,17 @@
     </header>
 
     <main class="page-inner">
-      <h1 class="page-inner__title container">Каталог продукции</h1>
+      <div class="page-inner__container">
+        <h1 class="page-inner__title">Каталог продукции</h1>
+      </div>
 
       <!-- Список товаров -->
       <section class="main-catalog">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="main-catalog__list list-style-none">
+        <ul class="main-catalog__list">
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/chicken-small-mobile@1x.jpg" width="140" height="144"
@@ -82,7 +84,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/chicken-big-mobile@1x.jpg" width="140" height="144"
@@ -113,7 +115,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/fish-small-mobile@1x.jpg" width="140" height="144"
@@ -144,7 +146,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/fish-big-mobile@1x.jpg" width="140" height="144"
@@ -175,7 +177,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144"
@@ -206,7 +208,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144"
@@ -237,7 +239,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="product container">
+            <div class="product  product__container">
               <div class="product__wrapper">
                 <a class="product__photo-wrapper" href="product.html" aria-label="Переход на страницу товара.">
                   <img class="product__photo" src="img/rice-small-mobile@1x.jpg" width="140" height="144"
@@ -268,7 +270,7 @@
           </li>
 
           <li class="main-catalog__item">
-            <div class="more-product  container">
+            <div class="more-product  more-product__container">
               <b class="more-product__title">Показать еще 100500 товаров</b>
               <p class="more-product__info">На самом деле вкусов гораздо больше!</p>
               <a class="more-product__button  button  button--grey" href="catalog-list.html">Показать все</a>
@@ -278,56 +280,58 @@
       </section>
 
       <!-- Дополнительные товары -->
-      <section class="additional-catalog container">
-        <h2 class="additional-catalog__title  sub-title">Дополнительные товары</h2>
-        <ul class="additional-catalog__list  list-style-none">
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Сахарозаменитель</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 упаковка (100 г)</td>
-                <td class="additional-product__data  additional-product__info-value">200 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Питьевая вода</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">5 литров</td>
-                <td class="additional-product__data  additional-product__info-value">50 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Молоко</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 литр</td>
-                <td class="additional-product__data  additional-product__info-value">100 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-          <li class="additional-catalog__item  additional-product">
-            <h4 class="additional-product__title">Витамины</h4>
-            <table class="additional-product__info">
-              <tr>
-                <td class="additional-product__data  additional-product__info-title">1 упаковка (30 г)</td>
-                <td class="additional-product__data  additional-product__info-value">300 &#8381;</td>
-              </tr>
-            </table>
-            <a class="additional-product__button  button" href="checkout.html">Заказать</a>
-          </li>
-        </ul>
+      <section class="additional-catalog">
+        <div class="additional-catalog__container">
+          <h2 class="additional-catalog__title  sub-title">Дополнительные товары</h2>
+          <ul class="additional-catalog__list">
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Сахарозаменитель</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 упаковка (100 г)</td>
+                  <td class="additional-product__data  additional-product__info-value">200 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Питьевая вода</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">5 литров</td>
+                  <td class="additional-product__data  additional-product__info-value">50 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Молоко</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 литр</td>
+                  <td class="additional-product__data  additional-product__info-value">100 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+            <li class="additional-catalog__item  additional-product">
+              <h4 class="additional-product__title">Витамины</h4>
+              <table class="additional-product__info">
+                <tr>
+                  <td class="additional-product__data  additional-product__info-title">1 упаковка (30 г)</td>
+                  <td class="additional-product__data  additional-product__info-value">300 &#8381;</td>
+                </tr>
+              </table>
+              <a class="additional-product__button  button" href="checkout.html">Заказать</a>
+            </li>
+          </ul>
 
-        <!-- Промо-акция (каталог) -->
-        <section class="additional-catalog__promo  catalog-promo">
-          <h3 class="visually-hidden">Промо-акция</h3>
-          <p class="catalog-promo__description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-        </section>
+          <!-- Промо-акция (каталог) -->
+          <section class="additional-catalog__promo  catalog-promo">
+            <h3 class="visually-hidden">Промо-акция</h3>
+            <p class="catalog-promo__description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+          </section>
+        </div>
       </section>
 
 
@@ -336,30 +340,36 @@
         <h2 class="visually-hidden">Контакты и связь с нами</h2>
 
         <!-- Контакты-инфо -->
-        <section class="contacts__info  contacts-info  contacts-info--white">
-          <h3 class="visually-hidden">Контакты</h3>
-          <b class="contacts-info__intro">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <section class="contacts__info  contacts-info  contacts-info--gray">
+          <div class="contacts-info__container">
+            <h3 class="visually-hidden">Контакты</h3>
+            <b class="contacts-info__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+            <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </section>
 
         <!-- Карта -->
         <section class="contacts__map map">
-          <h3 class="visually-hidden">Мы на карте</h3>
-          <img class="map__image" src="https://via.placeholder.com/150x150" width="1345" height="645" alt="Отображение адреса «Кэт энерджи»
-            на карте.">
-          <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.8531060829388!2d30.322084562522807!3d59.93873797249862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573381817003!5m2!1sru!2sru" width="1345" height="645"></iframe>
+          <div class="map__container">
+            <h3 class="visually-hidden">Мы на карте</h3>
+            <div class="map__wrapper">
+              <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Отображение адреса
+              «Кэт энерджи» на карте.">
+              <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
+            </div>
+          </div>
         </section>
       </section>
     </main>
 
     <!--  Подвал  -->
     <footer class="page-footer">
-      <div class="container">
+      <div class="page-footer__container">
         <a class="page-footer__logo footer-logo" href="index.html" aria-label="Переход на главную страницу сайта.">
           <img class="footer-logo__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип сайта «Кэт энерджи».">
         </a>
 
-        <ul class="page-footer__social  social  social--border  list-style-none">
+        <ul class="page-footer__social  social  social--border">
           <li class="social__item">
             <a class="social__btn  social__btn--vk" href="" target="_blank">
               <span class="visually-hidden">«Кэт энерджи» во Вконтакте.</span>

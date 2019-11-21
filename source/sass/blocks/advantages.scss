@@ -1,5 +1,9 @@
 /*  Преимущества  */
 
+.advantages__container {
+  @include container(320px, 20px);
+}
+
 .advantages {
   border-top: 1px solid transparent;
 }
@@ -13,7 +17,8 @@
 }
 
 .advantages__list {
-  margin: 29px 0;
+  @include list-style-none();
+  margin: 29px 0 42px;
 }
 
 .advantages__item {

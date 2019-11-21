@@ -1,5 +1,9 @@
 /*  more-product  */
 
+.more-product__container {
+  @include container(320px, 20px);
+}
+
 .more-product {
   position: relative;
 
