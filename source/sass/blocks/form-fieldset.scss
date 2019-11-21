@@ -1,7 +1,5 @@
 /*  form-fieldset  */
 
-/* $form-radio-size: 30px;
-$form-checkbox-size: 30px; */
 $form-choice-size: 30px;  //  ширина/высота кастомных радио/чекбоксовы
 $input-height: 45px;  //  высота инпутов
 
@@ -10,42 +8,54 @@ $input-height: 45px;  //  высота инпутов
   margin: 0;
 
   border: none;
+
+  //outline: 1px solid red;
+
+  &--program-select {
+    padding-top: 19px;
+    padding-bottom: 20px;
+  }
 }
 
 .form-fieldset__legend {
   display: block;
 
-  margin-bottom: 9px;
+  margin: 0;
+  margin-bottom: 33px;
 
   @include font-options(inherit, 24px, 24px, $header-color);
   font-weight: 400;
   text-transform: none;
+
+  //outline: 3px solid green;
 }
 
 .form-fieldset__list {
-  margin: 25px 0;
+  margin: 0;
   padding: 0;
 
   list-style: none;
 
-  &--choice {
-    margin-top: 31px;
-  }
+  //outline: 3px solid green;
 }
 
 .form-fieldset__item {
   display: flex;
-  //justify-content: space-between;
   position: relative;
 
   margin-bottom: 14px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &--choice {
-    margin-bottom: 25px;
+    min-height: $form-choice-size;
+    margin-bottom: 12px;
   }
 
   &--email::after,
@@ -88,8 +98,6 @@ $input-height: 45px;  //  высота инпутов
 }
 
 .form-fieldset__input {
-  //flex-shrink: 1;
-
   vertical-align: middle;
   width: 100%;
   height: $input-height;
@@ -130,7 +138,6 @@ $input-height: 45px;  //  высота инпутов
   width: 100%;
   min-height: 150px;
   margin: 0;
-  margin-top: 24px;
   padding: 13px;
 
   @include font-options(inherit, 16px, 18px, $text-base-color);
@@ -143,6 +150,8 @@ $input-height: 45px;  //  высота инпутов
   overflow: auto;
   outline: none;
 
+  //outline: 3px solid green;
+
   &:hover {
     border-color: $border-color-fourth;
   }
@@ -154,50 +163,12 @@ $input-height: 45px;  //  высота инпутов
   }
 }
 
-//  Радиокнопки
-/* .form-fieldset__radio-label {
-  display: block;
-  @include custom-radio($form-radio-size);
-}
-
-//  фокус
-.form-fieldset__radio:hover ~ .form-fieldset__radio-label,
-.form-fieldset__radio:focus ~ .form-fieldset__radio-label {
-  @include custom-radio--focus();
-}
-
-//  активный
-.form-fieldset__radio:checked ~ .form-fieldset__radio-label {
-  @include custom-radio--checked($form-radio-size);
-} */
-
-//////////////////
-
-
-//  Чекбоксы
-/* .form-fieldset__checkbox-label {
-  display: block;
-  @include custom-checkbox($form-checkbox-size);
-}
-
-//  фокус
-.form-fieldset__checkbox:hover ~ .form-fieldset__checkbox-label,
-.form-fieldset__checkbox:focus ~ .form-fieldset__checkbox-label {
-  @include custom-checkbox--focus();
-}
-
-//  активный
-.form-fieldset__checkbox:checked ~ .form-fieldset__checkbox-label {
-  @include custom-checkbox--checked($form-checkbox-size);
-} */
-
-//////////////////
-
 
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */
 
 .form-fieldset__choice-label {
   display: block;
+  margin: auto 0;
 
   @include custom-choice($form-choice-size);
 }

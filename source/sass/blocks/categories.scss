@@ -9,9 +9,13 @@
 }
 
 .categories__item {
-  margin-top: 20px;
+  margin-bottom: 20px;
 
   background-color: $bg-color-second;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .categories__item-container {
@@ -20,12 +24,10 @@
 }
 
 .categories__title {
-  /*position: relative;*/
   display: flex;
   align-items: center;
 
   margin: 0;
-  /*padding-left: 70px;*/
 
   @include font-options(inherit, 24px, 37px, $header-color);
   font-weight: normal;
@@ -33,7 +35,7 @@
 
   &::before {
     flex-shrink: 0;
-    position: /*absolute;*/relative;
+    position: relative;
     content: "";
     left: 0;
     top: 0;
@@ -45,13 +47,6 @@
     background-color: $bg-color-third;
     border-radius: 50%;
   }
-
-  /*&--slim::before {
-    background-image: url("../../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-    background-size: 35px 49px;
-    background-position: center center;
-  }*/
 }
 
 .categories__description {
@@ -66,14 +61,12 @@
   display: block;
   position: relative;
 
-  //padding: 19px 0 0;
   padding: 0;
   margin-top: 19px;
 
   @include font-options($font-base, 16px, 16px, $header-color);
   text-transform: uppercase;
 
-  //border-top: 1px solid $border-color-var-second;
   outline: none;
 
   &::after {
