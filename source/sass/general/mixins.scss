@@ -32,6 +32,22 @@
   color: $font-color;
 }
 
+// серые бордеры
+@mixin decorative-border($box-width: 100vw, $box-height: 0, $border-width: 1px, $border-color: $border-color-var, $border-side: "bottom") {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+
+    width: $box-width;
+    min-width: 320px;
+    height: $box-height;
+
+    //border-bottom: $border-width solid $border-color;
+    border-#{$border-side}: $border-width solid $border-color;
+    transform: translateX(-50%);
+  }
+}
 
 /*  Кастомные поля выбора   */
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */

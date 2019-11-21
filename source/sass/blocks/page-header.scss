@@ -1,11 +1,30 @@
 /*  page-header  */
 
 .page-header__logo-wrapper {
-  border-bottom: 1px solid $border-color-var;
+  @include decorative-border();
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .page-header__container {
   @include container(320px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include container($tablet-width, $tablet-padding);
+    padding-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 55px;
+  }
 }
 
 .page-header__logo {
@@ -16,5 +35,7 @@
 
   outline: none;
 
-  //border-bottom: 1px solid $border-color-var;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }

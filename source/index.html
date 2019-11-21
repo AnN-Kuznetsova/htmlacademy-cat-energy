@@ -9,37 +9,40 @@
   <body>
     <!--  Шапка  -->
     <header class="page-header">
+      <div class="page-header__container">
 
-      <!-- Логотип -->
-      <div class="page-header__logo-wrapper">
-        <div class="page-header__container">
-          <a class="page-header__logo  logo">
-            <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
-          </a>
+        <!-- Логотип -->
+        <div class="page-header__logo-wrapper">
+          <!-- <div class="page-header__container"> -->
+            <a class="page-header__logo  logo">
+              <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
+            </a>
+          <!-- </div> -->
         </div>
+
+        <!-- Главное меню -->
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--active">
+              <a class="main-nav__link">
+                <span class="main-nav__link-text">Главная</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
+                <span class="main-nav__link-text">Каталог продукции</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                <span class="main-nav__link-text">Подбор программы</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <!-- Главное меню -->
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active">
-            <a class="main-nav__link  main-nav__container">
-              <span class="main-nav__link-text">Главная</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__container" href="catalog.html">
-              <span class="main-nav__link-text">Каталог продукции</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__container" href="form.html">
-              <span class="main-nav__link-text">Подбор программы</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page-main">
