@@ -1,5 +1,11 @@
 /*  Категории  */
 
+.categories {
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
 .categories__container {
   @include container(320px, 20px);
 }

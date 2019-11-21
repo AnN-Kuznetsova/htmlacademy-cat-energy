@@ -14,10 +14,6 @@
   }
 }
 
-/* .main-nav__container {
-  @include container(320px, 20px);
-} */
-
 .main-nav__list {
   @include list-style-none();
 
@@ -47,6 +43,10 @@
 
 .main-nav__item--active .main-nav__link-text {
   border-bottom: 2px solid $bg-color-third;
+
+  @media (min-width: $desktop-width) {
+    border-color: $text-second-color;
+  }
 }
 
 .main-nav__link {
@@ -80,7 +80,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include font-options($font-base, 20px, 24.86px, $header-color);//$text-second-color);
+    @include font-options($font-base, 20px, 24.86px, $text-second-color);
   }
 }
 
