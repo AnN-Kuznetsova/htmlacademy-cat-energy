@@ -20,6 +20,10 @@ body {
   font-weight: normal;
 
   background-color: $bg-color-base;
+
+  @media (min-width: $tablet-width) {
+    @include font-options($font-base, 16px, 24px, $text-base-color);
+  }
 }
 
 /*  Ссылки  */

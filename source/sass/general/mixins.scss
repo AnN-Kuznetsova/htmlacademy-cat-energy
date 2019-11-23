@@ -18,6 +18,18 @@
   padding: 0 $container-padding;
 }
 
+@mixin tablet-width() {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-width() {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
 @mixin list-style-none() {
   margin: 0;
   padding: 0;

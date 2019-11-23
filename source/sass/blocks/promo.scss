@@ -15,16 +15,16 @@
     320px 305px,
     auto auto;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     position: relative;
 
-    margin-bottom: -50px;
+    margin-bottom: -49px;
 
     background-color: $bg-color-base;
     background-image: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     top: -117px;
     margin: 0;
     margin-bottom: -117px;
@@ -50,14 +50,14 @@
   padding-top: 26px;
   padding-bottom: 21px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     @include container($tablet-width, 117px);
-    padding-top: 55px;
+    padding-top: 53px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     @include container($desktop-width, 120px);
-    padding-top: 142px;
+    padding-top: 140px;
 
     height: 696px;
     overflow: hidden;
@@ -73,7 +73,7 @@
   font-weight: 400;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     @include font-options(inherit, 60px, 60px, $header-color);
     width: 490px;
     margin: 0;
@@ -82,7 +82,7 @@
     text-align: left;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     margin-top: 80px;
   }
 }
@@ -98,7 +98,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     @include font-options(inherit, 20px, 20px, $header-color);
     padding: 0;
     margin: 42px 0 16px;
@@ -106,7 +106,7 @@
     text-align: left;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     //margin: 42px 0 50px;
   }
 }
@@ -119,13 +119,13 @@
 
   margin: auto;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     //src: url("../img/index-can-tablet@1x.jpg");
     width: 709px;
     height: 609px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     position: relative;
     top: -280px;
     left: 140px;
@@ -143,7 +143,7 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet-width() {
     position: relative;
 
     top: -578px;
@@ -157,7 +157,7 @@
     line-height: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop-width() {
     top: -462px;
   }
 }
