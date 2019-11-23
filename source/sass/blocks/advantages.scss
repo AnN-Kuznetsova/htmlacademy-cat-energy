@@ -1,9 +1,33 @@
 /*  Преимущества  */
 
+.advantages {
+  @include tablet-width() {
+    @include decorative-border();
+  }
+
+  @include desktop-width() {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .advantages__container {
   @include container(320px, 20px);
   padding-top: 17px;
   padding-bottom: 42px;
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+    padding-top: 47px;
+    padding-bottom: 58px;
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 75px;
+    padding-bottom: 27px;
+  }
 }
 
 .advantages__intro {
@@ -12,25 +36,37 @@
   font-size: 36px;
   line-height: 60px;
   color: $header-color;
+
+  @include tablet-width() {
+    font-size: 60px;
+  }
 }
 
 .advantages__list {
   @include list-style-none();
-  margin: 29px 0 0;
+  margin: 28px 0 0;
+
+  @include tablet-width() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 71px;
+
+    counter-reset: advantagesCounter;
+  }
 }
 
 .advantages__item {
+  position: relative;
   display: flex;
   align-items: center;
 
   min-height: 60px;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
 
   @include font-options($font-text, 14px, 18px, inherit);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &::before {
     flex-shrink: 0;
@@ -52,4 +88,62 @@
     background-size:
     background-position: center center;
   }*/
+
+  @include tablet-width() {
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 45.76%;
+    min-height: 228px;
+    padding-right: 60px;
+    margin-bottom: 89px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      z-index: 10;
+
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 0;
+      counter-increment: advantagesCounter;
+      content: counter(advantagesCounter);
+      top: 0;
+      left: 0;
+
+      height: 228px;
+
+      @include font-options($font-base, 281.07px, 281.07px, $bg-color-second);
+      font-weight: 400px;
+
+      transform: translate(113px, -39px);
+    }
+  }
+
+  @include desktop-width() {
+    width: 20.08%;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item-info {
+  @include tablet-width() {
+    position: relative;
+    z-index: 20;
+  }
 }

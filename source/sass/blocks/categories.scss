@@ -48,7 +48,7 @@
 
 .categories__item {
   min-height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   background-color: $bg-color-second;
 
@@ -80,7 +80,7 @@
 }
 
 .categories__item-container {
-  padding: 31px 20px 22px;
+  padding: 25px 20px 22px;
   margin: auto;
 
   @include tablet-width() {
@@ -111,8 +111,8 @@
   font-weight: normal;
   text-transform: uppercase;
 
-   &::before {
-     @include categories-icon(50px);
+  &::before {
+    @include categories-icon(50px);
 
     left: 0;
     top: 0;
@@ -141,14 +141,12 @@
 
 .categories__description {
   font-family: $font-text;
-  margin: 30px 0 0;
+  margin: 23px 0 0;
   padding-bottom: 23px;
 
   border-bottom: 1px solid $border-color-var-second;
 
   @include tablet-width() {
-    margin-top: 23px;
-
     border-bottom: none;
   }
 
