@@ -1,13 +1,30 @@
 /*  Живой пример  */
 
-.living-example__info-container {
-  @include container(320px, 20px);
+.living-example {
+  background-color: $bg-color-second;
+
+  @include tablet-width() {
+    //background-image: linear-gradient($bg-color-base 57.43%, $bg-color-second 57.43%);
+    background-color: $bg-color-base;
+  }
 }
 
-.living-example {
-  padding: 17px 0 36px;
+.living-example__info-container {
+  @include container(320px, 20px);
+  padding-top: 16px;
+  padding-bottom: 35px;
 
-  background-color: $bg-color-second;
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+    padding-top: 44px;
+  }
+}
+
+.living-example__info-wrapper {
+  @include tablet-width() {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .living-example__title {
@@ -15,28 +32,74 @@
 
   @include font-options(inherit, 36px, 60px, $header-color);
   font-weight: 400;
+
+  @include tablet-width() {
+    font-size: 60px;
+  }
 }
 
 .living-example__text {
   margin: 25px 0;
 
   @include font-options($font-text, 14px, 18px, inherit);
+
+  @include tablet-width() {
+    margin-top: 64px;
+    margin-bottom: 53px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .living-example__widgets {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include tablet-width() {
+    width: 51.83%;
+  }
 }
 
 .living-example__attention {
   display: block;
 
-  margin: 9px 0;
+  margin: 9px 0 0;
   padding: 0 20px;
 
   @include font-options(inherit, 14px, 20px, $header-color);
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+
+  @include tablet-width() {
+    width: 192px;
+    margin: auto;
+    margin-top: 12px;
+    margin-right: 0;
+    padding: 0;
+
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+.living-example__food-expenses {
+  @include tablet-width() {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-top: 9px;
+  }
+}
+
+.living-example__cat-slider {
+  padding-bottom: 35px;
+
+  @include tablet-width() {
+    margin-top: 75px; //67px;
+    //padding-top: 8px;
+    //padding-bottom: 68px;
+  }
 }
