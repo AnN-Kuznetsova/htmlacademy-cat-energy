@@ -2,8 +2,10 @@
 $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px;
+$slider-total-height: 631px; // высота слайдера
+$slider-width: 320px; // ширина слайдов
+$slider-height: 240px; // высота слайдов
 $slider-rate: 50%;  //  процент смены кадров слайдера
-//$slider-width:
 
 .slider__container {
   //@include container(320px, 0);
@@ -12,10 +14,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
 .slider__list {
   @include list-style-none();
-
-  @include tablet-width() {
-    //margin-bottom: -102px;
-  }
 }
 
 .slider__item {
@@ -23,47 +21,52 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   width: 100%;
 
-  overflow: hidden;
-
   @include tablet-width() {
     display: block;
     position: relative;
 
-    height: 631px;
-
     &--before {
       z-index: 10;
-
-      width: $slider-rate; //50%;
-
-      background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
     }
 
     &--after {
       z-index: 1;
 
-      margin-top: -631px;
-
-      background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
+      margin-top: -$slider-total-height;
     }
   }
 }
 
+.slider__item-inner {
+  height: $slider-total-height;
+
+  &--before {
+    width: $slider-rate;
+
+    background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
+    overflow: hidden;
+  }
+
+  &--after {
+    background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
+  }
+}
+
 .slider__photo-wrapper {
-  width: 320px;
-  height: 240px;
+  width: $slider-width;
+  height: $slider-height;
   margin: 0 auto;
 
   @include tablet-width() {
-    width: 690px;
-    height: 517px;
+    $slider-width: 690px;
+    $slider-height: 517px;
+    width: $slider-width;
+    height: $slider-height;
 
     &--before {
       position: relative;
-      left: 100%;
-      transform: translateX(-$slider-rate); //translateX(-50%);
-      //$distanse: 50%;//690px;// * $slider-rate;
-      //transform: translateX(-50%);
+      left: 50vw;
+      transform: translateX(-50%);
     }
   }
 }
@@ -71,8 +74,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 .slider__photo {
   display: block;
 
-  width: 100%;
-  height: auto;
+  width: auto; //100%;
+  height: 100%; //auto;
 
   object-fit: contain;
 
