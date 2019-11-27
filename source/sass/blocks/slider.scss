@@ -38,17 +38,20 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__item-inner {
-  height: $slider-total-height;
 
-  &--before {
-    width: $slider-rate;
+  @include tablet-width() {
+    height: $slider-total-height;
 
-    background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
-    overflow: hidden;
-  }
+    &--before {
+      width: $slider-rate;
 
-  &--after {
-    background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
+      background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
+      overflow: hidden;
+    }
+
+    &--after {
+      background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
+    }
   }
 }
 
@@ -84,6 +87,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 }
 
+//  Контроллеры
+
 .slider__controls {
   display: flex;
 
@@ -101,7 +106,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   width: 50%;
 
-  //@include custom-radio($radio-width);
   @include custom-choice($radio-width);
 
   &::before {
@@ -131,20 +135,12 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 //  фокус
 .slider__toggle:first-of-type:focus ~ .slider__controls .slider__label:first-child,
 .slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label:nth-child(2) {
-  //@include custom-radio--focus();
   @include custom-choice--focus();
 }
 
 //  активный
 .slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child,
 .slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2) {
-  //@include custom-radio--checked($radio-width);
-
-  /* &::after {
-    width: ($radio-width - $radio-width / 8);
-    height: ($radio-height / 2);
-    border-radius: ($radio-height / 4);
-  } */
 
   &::after {
     position: absolute;
