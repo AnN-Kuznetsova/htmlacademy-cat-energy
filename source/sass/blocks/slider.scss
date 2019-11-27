@@ -2,6 +2,8 @@
 $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px;
+$slider-rate: 50%;  //  процент смены кадров слайдера
+//$slider-width:
 
 .slider__container {
   //@include container(320px, 0);
@@ -14,8 +16,6 @@ $slider-controls-width: 280px;
   @include tablet-width() {
     //margin-bottom: -102px;
   }
-
-  outline: 1px solid green;
 }
 
 .slider__item {
@@ -26,15 +26,24 @@ $slider-controls-width: 280px;
   overflow: hidden;
 
   @include tablet-width() {
+    display: block;
+    position: relative;
+
     height: 631px;
 
     &--before {
-      width: 50%;
+      z-index: 10;
+
+      width: $slider-rate; //50%;
 
       background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
     }
 
     &--after {
+      z-index: 1;
+
+      margin-top: -631px;
+
       background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
     }
   }
@@ -42,17 +51,19 @@ $slider-controls-width: 280px;
 
 .slider__photo-wrapper {
   width: 320px;
+  height: 240px;
   margin: 0 auto;
-
-  outline: 1px solid red;
 
   @include tablet-width() {
     width: 690px;
+    height: 517px;
 
     &--before {
       position: relative;
       left: 100%;
-      transform: translateX(-50%);
+      transform: translateX(-$slider-rate); //translateX(-50%);
+      //$distanse: 50%;//690px;// * $slider-rate;
+      //transform: translateX(-50%);
     }
   }
 }
@@ -62,6 +73,8 @@ $slider-controls-width: 280px;
 
   width: 100%;
   height: auto;
+
+  object-fit: contain;
 
   @include tablet-width() {
     transform: translateX(7px);
