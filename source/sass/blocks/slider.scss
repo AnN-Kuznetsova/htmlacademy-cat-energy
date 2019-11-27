@@ -131,19 +131,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     border-right: none;
   }
 
-  //  неактивный
-  &:first-child {
-    padding-left: 0;
-    padding-right: $radio-width + 18px;
-
-    text-align: right;
-  }
-
-  &:nth-child(2)::before {
-    left: 0;
-    transform: rotate(180deg) translateY(50%);
-  }
-
   @include tablet-width() {
     width: auto;
     height: 25px;
@@ -152,10 +139,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     border-bottom: 1px dotted rgba($header-color, 0.23);
 
-    &:first-child {
-      padding-right: 0;
-    }
-
     &::before,
     &::after {
       display: none;
@@ -163,15 +146,34 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 }
 
+//  неактивный
+.slider__label--before {
+  padding-left: 0;
+  padding-right: $radio-width + 18px;
+
+  text-align: right;
+
+  @include tablet-width() {
+    padding-right: 0;
+  }
+}
+
+.slider__label--after {
+  &::before {
+    left: 0;
+    transform: rotate(180deg) translateY(50%);
+  }
+}
+
 //  фокус
-.slider__toggle:first-of-type:focus ~ .slider__controls .slider__label:first-child,
-.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label:nth-child(2) {
+.slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before,
+.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after {
   @include custom-choice--focus();
 }
 
 //  активный
-.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child,
-.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2) {
+.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label--before,
+.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label--after {
 
   &::after {
     position: absolute;
@@ -189,20 +191,32 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 }
 
-.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label:first-child::after {
+.slider__toggle:first-of-type:checked ~ .slider__controls .slider__label--before::after {
   left: ($slider-controls-width / 2);
   transform: translate(-100%, -50%);
 }
 
-.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label:nth-child(2)::after {
+.slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label--after::after {
   left: 0;
   transform: translate(0, -50%);
 }
 
-.slider__toggle:first-of-type:checked ~ .slider__list .slider__item:first-child,
-.slider__toggle:nth-of-type(2):checked ~ .slider__list .slider__item:nth-child(2) {
+.slider__toggle:first-of-type:checked ~ .slider__list .slider__item--before,
+.slider__toggle:nth-of-type(2):checked ~ .slider__list .slider__item--after {
   display: block;
 }
+
+/* .slider__toggle:first-of-type:checked {
+  @include tablet-width() {
+    $slider-rate: 100%;
+  }
+}
+
+.slider__toggle:nth-of-type(2):checked {
+  @include tablet-width() {
+    $slider-rate: 0%;
+  }
+} */
 
 
 /*  range  */
@@ -214,6 +228,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     display: block;
 
     width: 428px;
-    margin: 0 20px;
+    margin: 0 23px;
   }
 }
