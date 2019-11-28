@@ -10,7 +10,13 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 .slider {
   @include tablet-width() {
     background-image:
-      linear-gradient(to bottom, $bg-color-base 26.8%, rgba($bg-color-base, 0) 26.8%),
+      linear-gradient(to bottom, $bg-color-base 170px, rgba($bg-color-base, 0) 170px),
+      linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%);
+  }
+
+  @include desktop-width() {
+    background-image:
+      linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px),
       linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%);
   }
 }
@@ -31,9 +37,10 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     justify-content: center;
   }
 
- /*  @include desktop-width() {
-    width: 690px;
-  } */
+  @include desktop-width() {
+    width: 690px; //$slider-width;
+    //height: $slider-height; //100%;
+  }
 }
 
 .slider__item {
@@ -67,14 +74,30 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     &--before {
       width: $slider-rate;
 
-      background-image: linear-gradient($bg-color-base 26.8%, $bg-color-second 26.8%);
+      background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
       overflow: hidden;
     }
 
     &--after {
-      background-image: linear-gradient($bg-color-base 26.8%, $bg-slider-after 26.8%);
+      background-image: linear-gradient($bg-color-base 170px, $bg-slider-after 170px);
     }
   }
+
+  @include desktop-width() {
+    //height: $slider-total-height;
+
+    &--before {
+      //width: $slider-rate;
+
+      background-image: linear-gradient($bg-color-base 190px, $bg-color-second 190px);
+      //overflow: hidden;
+    }
+
+    &--after {
+      background-image: linear-gradient($bg-color-base 190px, $bg-slider-after 190px);
+    }
+  }
+
 
   outline: 2px solid orange;
 }
@@ -103,6 +126,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include tablet-width() {
     transform: translateX(7px);
   }
+
+  @include desktop-width() {
+    transform: translateX(0);
+
+  }
 }
 
 //  Контроллеры
@@ -129,6 +157,14 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     font-size: 20px;
 
     //overflow: visible;
+  }
+
+  @include desktop-width() {
+    justify-content: space-between;
+
+    margin-top: -78px;
+    margin-left: 80px;
+    margin-right: 40px;
   }
 }
 
