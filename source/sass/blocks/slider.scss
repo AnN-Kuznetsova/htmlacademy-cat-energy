@@ -15,9 +15,10 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    background-image:
-      linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px),
-      linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%);
+    display: flex;
+
+    background-color: $bg-color-second;
+    background-image: linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px);
   }
 }
 
@@ -26,6 +27,15 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include tablet-width() {
     height: $slider-total-height;
+  }
+
+  @include desktop-width() {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    width: 690px;
+    height: auto;
   }
 }
 
@@ -40,6 +50,9 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include desktop-width() {
     width: 650px; //690px;
     margin-left: 40px;
+
+    display: flex;
+    height: auto;
   }
 }
 
@@ -64,18 +77,18 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
       transform: translateX(-50%);
     }
   }
+
+  @include desktop-width() {
+    display: flex;
+  }
 }
 
 .slider__item-inner {
-
   @include tablet-width() {
     height: $slider-total-height;
 
     &--before {
-      //width: $slider-rate;
-
       background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
-      //overflow: hidden;
     }
 
     &--after {
@@ -90,6 +103,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
+    height: auto;
+
     &--before {
       background-image: linear-gradient($bg-color-base 190px, $bg-color-second 190px);
     }
@@ -99,8 +114,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     }
   }
 
-
-  outline: 2px solid orange;
+  //outline: 2px solid orange;
 }
 
 .slider__photo-wrapper {
@@ -132,8 +146,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
       margin: 0;
       margin-left: -20px;
-      //transform: translateX($slider-rate);
-      //transform: translateX($slider-rate + 40px);
     }
   }
 }
@@ -147,23 +159,13 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   object-fit: contain;
 
   @include tablet-width() {
-    //position: relative;
     transform: translateX(7px);
   }
 
   @include desktop-width() {
     width: 690px;
-    /* left: 0;
-    object-fit: none; */
+
     transform: translateX(0);
-
-    /* &--before {
-      transform: translateX(-40px);
-    }
-
-    &--after {
-      transform: translateX(-20px);
-    } */
   }
 }
 
@@ -195,10 +197,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 652px;
 
-    margin-top: -78px;
-    margin-left: 80px;
-    margin-right: 40px;
+    transform: translateX(calc(-50% + 20px));
   }
 }
 

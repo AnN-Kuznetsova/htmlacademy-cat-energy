@@ -1,5 +1,7 @@
 /*  Живой пример  */
 
+//$slider-rate: 70%;  //  процент смены кадров слайдера
+
 .living-example {
   background-color: $bg-color-second;
 
@@ -14,6 +16,7 @@
     background-image:
       linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px),
       linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%);
+      //linear-gradient(to right, $bg-color-second $slider-rate, $bg-slider-after $slider-rate);
   }
 }
 
@@ -39,7 +42,7 @@
     padding: 55px 135px 72px 40px;
   }
 
-  outline: 1px solid red;
+  //outline: 1px solid red;
 }
 
 .living-example__info-wrapper {
@@ -148,5 +151,5 @@
     padding: 0;
   }
 
-  outline: 1px solid green;
+  //outline: 1px solid green;
 }
