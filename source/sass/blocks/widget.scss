@@ -54,4 +54,8 @@
 
     background-color: $bg-color-base;
   }
+
+  @include desktop-width() {
+    background-color: $bg-color-second;
+  }
 }

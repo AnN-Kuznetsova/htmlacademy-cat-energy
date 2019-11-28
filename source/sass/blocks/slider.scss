@@ -38,7 +38,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    width: 690px;
+    width: 650px; //690px;
+    margin-left: 40px;
   }
 }
 
@@ -108,15 +109,31 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   margin: 0 auto;
 
   @include tablet-width() {
+    position: relative;
     $slider-width: 690px;
     $slider-height: 517px;
     width: $slider-width;
     height: $slider-height;
 
     &--after {
-      position: relative;
       right: $slider-width;
       transform: translateX($slider-rate);
+    }
+  }
+
+  @include desktop-width() {
+    $slider-width: 690px; //650px;
+    width: $slider-width;
+    margin: 0;
+    margin-left: -40px;
+
+    &--after {
+      right: $slider-width;
+
+      margin: 0;
+      margin-left: -20px;
+      //transform: translateX($slider-rate);
+      //transform: translateX($slider-rate + 40px);
     }
   }
 }
@@ -130,12 +147,23 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   object-fit: contain;
 
   @include tablet-width() {
+    //position: relative;
     transform: translateX(7px);
   }
 
   @include desktop-width() {
+    width: 690px;
+    /* left: 0;
+    object-fit: none; */
     transform: translateX(0);
 
+    /* &--before {
+      transform: translateX(-40px);
+    }
+
+    &--after {
+      transform: translateX(-20px);
+    } */
   }
 }
 

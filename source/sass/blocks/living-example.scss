@@ -12,10 +12,8 @@
     justify-content: center;
 
     background-image:
-      /* linear-gradient(to bottom, $bg-color-base 26.8%, rgba($bg-color-base, 0) 26.8%),
-      linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%); */
       linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px),
-      linear-gradient(to right, $bg-color-second 50%, red 50%);
+      linear-gradient(to right, $bg-color-second 50%, $bg-slider-after 50%);
   }
 }
 
