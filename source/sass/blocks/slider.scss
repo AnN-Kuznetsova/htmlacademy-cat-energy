@@ -38,8 +38,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    width: 690px; //$slider-width;
-    //height: $slider-height; //100%;
+    width: 690px;
   }
 }
 
@@ -53,13 +52,13 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     position: relative;
 
     &--before {
-      z-index: 10;
+      z-index: 1; //10;
 
       transform: translateX(50%);
     }
 
     &--after {
-      z-index: 1;
+      z-index: 10; //1;
 
       transform: translateX(-50%);
     }
@@ -72,25 +71,26 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     height: $slider-total-height;
 
     &--before {
-      width: $slider-rate;
+      //width: $slider-rate;
 
       background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
-      overflow: hidden;
+      //overflow: hidden;
     }
 
     &--after {
+      width: $slider-rate;
+      overflow: hidden;
+      position: relative;
+      right: -100%;
+      transform: translateX(-100%);
+
       background-image: linear-gradient($bg-color-base 170px, $bg-slider-after 170px);
     }
   }
 
   @include desktop-width() {
-    //height: $slider-total-height;
-
     &--before {
-      //width: $slider-rate;
-
       background-image: linear-gradient($bg-color-base 190px, $bg-color-second 190px);
-      //overflow: hidden;
     }
 
     &--after {
@@ -112,6 +112,12 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     $slider-height: 517px;
     width: $slider-width;
     height: $slider-height;
+
+    &--after {
+      position: relative;
+      right: $slider-width;
+      transform: translateX($slider-rate);
+    }
   }
 }
 
