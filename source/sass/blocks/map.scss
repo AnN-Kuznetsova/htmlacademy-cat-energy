@@ -1,9 +1,17 @@
 /*  Карта  */
 
-$map-height: 362px;
+  $map-height: 362px;
+
+/* @include tablet-width() {
+  $map-height: 400px;
+} */
 
 .map__container {
   @include container(320px, 0);
+
+  @include tablet-width() {
+    @include container($tablet-width, 0);
+  }
 }
 
 .map {
@@ -13,6 +21,11 @@ $map-height: 362px;
 
   background-color: #e5e5e5;
   overflow: hidden;
+
+  @include tablet-width() {
+    $map-height: 400px;
+    height: $map-height;
+  }
 }
 
 .map-wrapper {
@@ -44,6 +57,7 @@ $map-height: 362px;
 
 .map__image {
   $map-image-height: 400px;
+
   $translateY-var: (($map-image-height - $map-height) / 2);
 
   display: block;
@@ -53,6 +67,15 @@ $map-height: 362px;
   margin: 0 auto;
 
   transform: translateY(-$translateY-var);
+
+  @include tablet-width() {
+    $map-height: 400px;
+    $translateY-var: (($map-image-height - $map-height) / 2);
+
+    width: $tablet-width;
+
+    transform: translateY(-$translateY-var);
+  }
 }
 
 .map__interactive {
@@ -67,4 +90,11 @@ $map-height: 362px;
   height: $interactive-height;
 
   transform: translate(-50%, -$translateY-var);
+
+  @include tablet-width() {
+    $map-height: 400px;
+    $translateY-var: (($interactive-height - $map-height) / 2);
+
+    transform: translate(-50%, -$translateY-var);
+  }
 }

@@ -18,6 +18,12 @@
 
   padding-top: 29px;
   padding-bottom: 24px;
+
+  @include tablet-width() {
+    @include container($tablet-width, 71px);
+    padding-top: 63px;
+    padding-bottom: 58px;
+  }
 }
 
 .contacts-info__intro {
@@ -29,6 +35,13 @@
   @include font-options(inherit, 16px, 20px, $header-color);
   font-weight: 400;
   text-transform: uppercase;
+
+  @include tablet-width() {
+    margin: auto 0;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .contacts-info__content {
@@ -39,4 +52,20 @@
   margin: 0;
 
   @include font-options($font-text, 14px, 20px, inherit);
+
+  @include tablet-width() {
+    width: 170px;
+
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.contacts-info__spb {
+  @include tablet-width() {
+    display: inline-block;
+    vertical-align: baseline;
+
+    margin-top: 20px;
+  }
 }

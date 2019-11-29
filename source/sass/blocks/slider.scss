@@ -265,7 +265,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 //  активный
 .slider__toggle:first-of-type:checked ~ .slider__controls .slider__label--before,
 .slider__toggle:nth-of-type(2):checked ~ .slider__controls .slider__label--after {
-
   &::after {
     position: absolute;
     content: "";
