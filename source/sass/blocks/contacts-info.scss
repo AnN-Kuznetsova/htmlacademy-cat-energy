@@ -67,7 +67,7 @@
     text-align: right;
   }
 
-  @include tablet-width() {
+  @include desktop-width() {
     text-align: left;
   }
 }
