@@ -76,6 +76,10 @@
 
     transform: translateY(-$translateY-var);
   }
+
+  @include desktop-width() {
+    width: 1440px;
+  }
 }
 
 .map__interactive {
@@ -96,5 +100,9 @@
     $translateY-var: (($interactive-height - $map-height) / 2);
 
     transform: translate(-50%, -$translateY-var);
+  }
+
+  @include desktop-width() {
+    //left: 75%;
   }
 }

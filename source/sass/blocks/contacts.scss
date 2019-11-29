@@ -1,1 +1,35 @@
 /*  Контакты  */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-width() {
+    height: 400px;
+
+    overflow: hidden;
+  }
+}
+
+.contacts__info {
+  order: -1;
+
+  @include desktop-width() {
+    order: 2;
+    position: relative;
+    z-index: 10;
+    top: -100%;
+    left: 50%;
+
+    width: 570px;
+
+    transform: translateX(calc(-100% - 40px)) translateY(calc(50% - 5px));
+  }
+}
+
+.contacts__map {
+  @include desktop-width() {
+    min-height: 400px;
+  }
+}
+

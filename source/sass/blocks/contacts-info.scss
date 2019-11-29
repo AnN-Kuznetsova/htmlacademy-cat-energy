@@ -24,6 +24,13 @@
     padding-top: 63px;
     padding-bottom: 58px;
   }
+
+  @include desktop-width() {
+    min-width: 57px;
+    width: 570px;
+    padding: 63px 74px 58px 76px;
+    margin: 0;
+  }
 }
 
 .contacts-info__intro {
@@ -58,6 +65,10 @@
 
     font-size: 16px;
     text-align: right;
+  }
+
+  @include tablet-width() {
+    text-align: left;
   }
 }
 
