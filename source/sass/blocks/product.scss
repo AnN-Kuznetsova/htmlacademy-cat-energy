@@ -2,10 +2,10 @@
 
 .product {
   @include tablet-width() {
-    //padding-bottom: 40px;
     padding: 0 37px 40px;
 
-    background-image: linear-gradient(to bottom, $bg-color-base 82px, $bg-color-second 82px);
+    //background-image: linear-gradient(to bottom, $bg-color-base 82px, $bg-color-second 82px);
+    background-color: $bg-color-second;
 
     outline: 1px solid red;
   }
@@ -22,8 +22,8 @@
 
 .product__info-wrapper {
   @include tablet-width() {
-    //padding: 39px 37px 34px;
-    padding: 39px 0 35px;
+    //padding: 39px 0 35px;
+    padding: 0 0 34px;
   }
 }
 
@@ -38,7 +38,7 @@
 
   @include tablet-width() {
     padding: 0 50px;
-    margin-top: 0;
+    margin-top: -45px;
     margin-bottom: 19px;
 
     font-size: 20px;
@@ -62,9 +62,10 @@
     width: 324px;
     height: 208px;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-83px);
 
     outline: 2px solid green;
+    opacity: 0.3;
   }
 }
 

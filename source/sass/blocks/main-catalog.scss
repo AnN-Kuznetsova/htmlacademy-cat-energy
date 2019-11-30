@@ -23,8 +23,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    margin-top: 81px;
   }
 }
 
@@ -42,7 +40,8 @@
   @include tablet-width() {
     width: 324px;
     padding: 0;
-    margin: 0 $tablet-padding 57px;
+    //margin: 0 $tablet-padding 57px;
+    margin: 140px $tablet-padding 0;
 
     &::after {
       height: 0;
