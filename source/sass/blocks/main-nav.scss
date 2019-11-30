@@ -45,7 +45,9 @@
   border-bottom: 2px solid $bg-color-third;
 
   @media (min-width: $desktop-width) {
-    border-color: $text-second-color;
+    &--index {
+      border-color: $text-second-color;
+    }
   }
 }
 
@@ -80,7 +82,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include font-options($font-base, 20px, 24.86px, $text-second-color);
+    font-size: 20px;
+
+    &--index {
+      color: $text-second-color;
+    }
   }
 }
 
