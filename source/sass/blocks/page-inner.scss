@@ -3,6 +3,11 @@
 .page-inner__container {
   @include container(320px, 20px);
   padding-top: 15px;
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+    padding-top: 53px;
+  }
 }
 
 .page-inner__title {
@@ -10,4 +15,8 @@
 
   @include font-options(inherit, 36px, 60px, $header-color);
   font-weight: normal;
+
+  @include tablet-width() {
+    font-size: 60px;
+  }
 }

@@ -15,14 +15,14 @@
     55px 59px,
     280px 289px;
   background-position:
-    center 65px,
+    center 66px,
     center center;
   border-top: 1px solid transparent;
 }
 
 .catalog-promo__description {
   width: 170px;
-  margin: 186px auto 0;
+  margin: 187px auto 0;
 
   @include font-options($font-text, 16px, 20px, $text-second-color);
   text-align: center;
