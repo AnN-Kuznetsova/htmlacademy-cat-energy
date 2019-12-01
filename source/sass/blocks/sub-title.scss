@@ -1,6 +1,15 @@
 /*  sub-title  */
 
 .sub-title {
+  margin: 0;
+
   @include font-options(inherit, 24px, 24px, $header-color);
   font-weight: normal;
+
+  @include tablet-width() {
+    padding: 0 38px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
