@@ -2,6 +2,10 @@
 
 .main-catalog {
   margin-top: 29px;
+
+  @include desktop-width() {
+    margin-top: 23px;
+  }
 }
 
 .main-catalog__container {
@@ -40,7 +44,6 @@
   @include tablet-width() {
     width: 324px;
     padding: 0;
-    //margin: 0 $tablet-padding 57px;
     margin: 140px $tablet-padding 0;
 
     &::after {
@@ -49,5 +52,10 @@
 
       border: none;
     }
+  }
+
+  @include desktop-width() {
+    width: 245px;
+    margin: 143px $desktop-padding 0;
   }
 }

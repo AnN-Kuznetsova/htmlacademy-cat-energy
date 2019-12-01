@@ -14,7 +14,7 @@ body {
   min-width: 320px;
   //width: 320px;
   //width: $tablet-width;
-  //width: $desktop-width;
+  width: $desktop-width;
 
   @include font-options($font-base, 14px, 18px, $text-base-color);
   font-weight: normal;

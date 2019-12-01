@@ -4,7 +4,6 @@
   @include tablet-width() {
     padding: 0 37px 40px;
 
-    //background-image: linear-gradient(to bottom, $bg-color-base 82px, $bg-color-second 82px);
     background-color: $bg-color-second;
 
     outline: 1px solid red;
@@ -22,7 +21,6 @@
 
 .product__info-wrapper {
   @include tablet-width() {
-    //padding: 39px 0 35px;
     padding: 0 0 34px;
   }
 }
@@ -43,6 +41,10 @@
 
     font-size: 20px;
     text-align: center;
+  }
+
+  @include desktop-width() {
+    padding: 0 20px;
   }
 }
 
@@ -66,6 +68,11 @@
 
     outline: 2px solid green;
     opacity: 0.3;
+  }
+
+  @include desktop-width() {
+    width: 245px;
+    height: 208px;
   }
 }
 

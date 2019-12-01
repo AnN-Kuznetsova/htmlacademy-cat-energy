@@ -8,6 +8,11 @@
     @include container($tablet-width, $tablet-padding);
     padding-top: 53px;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 69px;
+  }
 }
 
 .page-inner__title {
