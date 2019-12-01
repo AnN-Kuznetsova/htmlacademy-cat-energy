@@ -18,14 +18,15 @@ $input-height: 45px;  //  высота инпутов
 }
 
 .form-fieldset__legend {
-  display: block;
+  margin-bottom: 33px;
+
+  /* display: block;
 
   margin: 0;
-  margin-bottom: 33px;
 
   @include font-options(inherit, 24px, 24px, $header-color);
   font-weight: 400;
-  text-transform: none;
+  text-transform: none; */
 
   //outline: 3px solid green;
 }

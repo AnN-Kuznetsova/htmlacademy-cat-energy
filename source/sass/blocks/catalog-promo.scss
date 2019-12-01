@@ -30,6 +30,20 @@
       14% 65px,
       center center;
   }
+
+  @include desktop-width() {
+    padding: 187px 40px 40px;
+
+    background-image:
+      url("../img/icon-gift.svg"),
+      url("../img/gift-photo-desktop@1x.jpg");
+    background-size:
+      55px 60px,
+      245px 289px;
+    background-position:
+      center 65px,
+      center center;
+  }
 }
 
 .catalog-promo__description {
@@ -40,5 +54,9 @@
 
   @include tablet-width() {
     text-align: left;
+  }
+
+  @include desktop-width() {
+    text-align: center;
   }
 }

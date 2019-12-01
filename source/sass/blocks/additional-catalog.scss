@@ -10,19 +10,43 @@
     padding-top: 66px;
     padding-bottom: 75px;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 75px;
+    padding-bottom: 86px;
+  }
+}
+
+.additional-catalog__wrapper {
+  margin-top: 33px;
+
+  @include tablet-width() {
+    margin-top: 79px;
+  }
+
+  @include desktop-width() {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-catalog__list {
   @include list-style-none();
 
-  margin-top: 33px;
+  margin: 0;
 
   @include tablet-width() {
-    margin-top: 79px;
 
     border: 1px solid $border-color-var;
     border-top: none;
     border-bottom: none;
+  }
+
+  @include desktop-width() {
+    width: 73.36%;
+
+    border: none;
   }
 }
 
@@ -45,5 +69,10 @@
 
   @include tablet-width() {
     margin-top: 70px;
+  }
+
+  @include desktop-width() {
+    width: 20.08%;
+    margin: 0;
   }
 }
