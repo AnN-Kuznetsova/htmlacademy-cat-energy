@@ -12,9 +12,23 @@
 }
 
 @mixin container($container-width: 320px, $container-padding: 20px) {
+  min-width: $container-width;
+  max-width: 1300px;
+  //width: $container-width;
   margin: 0 auto;
-  width: $container-width;
   padding: 0 $container-padding;
+}
+
+@mixin tablet-width() {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-width() {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
 }
 
 @mixin list-style-none() {
@@ -31,6 +45,22 @@
   color: $font-color;
 }
 
+// серые бордеры
+@mixin decorative-border($box-width: 100vw, $box-height: 0, $border-width: 1px, $border-color: $border-color-var, $border-side: "bottom") {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+
+    width: $box-width;
+    min-width: 320px;
+    height: $box-height;
+
+    //border-bottom: $border-width solid $border-color;
+    border-#{$border-side}: $border-width solid $border-color;
+    transform: translateX(-50%);
+  }
+}
 
 /*  Кастомные поля выбора   */
 /*  РАДИОКНОПКИ И ЧЕКБОКСЫ  */

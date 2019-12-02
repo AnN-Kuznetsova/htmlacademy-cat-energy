@@ -5,7 +5,8 @@
 
   padding: 10px 20px;
 
-  @include font-options(inherit, 16px, 20px, $btn-text-color-base);
+  @include font-options($font-base, 16px, 20px, $btn-text-color-base);
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
 
@@ -39,5 +40,11 @@
   &--grey:active {
     background-color: $btn-color-second-active;
     color: $btn-text-color-second-active;
+  }
+
+  @media (min-width: $tablet-width) {
+    /* padding: 15px 27px;
+
+    @include font-options($font-base, 20px, 20px, $btn-text-color-base); */
   }
 }

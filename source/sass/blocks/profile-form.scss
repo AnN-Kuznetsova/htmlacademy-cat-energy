@@ -16,7 +16,12 @@
   //outline: 1px solid green;
 }
 
+.profile-form__cat-details {
+  margin-top: 25px;
+}
+
 .profile-form__program-select {
+  margin-top: 25px;
   border: 1px solid $border-color-third;
 }
 
@@ -25,7 +30,7 @@
 }
 
 .profile-form__comment {
-  margin-top: 4px;
+  margin-top: 30px;
 }
 
 .profile-form__additionally {
@@ -34,7 +39,7 @@
 
 .profile-form__button {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 36px;
 }
 
 .profile-form__required {

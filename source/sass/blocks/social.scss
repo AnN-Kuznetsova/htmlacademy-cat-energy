@@ -11,6 +11,10 @@
     border-top: 1px solid $border-color-var-second;
     border-bottom: 1px solid $border-color-var-second;
   }
+
+  @include tablet-width() {
+    border: none;
+  }
 }
 
 .social__item {
@@ -22,6 +26,11 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include tablet-width() {
+    //margin-top: 50px;
+    margin: auto 7px;
   }
 }
 
@@ -48,4 +57,22 @@
 .social__image {
   fill: $social-color-base;
   pointer-events: none;
+
+  @include tablet-width() {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+      margin-left: -12px;
+    }
+  }
 }

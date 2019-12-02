@@ -1,11 +1,45 @@
 /*  page-header  */
 
-.page-header__logo-wrapper {
-  border-bottom: 1px solid $border-color-var;
+.page-header {
+  @include tablet-width() {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* @include desktop-width() {
+    background-color: $bg-color-third;
+    background-image:
+      linear-gradient(to left, $bg-color-promo 50%, $bg-color-base 50%);
+    background-position:
+      center top;
+  } */
 }
 
 .page-header__container {
   @include container(320px, 20px);
+
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding);
+    padding-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 55px;
+  }
+}
+
+.page-header__logo-wrapper {
+  @include decorative-border();
+
+  @include tablet-width() {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .page-header__logo {
@@ -16,5 +50,7 @@
 
   outline: none;
 
-  //border-bottom: 1px solid $border-color-var;
+  @include tablet-width() {
+    padding: 0;
+  }
 }

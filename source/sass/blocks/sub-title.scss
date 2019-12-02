@@ -1,6 +1,22 @@
 /*  sub-title  */
 
 .sub-title {
+  display: block;
+
+  margin: 0;
+
   @include font-options(inherit, 24px, 24px, $header-color);
   font-weight: normal;
+  text-transform: none;
+
+  @include tablet-width() {
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include desktop-width() {
+    padding-left: 0;
+  }
 }

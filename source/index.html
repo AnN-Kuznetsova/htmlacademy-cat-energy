@@ -9,37 +9,39 @@
   <body>
     <!--  Шапка  -->
     <header class="page-header">
+      <div class="page-header__container">
 
-      <!-- Логотип -->
-      <div class="page-header__logo-wrapper">
-        <div class="page-header__container">
-          <a class="page-header__logo  logo">
-            <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
-          </a>
+        <!-- Логотип -->
+        <div class="page-header__logo-wrapper">
+          <!-- <div class="page-header__container"> -->
+            <a class="page-header__logo  logo">
+              <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
+            </a>
+          <!-- </div> -->
         </div>
-      </div>
 
-      <!-- Главное меню -->
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active">
-            <a class="main-nav__link  main-nav__container">
-              <span class="main-nav__link-text">Главная</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__container" href="catalog.html">
-              <span class="main-nav__link-text">Каталог продукции</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link  main-nav__container" href="form.html">
-              <span class="main-nav__link-text">Подбор программы</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <!-- Главное меню -->
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--active">
+              <a class="main-nav__link  main-nav__link--index">
+                <span class="main-nav__link-text  main-nav__link-text--index">Главная</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--index" href="catalog.html">
+                <span class="main-nav__link-text  main-nav__link-text--index">Каталог продукции</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--index" href="form.html">
+                <span class="main-nav__link-text  main-nav__link-text--index">Подбор программы</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
@@ -61,18 +63,18 @@
         <div class="categories__container">
           <h2 class="visually-hidden">Категории питания</h2>
           <ul class="categories__list">
-            <li class="categories__item">
-              <div class="categories__item-container">
+            <li class="categories__item  categories__item--slim">
+              <div class="categories__item-container  categories__item-container--slim">
                 <h3 class="categories__title  categories__title--slim">Похудение</h3>
                 <p class="categories__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
                   Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
                 <a class="categories__link" href="slim.html">Каталог Slim</a>
               </div>
             </li>
-            <li class="categories__item">
-              <div class="categories__item-container">
+            <li class="categories__item  categories__item--pro">
+              <div class="categories__item-container  categories__item-container--pro">
                 <h3 class="categories__title  categories__title--pro">Набор массы</h3>
-                <p class="categories__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
+                <p class="categories__description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту
                   нарастить необходимые мышцы!</p>
                 <a class="categories__link" href="pro.html">Каталог Pro</a>
               </div>
@@ -87,10 +89,18 @@
           <h2 class="visually-hidden">Наши преимущества</h2>
           <p class="advantages__intro">Как это работает</p>
           <ul class="advantages__list">
-            <li class="advantages__item  advantages__item--leaf">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="advantages__item  advantages__item--water">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="advantages__item  advantages__item--cutlery">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="advantages__item  advantages__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="advantages__item  advantages__item--leaf">
+              <span class="advantages__item-info">Функциональное питание содержит только полезные питательные вещества.</span>
+            </li>
+            <li class="advantages__item  advantages__item--water">
+              <span class="advantages__item-info">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</span>
+            </li>
+            <li class="advantages__item  advantages__item--cutlery">
+              <span class="advantages__item-info">Замените один-два приема обычной еды на наше функциональное питание.</span>
+            </li>
+            <li class="advantages__item  advantages__item--clock">
+              <span class="advantages__item-info">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</span>
+            </li>
           </ul>
         </div>
       </section>
@@ -101,7 +111,7 @@
           <div class="living-example__info-wrapper">
             <h2 class="living-example__title">Живой пример</h2>
             <p class="living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без
-              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              изнуряющих тренировок! При этом он не менял своих привычек и по-&NoBreak;прежнему спит по 16 часов в день.</p>
             <div class="living-example__widgets">
               <p class="widget">
                 <span class="widget__value">5 кг</span>
@@ -112,7 +122,7 @@
                 <span class="widget__caption">затрачено времени</span>
               </p>
             </div>
-            <b class="living-example__attention">Затраты на питание: 15 000 руб.</b>
+            <b class="living-example__attention">Затраты на питание: <span class="living-example__food-expenses">15 000 руб.</span></b>
           </div>
         </div>
 
@@ -125,21 +135,31 @@
             <input class="slider__toggle visually-hidden" id="slim-cat-toggle" type="radio" name="toggle">
 
             <ul class="slider__list">
-              <li class="slider__item">
-                <div class="slider__photo-wrapper">
-                  <img class="slider__photo" src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография очень пухлого кота.">
+              <li class="slider__item  slider__item--before">
+                <div class="slider__item-inner  slider__item-inner--before">
+                  <div class="slider__photo-wrapper  slider__photo-wrapper--before">
+                    <img class="slider__photo" src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография очень пухлого кота.">
+                  </div>
                 </div>
               </li>
-              <li class="slider__item">
-                  <div class="slider__photo-wrapper">
+              <li class="slider__item  slider__item--after">
+                <div class="slider__item-inner  slider__item-inner--after">
+                  <div class="slider__photo-wrapper  slider__photo-wrapper--after">
                     <img class="slider__photo" src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография стройного кота.">
                   </div>
+                </div>
               </li>
             </ul>
 
             <div class="slider__controls">
-              <label class="slider__label" for="fat-cat-toggle">Было</label>
-              <label class="slider__label" for="slim-cat-toggle">Стало</label>
+              <label class="slider__label  slider__label--before" for="fat-cat-toggle">Было</label>
+              <div class="slider__range range">
+                <div class="range__bar"></div>
+                <button class="range__toggle" type="button">
+                  <span class="visually-hidden">Контроллер ползунка смены слайдов</span>
+                </button>
+              </div>
+              <label class="slider__label  slider__label--after" for="slim-cat-toggle">Стало</label>
             </div>
           </div>
         </section>
@@ -149,15 +169,6 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты и связь с нами</h2>
 
-        <!-- Контакты-инфо -->
-        <section class="contacts__info  contacts-info">
-          <div class="contacts-info__container">
-            <h3 class="visually-hidden">Контакты</h3>
-            <b class="contacts-info__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
-            <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-        </section>
-
         <!-- Карта -->
         <section class="contacts__map map">
           <div class="map__container">
@@ -165,8 +176,17 @@
             <div class="map__wrapper">
               <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Отображение адреса
               «Кэт энерджи» на карте.">
-              <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
+              <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
             </div>
+          </div>
+        </section>
+
+        <!-- Контакты-инфо -->
+        <section class="contacts__info  contacts-info">
+          <div class="contacts-info__container">
+            <h3 class="visually-hidden">Контакты</h3>
+            <b class="contacts-info__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+            <p class="contacts-info__content">ул. Большая Конюшенная, д. 19/8 <span class="contacts-info__spb">Санкт-Петербург</span></p>
           </div>
         </section>
       </section>
@@ -184,7 +204,7 @@
             <a class="social__btn  social__btn--vk" href="" target="_blank">
               <span class="visually-hidden">«Кэт энерджи» во Вконтакте.</span>
               <!-- <svg width="22" height="12"></svg> -->
-              <svg class="social__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social__image  social__image--vk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve" width="22" height="12">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                   c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
@@ -206,7 +226,7 @@
             <a class="social__btn  social__btn--instagram" href="" target="_blank">
               <span class="visually-hidden">«Кэт энерджи» в Инстаграме.</span>
               <!-- <svg width="16" height="16"></svg> -->
-              <svg class="social__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social__image  social__image--instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve" width="16" height="16">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,
                   1H11.8 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -220,7 +240,7 @@
             <a class="social__btn  social__btn--fb" href="" target="_blank">
               <span class="visually-hidden">«Кэт энерджи» в Фейсбуке.</span>
               <!-- <svg width="10" height="19"></svg> -->
-              <svg class="social__image" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg class="social__image  social__image--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve" width="10" height="19">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z
                   M3.1,18 h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,

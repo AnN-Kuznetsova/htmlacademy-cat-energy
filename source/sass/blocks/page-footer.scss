@@ -1,13 +1,25 @@
 /*  Подвал  */
 
-.page-footer__container {
-  @include container(320px, 20px);
+.page-footer {
+  background-color: $bg-color-second;
 }
 
-.page-footer {
-  /*display: flex;*/
+.page-footer__container {
+  @include container(320px, 20px);
 
-  background-color: $bg-color-second;
+  @include tablet-width() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include container($tablet-width, $tablet-padding);
+    min-height: 144px;
+  }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    min-height: 150px;
+  }
 }
 
 .page-footer__logo {
@@ -16,9 +28,28 @@
   padding-top: 9px;
 
   outline: none;
+
+  @include tablet-width() {
+    width: 162px;
+    min-height: auto;
+    margin: auto 0;
+    padding: 0;
+  }
 }
+
+/* .page-footer__social {
+  @include tablet-width() {
+    //margin: 0 auto;
+  }
+} */
 
 .page-footer__copyright {
   width: 100%;
   min-height: 80px;
+
+  @include tablet-width() {
+    width: 162px;
+    min-height: auto;
+    margin: auto 0;
+  }
 }

@@ -1,5 +1,10 @@
 /*  ПЕРЕМЕННЫЕ */
 
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$tablet-padding: 30px;
+$desktop-padding: 40px;
+
 /*  Шрифт  */
 $font-base: "Oswald", "Arial", sans-serif;
 $font-text: "Arial", sans-serif;
@@ -16,6 +21,8 @@ $bg-color-base: #ffffff;
 $bg-color-second: #f2f2f2;
 $bg-color-third: #68b738;
 $bg-color-promo: #64a83b;//#65a93c; //#63a73a;
+$bg-slider-after: #eaeaea;
+$bg-range: #dcdcdc;
 
 //  Кнопки
 //  основные

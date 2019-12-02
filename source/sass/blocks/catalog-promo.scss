@@ -1,8 +1,7 @@
 /*  catalog-promo  */
 
 .catalog-promo {
-  width: 280px;
-  height: 289px;
+  padding: 187px 55px 42px;
 
   background-color: $bg-color-promo;
   background-image:
@@ -15,15 +14,49 @@
     55px 59px,
     280px 289px;
   background-position:
-    center 65px,
+    center 66px,
     center center;
-  border-top: 1px solid transparent;
+
+  @include tablet-width() {
+    padding: 72px 120px 68px 59.75%;
+
+    background-image:
+      url("../img/icon-gift.svg"),
+      url("../img/gift-photo-tablet@1x.jpg");
+    background-size:
+      55px 60px,
+      708px 200px;
+    background-position:
+      14% 65px,
+      center center;
+  }
+
+  @include desktop-width() {
+    padding: 187px 40px 40px;
+
+    background-image:
+      url("../img/icon-gift.svg"),
+      url("../img/gift-photo-desktop@1x.jpg");
+    background-size:
+      55px 60px,
+      245px 289px;
+    background-position:
+      center 65px,
+      center center;
+  }
 }
 
 .catalog-promo__description {
-  width: 170px;
-  margin: 186px auto 0;
+  margin: 0;
 
   @include font-options($font-text, 16px, 20px, $text-second-color);
   text-align: center;
+
+  @include tablet-width() {
+    text-align: left;
+  }
+
+  @include desktop-width() {
+    text-align: center;
+  }
 }
