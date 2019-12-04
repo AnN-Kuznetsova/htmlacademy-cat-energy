@@ -6,6 +6,8 @@
 
 .page-footer__container {
   @include container(320px, 20px);
+  padding-top: 41px;
+  padding-bottom: 22px;
 
   @include tablet-width() {
     display: flex;
@@ -13,43 +15,35 @@
     justify-content: space-between;
 
     @include container($tablet-width, $tablet-padding);
-    min-height: 144px;
+    padding-top: 52px;
+    padding-bottom: 55px;
   }
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding);
-    min-height: 150px;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 }
 
 .page-footer__logo {
   width: 100%;
-  min-height: 95px;
-  padding-top: 9px;
+  margin-bottom: 31px;
 
   outline: none;
 
   @include tablet-width() {
     width: 162px;
-    min-height: auto;
     margin: auto 0;
-    padding: 0;
   }
 }
 
-/* .page-footer__social {
-  @include tablet-width() {
-    //margin: 0 auto;
-  }
-} */
-
 .page-footer__copyright {
   width: 100%;
-  min-height: 80px;
+  margin-top: 23px;
 
   @include tablet-width() {
     width: 162px;
-    min-height: auto;
     margin: auto 0;
   }
 }
