@@ -63,11 +63,11 @@
                 <legend class="visually-hidden">Данные о коте</legend>
                 <ul class="form-fieldset__list">
                   <li class="form-fieldset__item">
-                    <label class="form-fieldset__label" for="cat-name">Имя:<sup class="label-required">*</sup></label>
+                    <label class="form-fieldset__label" for="cat-name">Имя:<sup class="profile-form__label-required">*</sup></label>
                     <input class="form-fieldset__input" id="cat-name" type="text" name="cat-name" value="" placeholder="Барсик" required>
                   </li>
                   <li class="form-fieldset__item">
-                    <label class="form-fieldset__label" for="cat-weight">Вес (кг):<sup class="label-required">*</sup></label>
+                    <label class="form-fieldset__label" for="cat-weight">Вес (кг):<sup class="profile-form__label-required">*</sup></label>
                     <input class="form-fieldset__input" id="cat-weight" type="text" name="cat-weight" value="" placeholder="7" pattern="[0-9]{1,2}" required>
                   </li>
                   <li class="form-fieldset__item">
@@ -115,11 +115,11 @@
                 <legend class="form-fieldset__legend">Контактные данные (владельца&nbsp;кота)</legend>
                 <ul class="form-fieldset__list">
                   <li class="form-fieldset__item  form-fieldset__item--email">
-                    <label class="form-fieldset__label" for="owner-email">e-mail:<sup class="label-required">*</sup></label>
+                    <label class="form-fieldset__label" for="owner-email">e-mail:<sup class="profile-form__label-required">*</sup></label>
                     <input class="form-fieldset__input  form-fieldset__input--email" id="owner-email" type="email" name="owner-email" value="" placeholder="kuklachev@gmail.com" required>
                   </li>
                   <li class="form-fieldset__item  form-fieldset__item--tel">
-                    <label class="form-fieldset__label" for="owner-tel">Телефон:<sup class="label-required">*</sup></label>
+                    <label class="form-fieldset__label" for="owner-tel">Телефон:<sup class="profile-form__label-required">*</sup></label>
                     <input class="form-fieldset__input  form-fieldset__input--tel" id="owner-tel" type="tel" name="owner-tel" value="" placeholder="8 (960) 900-60-90" pattern="8 [(]{1}[0-9]{3}[)]{1} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                   </li>
                 </ul>
@@ -132,7 +132,7 @@
             <div class="profile-form__comment">
               <div class="form-fieldset">
                 <label class="form-fieldset__legend" for="comment">Комментарий</label>
-                <textarea class="form-fieldset__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="6"></textarea>
+                <textarea class="form-fieldset__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
               <!-- <div class="profile-form__container">
               </div> -->
@@ -142,7 +142,7 @@
             <div class="profile-form__additionally">
               <fieldset class="form-fieldset">
                 <legend class="form-fieldset__legend">Дополнительно</legend>
-                <ul class="form-fieldset__list">
+                <ul class="form-fieldset__list  form-fieldset__list--checkboxes">
                   <li class="form-fieldset__item  form-fieldset__item--choice">
                     <!-- <input class="visually-hidden form-fieldset__checkbox" id="sweetener-select" type="checkbox" name="sweetener-select" checked> -->
                     <!-- <label class="form-fieldset__checkbox-label" for="sweetener-select">Сахарозаменитель</label> -->
@@ -177,7 +177,7 @@
             </div> -->
             <button class="button profile-form__button" type="submit">Отправить заявку</button>
 
-            <small class="profile-form__required"><sup class="label-required">*</sup> — Обязательные поля</small>
+            <small class="profile-form__required"><sup class="profile-form__label-required">*</sup> — Обязательные поля</small>
           </div>
         </form>
       </section>

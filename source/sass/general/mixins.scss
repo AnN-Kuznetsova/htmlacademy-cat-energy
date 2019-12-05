@@ -67,6 +67,15 @@
   }
 }
 
+//  большая кнопка
+@mixin button-big() {
+  margin: 0;
+  padding: 15px 20px 17px;
+
+  font-size: 20px;
+  line-height: 20px;
+}
+
 // серые бордеры
 @mixin decorative-border($box-width: 100vw, $box-height: 0, $border-width: 1px, $border-color: $border-color-var, $border-side: "bottom") {
   &::after {
@@ -116,6 +125,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    padding-left: $choice-size +  20px;
   }
 }
 

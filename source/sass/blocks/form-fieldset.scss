@@ -1,7 +1,12 @@
 /*  form-fieldset  */
 
-$form-choice-size: 30px;  //  ширина/высота кастомных радио/чекбоксовы
-$input-height: 45px;  //  высота инпутов
+//  ширина/высота кастомных радио/чекбоксовы
+$form-choice-size: 30px;
+$form-choice-size-tablet: 40px;
+
+//  высота инпутов
+$input-height: 45px;
+$input-height-tablet: 52px;
 
 .form-fieldset {
   padding: 0;
@@ -12,22 +17,29 @@ $input-height: 45px;  //  высота инпутов
   //outline: 1px solid red;
 
   &--program-select {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 20px;
+    margin-left: -$mobile-padding;
+    margin-right: -$mobile-padding;
+    padding: $mobile-padding;
 
     border: 1px solid $border-color-third;
 
     @include tablet-width() {
       margin: 0;
+      padding: 23px 27px;
     }
   }
+
 }
 
 .form-fieldset__legend {
   @include sub-title();
 
   margin-bottom: 33px;
+
+  @include tablet-width() {
+    padding: 0;
+    margin-bottom: 76px;
+  }
 
   //outline: 3px solid green;
 }
@@ -37,6 +49,16 @@ $input-height: 45px;  //  высота инпутов
   padding: 0;
 
   list-style: none;
+
+  @include tablet-width() {
+    &--checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-top: -20px;
+    }
+  }
 
   //outline: 3px solid green;
 }
@@ -86,6 +108,28 @@ $input-height: 45px;  //  высота инпутов
     background-image: url("../img/icon-phone.svg");
     background-size: 20px 20px;
   }
+
+  @include tablet-width() {
+    margin-bottom: 20px;
+
+    &--email::after,
+    &--tel::after {
+      width: $input-height-tablet;
+      height:$input-height-tablet;
+    }
+
+    &--choice {
+      min-width: 45.3%; //284px;
+      min-height: $form-choice-size-tablet;
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.form-fieldset__list--checkboxes .form-fieldset__item--choice {
+  @include tablet-width() {
+    margin-bottom: 32px;
+  }
 }
 
 .form-fieldset__label {
@@ -134,6 +178,19 @@ $input-height: 45px;  //  высота инпутов
     border-color: $border-color-input-error;
     border-width: 2px;
   }
+
+  @include tablet-width() {
+    height: $input-height-tablet;
+    padding: 13px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--email,
+    &--tel {
+      padding-right: $input-height-tablet;
+    }
+  }
 }
 
 .form-fieldset__textarea {
@@ -163,6 +220,14 @@ $input-height: 45px;  //  высота инпутов
     border-color: $border-color-input-active;
     border-width: 2px;
   }
+
+  @include tablet-width() {
+    min-height: 174px;
+    padding: 10px 17px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 
@@ -173,6 +238,10 @@ $input-height: 45px;  //  высота инпутов
   margin: auto 0;
 
   @include custom-choice($form-choice-size);
+
+  @include tablet-width() {
+    @include custom-choice($form-choice-size-tablet);
+  }
 }
 
 //  фокус
@@ -184,4 +253,8 @@ $input-height: 45px;  //  высота инпутов
 //  активный
 .form-fieldset__choice-input:checked ~ .form-fieldset__choice-label {
   @include custom-choice--checked($form-choice-size);
+
+  @include tablet-width() {
+    @include custom-choice--checked($form-choice-size-tablet);
+  }
 }

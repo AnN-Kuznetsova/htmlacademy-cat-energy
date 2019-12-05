@@ -7,38 +7,82 @@
 
   border-top: 1px solid transparent;
 
+  @include tablet-width() {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   //outline: 1px solid red;
 }
 
 .profile-form__container {
-  @include container(320px, 20px);
+  @include container($mobile-width, $mobile-padding);
+  padding-top: 14px;
+  padding-bottom: 31px;
+
+  @include tablet-width() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include container($tablet-width, 70px);
+    padding-top: 40px;
+    padding-bottom: 72px;
+  }
 
   //outline: 1px solid green;
 }
 
 .profile-form__cat-details {
+  width: 100%;
   margin-top: 25px;
 }
 
 .profile-form__program-select {
+  width: 100%;
   margin-top: 24px;
+
+  @include tablet-width() {
+    margin-top: 73px;
+  }
 }
 
 .profile-form__cat-owner {
+  width: 100%;
   margin-top: 30px;
+
+  @include tablet-width() {
+    margin-top: 77px;
+  }
 }
 
 .profile-form__comment {
+  width: 100%;
   margin-top: 30px;
+
+  @include tablet-width() {
+    margin-top: 65px;
+  }
 }
 
 .profile-form__additionally {
   margin-top: 28px;
+
+  @include tablet-width() {
+    margin-top: 65px;
+  }
 }
 
 .profile-form__button {
   width: 100%;
   margin-top: 36px;
+
+  @include tablet-width() {
+    @include button-big();
+
+    width: 45%;
+    margin-top: 22px;
+  }
 }
 
 .profile-form__required {
@@ -49,4 +93,27 @@
   @include font-options($font-text, 14px, 16px, $text-base-color);
   text-transform: none;
   text-align: center;
+
+  @include tablet-width() {
+    margin-top: 38px;
+    width: 45%;
+
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.profile-form__label-required {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  font-size: 18px;
+
+  @include tablet-width() {
+    top: -1px;
+    left: 1px;
+
+    font-size: 20px;
+  }
 }
