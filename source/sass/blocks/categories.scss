@@ -82,6 +82,7 @@
 .categories__item-container {
   padding: 25px 20px 22px;
   margin: auto;
+  width: 100%;
 
   @include tablet-width() {
     padding: 78px 80px 60px 52px;

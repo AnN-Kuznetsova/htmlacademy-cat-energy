@@ -142,6 +142,8 @@
 }
 
 .advantages__item-info {
+  width: 100%;
+
   @include tablet-width() {
     position: relative;
     z-index: 20;
