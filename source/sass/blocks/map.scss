@@ -2,18 +2,6 @@
 
 $map-height: 362px;
 
-/* @include tablet-width() {
-  $map-height: 400px;
-} */
-
-.map__container {
-  @include container(320px, 0);
-
-  @include tablet-width() {
-    @include container($tablet-width, 0);
-  }
-}
-
 .map {
   position: relative;
 
@@ -32,8 +20,6 @@ $map-height: 362px;
   position: relative;
 
   max-height: $map-height;
-
-  overflow: hidden;
 
   //  маркер местоположения на карте
   /*&::after {
@@ -86,13 +72,12 @@ $map-height: 362px;
   $interactive-height: 645px;
   $translateY-var: (($interactive-height - $map-height) / 2);
 
-  //width: 100vw;
+  width: 100vw;
 
   position: relative;
   left: 50%;
   top: -402px;
 
-  width: 1345px;
   height: $interactive-height;
 
   transform: translate(-50%, -$translateY-var);

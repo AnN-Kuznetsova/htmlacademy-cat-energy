@@ -16,7 +16,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   padding-top: 29px;
   padding-bottom: 24px;
@@ -59,6 +58,7 @@
   width: 140px;
   padding: 0;
   margin: 0;
+  margin-left: auto;
 
   @include font-options($font-text, 14px, 20px, inherit);
 
