@@ -124,6 +124,18 @@ $input-height-tablet: 52px;
       margin-bottom: 13px;
     }
   }
+
+  @include desktop-width() {
+    &--email,
+    &--tel {
+      width: 570px;
+      margin: 0;
+    }
+
+    &--choice {
+      min-width: 245px;
+    }
+  }
 }
 
 .form-fieldset__list--checkboxes .form-fieldset__item--choice {

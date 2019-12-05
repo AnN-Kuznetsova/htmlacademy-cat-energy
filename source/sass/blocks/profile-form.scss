@@ -30,12 +30,23 @@
     padding-bottom: 72px;
   }
 
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-top: 66px;
+    padding-bottom: 82px;
+  }
+
   //outline: 1px solid green;
 }
 
 .profile-form__cat-details {
   width: 100%;
   margin-top: 25px;
+
+  @include desktop-width() {
+    width: 570px;
+    margin: 0;
+  }
 }
 
 .profile-form__program-select {
@@ -44,6 +55,11 @@
 
   @include tablet-width() {
     margin-top: 73px;
+  }
+
+  @include desktop-width() {
+    width: 570px;
+    margin: 0;
   }
 }
 
@@ -54,6 +70,17 @@
   @include tablet-width() {
     margin-top: 77px;
   }
+
+  @include desktop-width() {
+    margin-top: 69px;
+  }
+}
+
+.profile-form__cat-owner .form-fieldset__list {
+  @include desktop-width() {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .profile-form__comment {
@@ -63,6 +90,10 @@
   @include tablet-width() {
     margin-top: 65px;
   }
+
+  @include desktop-width() {
+    margin-top: 67px;
+  }
 }
 
 .profile-form__additionally {
@@ -70,6 +101,11 @@
 
   @include tablet-width() {
     margin-top: 65px;
+  }
+
+  @include desktop-width() {
+    width: 100%;
+    margin-top: 67px;
   }
 }
 
@@ -82,6 +118,11 @@
 
     width: 45%;
     margin-top: 22px;
+  }
+
+  @include desktop-width() {
+    width: 570px;
+    margin-top: 29px;
   }
 }
 
@@ -100,6 +141,11 @@
 
     font-size: 16px;
     text-align: left;
+  }
+
+  @include desktop-width() {
+    width: 570px;
+    margin-top: 45px;
   }
 }
 

@@ -7,6 +7,11 @@
     @include container($tablet-width, 70px);
     padding-right: 350px;
   }
+
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding);
+    padding-right: 935px;
+  }
 }
 
 .program-selection__description {
