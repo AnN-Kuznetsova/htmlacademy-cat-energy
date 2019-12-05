@@ -55,10 +55,10 @@
         </div>
 
         <form class="program-selection__form  profile-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="profile-form__container">
 
-          <!-- Данные о коте -->
-          <div class="profile-form__cat-details">
-            <div class="profile-form__container">
+            <!-- Данные о коте -->
+            <div class="profile-form__cat-details">
               <fieldset class="form-fieldset">
                 <legend class="visually-hidden">Данные о коте</legend>
                 <ul class="form-fieldset__list">
@@ -76,12 +76,12 @@
                   </li>
                 </ul>
               </fieldset>
+              <!-- <div class="profile-form__container">
+              </div> -->
             </div>
-          </div>
 
-          <!-- Выбор программы -->
-          <div class="profile-form__program-select">
-            <div class="profile-form__container">
+            <!-- Выбор программы -->
+            <div class="profile-form__program-select">
               <fieldset class="form-fieldset  form-fieldset--program-select">
                 <legend class="visually-hidden">Выберите программу</legend>
                 <ul class="form-fieldset__list">
@@ -105,14 +105,14 @@
                   </li>
                 </ul>
               </fieldset>
+              <!-- <div class="profile-form__container">
+              </div> -->
             </div>
-          </div>
 
-          <!-- Данные владельца кота -->
-          <div class="profile-form__cat-owner">
-            <div class="profile-form__container">
+            <!-- Данные владельца кота -->
+            <div class="profile-form__cat-owner">
               <fieldset class="form-fieldset">
-                <legend class="form-fieldset__legend  sub-title">Контактные данные (владельца&nbsp;кота)</legend>
+                <legend class="form-fieldset__legend">Контактные данные (владельца&nbsp;кота)</legend>
                 <ul class="form-fieldset__list">
                   <li class="form-fieldset__item  form-fieldset__item--email">
                     <label class="form-fieldset__label" for="owner-email">e-mail:<sup class="label-required">*</sup></label>
@@ -124,24 +124,24 @@
                   </li>
                 </ul>
               </fieldset>
+              <!-- <div class="profile-form__container">
+              </div> -->
             </div>
-          </div>
 
-          <!-- Комментарий -->
-          <div class="profile-form__comment">
-            <div class="profile-form__container">
+            <!-- Комментарий -->
+            <div class="profile-form__comment">
               <div class="form-fieldset">
-                <label class="form-fieldset__legend  sub-title" for="comment">Комментарий</label>
+                <label class="form-fieldset__legend" for="comment">Комментарий</label>
                 <textarea class="form-fieldset__textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота" cols="30" rows="6"></textarea>
               </div>
+              <!-- <div class="profile-form__container">
+              </div> -->
             </div>
-          </div>
 
-          <!-- Дополнительно -->
-          <div class="profile-form__additionally">
-            <div class="profile-form__container">
+            <!-- Дополнительно -->
+            <div class="profile-form__additionally">
               <fieldset class="form-fieldset">
-                <legend class="form-fieldset__legend  sub-title">Дополнительно</legend>
+                <legend class="form-fieldset__legend">Дополнительно</legend>
                 <ul class="form-fieldset__list">
                   <li class="form-fieldset__item  form-fieldset__item--choice">
                     <!-- <input class="visually-hidden form-fieldset__checkbox" id="sweetener-select" type="checkbox" name="sweetener-select" checked> -->
@@ -169,10 +169,12 @@
                   </li>
                 </ul>
               </fieldset>
+              <!-- <div class="profile-form__container">
+              </div> -->
             </div>
-          </div>
 
-          <div class="profile-form__container">
+            <!-- <div class="profile-form__container">
+            </div> -->
             <button class="button profile-form__button" type="submit">Отправить заявку</button>
 
             <small class="profile-form__required"><sup class="label-required">*</sup> — Обязательные поля</small>
