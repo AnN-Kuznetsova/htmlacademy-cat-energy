@@ -28,7 +28,6 @@ $input-height-tablet: 52px;
       padding: 23px 27px;
     }
   }
-
 }
 
 .form-fieldset__legend {
@@ -115,7 +114,7 @@ $input-height-tablet: 52px;
     &--email::after,
     &--tel::after {
       width: $input-height-tablet;
-      height:$input-height-tablet;
+      height: $input-height-tablet;
     }
 
     &--choice {
