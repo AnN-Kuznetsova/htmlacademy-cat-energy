@@ -3,7 +3,7 @@
 .more-product {
   position: relative;
 
-  padding: 78px 0 0;
+  padding-top: 78px;
 
   text-align: center;
 
@@ -13,10 +13,11 @@
     left: 50%;
     top: 25px;
 
-    width: 0;
+    width: 2px;
     height: 30px;
 
-    border-left: 2px solid #d3d3d3;
+    //border-left: 2px solid #d3d3d3;
+    background-color: #d3d3d3;
 
     transform: translateX(-50%);
   }
@@ -27,17 +28,19 @@
     left: 50%;
     top: 40px;
 
+    min-width: 30px;
     width: 30px;
-    height: 0;
+    height: 2px;
 
-    border-top: 2px solid #d3d3d3;
+    //border-top: 2px solid #d3d3d3;
+    background-color: #d3d3d3;
 
     transform: translateX(-50%);
   }
 
   @include tablet-width() {
     height: 100%;
-    padding: 164px 37px 40px;
+    padding: 163px 37px 40px;
 
     border: 1px solid $border-color-var;
 

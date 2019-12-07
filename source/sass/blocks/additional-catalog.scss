@@ -7,15 +7,19 @@
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding);
-    padding-top: 66px;
+    padding-top: 65px;
     padding-bottom: 75px;
   }
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding);
-    padding-top: 75px;
+    padding-top: 73px;
     padding-bottom: 86px;
   }
+}
+
+.additional-catalog__title {
+  @include sub-title();
 }
 
 .additional-catalog__wrapper {

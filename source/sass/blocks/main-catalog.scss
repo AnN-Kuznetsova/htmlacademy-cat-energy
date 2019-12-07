@@ -4,7 +4,7 @@
   margin-top: 29px;
 
   @include desktop-width() {
-    margin-top: 23px;
+    margin-top: 25px;
   }
 }
 
@@ -44,7 +44,7 @@
   @include tablet-width() {
     width: 324px;
     padding: 0;
-    margin: 140px $tablet-padding 0;
+    margin: 138px $tablet-padding 0;
 
     &::after {
       height: 0;
@@ -56,6 +56,6 @@
 
   @include desktop-width() {
     width: 245px;
-    margin: 143px $desktop-padding 0;
+    margin: 141px $desktop-padding 0;
   }
 }

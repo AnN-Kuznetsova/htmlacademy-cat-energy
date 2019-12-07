@@ -145,17 +145,14 @@
   line-height: 18px;
 
   @include tablet-width() {
+    @include button-big();
+
     position: relative;
 
     top: -578px;
     left: 0;
 
     width: 245px;
-    margin: 0;
-    padding: 15px 20px 17px;
-
-    font-size: 20px;
-    line-height: 20px;
   }
 
   @include desktop-width() {

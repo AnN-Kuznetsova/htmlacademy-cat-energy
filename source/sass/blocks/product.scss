@@ -2,7 +2,7 @@
 
 .product {
   @include tablet-width() {
-    padding: 0 37px 40px;
+    padding: 0 37px 42px;
 
     background-color: $bg-color-second;
 
@@ -36,8 +36,8 @@
 
   @include tablet-width() {
     padding: 0 50px;
-    margin-top: -45px;
-    margin-bottom: 19px;
+    margin-top: -46px;
+    margin-bottom: 21px;
 
     font-size: 20px;
     text-align: center;
@@ -104,7 +104,7 @@
   padding: 0;
 
   @include tablet-width() {
-    padding: 7.5px 0;
+    padding: 7px 0 8px;
 
     border-bottom: 1px solid $border-color-fourth;
   }
