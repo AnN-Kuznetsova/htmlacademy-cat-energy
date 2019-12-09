@@ -1,6 +1,8 @@
 /*  Преимущества  */
 
 .advantages {
+  background-color: $bg-color-base;
+
   @include tablet-width() {
     @include decorative-border();
   }
@@ -25,7 +27,7 @@
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding);
-    padding-top: 75px;
+    padding-top: 44px; //75px;
     padding-bottom: 27px;
   }
 }
@@ -80,14 +82,25 @@
     margin-right: 20px;
 
     background-color: $bg-color-third;
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
   }
 
-  /*&--leaf::before {
-    background-image: url(../../img/advantage-leaf@1x.png);
-    background-repeat: no-repeat;
-    background-size:
-    background-position: center center;
-  }*/
+  &--leaf::before {
+    background-position: -5px -145px;
+  }
+
+  &--water::before {
+    background-position: -5px -215px;
+  }
+
+  &--cutlery::before {
+    background-position: -5px -75px;
+  }
+
+  &--clock::before {
+    background-position: -5px -5px;
+  }
 
   @include tablet-width() {
     flex-direction: column;
@@ -128,16 +141,37 @@
 
       transform: translate(113px, -39px);
     }
+
+    &--leaf::before {
+      background-position: 5px -135px;
+    }
+
+    &--water::before {
+      background-position: 5px -205px;
+    }
+
+    &--cutlery::before {
+      background-position: 5px -65px;
+    }
+
+    &--clock::before {
+      background-position: 5px 5px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @include desktop-width() {
     width: 20.08%;
     padding-right: 0;
-    margin-bottom: 0;
-  }
+    //margin-bottom: 40px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 89px;
+    }
   }
 }
 

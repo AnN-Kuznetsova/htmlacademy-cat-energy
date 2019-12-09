@@ -57,6 +57,11 @@
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
+  &:focus {
+    @include focus();
+    border-radius: 50%;
+  }
+
   &:active {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     border: 2px solid $btn-color-base;

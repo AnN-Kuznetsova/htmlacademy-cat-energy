@@ -228,12 +228,25 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     padding: 0;
     margin: auto 0;
 
-    border-bottom: 1px dotted rgba($header-color, 0.23);
+    //border-bottom: 1px dotted rgba($header-small-color, 0.23);
 
     &::before,
     &::after {
       display: none;
     }
+  }
+}
+
+.slider__label-text {
+  border-bottom: 1px dotted rgba($header-small-color, 0.23);
+
+  &:hover {
+    border-bottom: 1px solid rgba($header-small-color, 0.4);
+  }
+
+  &:active {
+    border: none;
+    opacity: 1;
   }
 }
 
@@ -260,6 +273,19 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 .slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before,
 .slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after {
   @include custom-choice--focus();
+}
+
+.slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before .slider__label-text,
+.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after .slider__label-text {
+  border-bottom: 1px solid rgba($header-small-color, 0.4);
+
+  @include focus($bg-color-third, $bg-color-second);
+}
+
+.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after .slider__label-text {
+  @include tablet-width() {
+    @include focus($bg-color-third, $bg-slider-after);
+  }
 }
 
 //  активный

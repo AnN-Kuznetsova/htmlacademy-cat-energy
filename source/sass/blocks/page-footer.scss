@@ -38,6 +38,12 @@
   }
 }
 
+.page-footer__social {
+  @include tablet-width() {
+    max-width: 37%;
+  }
+}
+
 .page-footer__copyright {
   width: 100%;
   margin-top: 23px;

@@ -4,13 +4,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 
   outline: none;
 
   &:hover .copyright__name,
   &:focus .copyright__name {
     color: $text-base-color;
+  }
+
+  &:focus .copyright__name {
+    @include focus($bg-color-third, $bg-color-second);
   }
 
   &:hover .copyright__image,
@@ -20,6 +23,7 @@
 
   &:active .copyright__name {
     opacity: 0.3;
+    box-shadow: none;
   }
 
   &:active .copyright__image {
@@ -29,6 +33,8 @@
 
 .copyright__name {
   display: block;
+
+  margin-top: 8px;
 
   @include font-options($font-text, 16px, 16px, $text-base-color);
 }

@@ -8,8 +8,13 @@
     opacity: 0.8;
   }
 
+  &:focus .footer-logo__image {
+    @include focus($bg-color-third, $bg-color-second);
+  }
+
   &:active .footer-logo__image {
     opacity: 0.6;
+    box-shadow: none;
   }
 }
 

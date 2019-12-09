@@ -14,13 +14,27 @@
   border-radius: 50%;
 }
 
+@mixin categories-icon-img ($icon-width, $icon-height, $icon-url, $icon-top, $icon-left, $icon-right) {
+  position: absolute;
+  content: "";
+  z-index: 10;
+  top: $icon-top;
+  left: $icon-left;
+  right: $icon-right;
+
+  width: $icon-width;
+  height: $icon-height;
+
+  background-image: url($icon-url);
+  background-repeat: no-repeat;
+  background-size: $icon-width $icon-height;
+}
+
 .categories {
+  background-color: $bg-color-base;
+
   @include tablet-width() {
     position: relative;
-  }
-
-  @include desktop-width() {
-    margin-top: 79px;
   }
 }
 
@@ -33,7 +47,10 @@
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding);
+    padding-top: 79px;
   }
+
+  //border: 1px solid green;
 }
 
 .categories__list {
@@ -53,6 +70,7 @@
   background-color: $bg-color-second;
 
   @include tablet-width() {
+    position: relative;
     display: flex;
 
     min-height: 370px;
@@ -63,19 +81,31 @@
 
       transform: translate(-63px, 92px);
     }
-  }
 
-  @include desktop-width() {
-    width: 46.72%; //570px;
-    margin-bottom: 0;
+    &--slim::before {
+      @include categories-icon-img(140px, 194px, "../img/icon-cat-slim.svg", 80px, "", 92px);
+    }
 
-    &::after {
-      display: none;
+    &--pro::before {
+      @include categories-icon-img(268px, 112px, "../img/icon-cat-pro.svg", 135px, "", 28px);
     }
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include desktop-width() {
+    width: 46.72%; //570px;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+
+    &:last-child {
+      margin-bottom: 31px;
+    }
   }
 }
 
@@ -103,6 +133,7 @@
 }
 
 .categories__title {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -117,14 +148,25 @@
 
     left: 0;
     top: 0;
+
     margin-right: 20px;
+    margin-bottom: auto;
+  }
+
+  &--slim::after {
+    @include categories-icon-img(35px, 49px, "../img/icon-cat-slim.svg", -3px, 9px, "");
+  }
+
+  &--pro::after {
+    @include categories-icon-img(67px, 28px, "../img/icon-cat-pro.svg", 11px, -8px, "");
   }
 
   @include tablet-width() {
     font-size: 36px;
     line-height: 37.02px;
 
-    &::before {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -136,6 +178,16 @@
       width: 100px;
       height: 100px;
       margin-right: 62px;
+    }
+
+    &--slim::after {
+      @include categories-icon-img(70px, 97px, "../img/icon-cat-slim.svg", -6px, 14px, "");
+      display: block;
+    }
+
+    &--pro::after {
+      @include categories-icon-img(134px, 56px, "../img/icon-cat-pro.svg", 22px, -18px, "");
+      display: block;
     }
   }
 }
@@ -168,7 +220,7 @@
   @include font-options($font-base, 16px, 16px, $header-color);
   text-transform: uppercase;
 
-  outline: none;
+  //outline: none;
 
   &::after {
     position: absolute;
@@ -193,8 +245,13 @@
     background-size: 33px 11px;
   }
 
+  &:focus {
+    @include focus($bg-color-third, $bg-color-second);
+  }
+
   &:active {
     opacity: 0.3;
+    box-shadow: none;
   }
 
   @include tablet-width() {

@@ -6,13 +6,9 @@
     z-index: 10;
   }
 
-  /* @include desktop-width() {
-    background-color: $bg-color-third;
-    background-image:
-      linear-gradient(to left, $bg-color-promo 50%, $bg-color-base 50%);
-    background-position:
-      center top;
-  } */
+  @include desktop-width() {
+    background-color: transparent;
+  }
 }
 
 .page-header__container {
@@ -36,6 +32,8 @@
   @include decorative-border();
 
   @include tablet-width() {
+    flex-shrink: 0;
+
     &::after {
       display: none;
     }
@@ -49,6 +47,16 @@
   padding-bottom: 11px;
 
   outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 
   @include tablet-width() {
     padding: 0;

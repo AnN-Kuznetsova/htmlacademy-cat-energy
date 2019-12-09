@@ -19,6 +19,12 @@
   padding: 0 $container-padding;
 }
 
+@mixin mobile-width-only() {
+  @media (max-width: $mobile-width-only) {
+    @content;
+  }
+}
+
 @mixin tablet-width() {
   @media (min-width: $tablet-width) {
     @content;
@@ -87,10 +93,24 @@
     min-width: 320px;
     height: $box-height;
 
-    //border-bottom: $border-width solid $border-color;
     border-#{$border-side}: $border-width solid $border-color;
     transform: translateX(-50%);
   }
+}
+
+@mixin focus($shadow-color: $bg-color-third, $background-color: $bg-color-base) {
+  outline: none;
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 5px $background-color,
+    0 0 0 6px $shadow-color;
+}
+
+@mixin focus-button($shadow-color: $btn-text-color-hover, $background-color: $btn-color-base-hover) {
+  outline: none;
+  box-shadow:
+    inset 0 -7px 0 0 $background-color,
+    inset 0 -9px 0 0 $shadow-color;
 }
 
 /*  Кастомные поля выбора   */
