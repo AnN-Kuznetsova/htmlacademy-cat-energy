@@ -44,27 +44,19 @@
 
 .promo__container {
   @include container(320px, 20px, 27px, 21px);
-  /* padding-top: 28px;
-  padding-bottom: 21px; */
 
   @include tablet-width() {
     display: flex;
     flex-direction: column;
 
     @include container($tablet-width, $tablet-padding, 52px, 0);
-    /* padding-top: 52px;
-    padding-bottom: 0; */
   }
 
   @include desktop-width() {
     @include container($desktop-width, 120px, 140px, 30px);
-    /* padding-top: 140px;
-    padding-bottom: 30px; */
 
     min-height: 696px;
   }
-
-  //border: 1px solid red;
 }
 
 .promo__title {

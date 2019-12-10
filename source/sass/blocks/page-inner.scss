@@ -6,12 +6,10 @@
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 53px, 0);
-    /* padding-top: 53px; */
   }
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding, 70px, 0);
-    /* padding-top: 70px; */
   }
 }
 

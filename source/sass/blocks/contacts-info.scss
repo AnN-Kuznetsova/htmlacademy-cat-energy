@@ -22,8 +22,6 @@
 
   @include tablet-width() {
     @include container($tablet-width, 71px, 63px, 58px);
-    /* padding-top: 63px;
-    padding-bottom: 58px; */
   }
 
   @include desktop-width() {

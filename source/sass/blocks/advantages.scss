@@ -16,19 +16,13 @@
 
 .advantages__container {
   @include container(320px, 20px, 17px, 42px);
-  /* padding-top: 17px;
-  padding-bottom: 42px; */
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 47px, 58px);
-    /* padding-top: 47px;
-    padding-bottom: 58px; */
   }
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding, 44px, 27px);
-    /* padding-top: 44px; //75px;
-    padding-bottom: 27px; */
   }
 }
 

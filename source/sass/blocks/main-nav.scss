@@ -3,8 +3,6 @@
 .main-nav {
   position: relative;
 
-  // min-height: 66px; //195px;
-
   @media (min-width: $tablet-width) {
     min-height: 58px;
     max-width: 70%;
@@ -55,10 +53,8 @@
 .main-nav__link {
   display: block;
 
-  //padding: 23px 30px 23px;
   padding: 16px 30px 16px;
 
-  //@include font-options($font-base, 20px, 20px, $header-color);
   @include font-options($font-base, 20px, 35px, $header-color);
   font-weight: 500;
   text-align: center;
@@ -81,7 +77,6 @@
   @media (min-width: $tablet-width) {
     padding: 15px 0;
 
-    //@include font-options($font-base, 18px, 24.86px, $header-color);
     font-size: 18px;
     font-weight: 400;
   }
