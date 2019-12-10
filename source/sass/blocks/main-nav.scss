@@ -55,7 +55,8 @@
 .main-nav__link {
   display: block;
 
-  padding: 23px 30px 23px;
+  //padding: 23px 30px 23px;
+  padding: 16px 30px 16px;
 
   //@include font-options($font-base, 20px, 20px, $header-color);
   @include font-options($font-base, 20px, 35px, $header-color);

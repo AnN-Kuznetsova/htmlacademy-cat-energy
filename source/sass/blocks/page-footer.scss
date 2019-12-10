@@ -5,24 +5,24 @@
 }
 
 .page-footer__container {
-  @include container(320px, 20px);
-  padding-top: 41px;
-  padding-bottom: 22px;
+  @include container(320px, 20px, 41px, 22px);
+  /* padding-top: 41px;
+  padding-bottom: 22px; */
 
   @include tablet-width() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include container($tablet-width, $tablet-padding);
-    padding-top: 52px;
-    padding-bottom: 55px;
+    @include container($tablet-width, $tablet-padding, 52px, 55px);
+    /* padding-top: 52px;
+    padding-bottom: 55px; */
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 55px;
-    padding-bottom: 55px;
+    @include container($desktop-width, $desktop-padding, 55px, 55px);
+    /* padding-top: 55px;
+    padding-bottom: 55px; */
   }
 }
 

@@ -16,24 +16,24 @@
 }
 
 .profile-form__container {
-  @include container($mobile-width, $mobile-padding);
-  padding-top: 14px;
-  padding-bottom: 31px;
+  @include container($mobile-width, $mobile-padding, 14px, 31px);
+  /* padding-top: 14px;
+  padding-bottom: 31px; */
 
   @include tablet-width() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include container($tablet-width, 70px);
-    padding-top: 40px;
-    padding-bottom: 72px;
+    @include container($tablet-width, 70px, 40px, 72px);
+    /* padding-top: 40px;
+    padding-bottom: 72px; */
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 66px;
-    padding-bottom: 82px;
+    @include container($desktop-width, $desktop-padding, 66px, 82px);
+    /* padding-top: 66px;
+    padding-bottom: 82px; */
   }
 
   //outline: 1px solid green;

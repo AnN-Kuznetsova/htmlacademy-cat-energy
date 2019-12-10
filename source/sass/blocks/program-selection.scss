@@ -1,15 +1,15 @@
 /*  Подбор программы  */
 
 .program-selection__container {
-  @include container($mobile-width, $mobile-padding);
+  @include container($mobile-width, $mobile-padding, 0, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, 70px);
+    @include container($tablet-width, 70px, 0, 0);
     padding-right: 350px;
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
+    @include container($desktop-width, $desktop-padding, 0, 0);
     padding-right: 935px;
   }
 }

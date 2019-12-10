@@ -39,15 +39,15 @@
 }
 
 .categories__container {
-  @include container(320px, 20px);
+  @include container(320px, 20px, 0, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
+    @include container($tablet-width, $tablet-padding, 0, 0);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 79px;
+    @include container($desktop-width, $desktop-padding, 79px, 0);
+    /* padding-top: 79px; */
   }
 
   //border: 1px solid green;

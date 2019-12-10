@@ -12,19 +12,19 @@
 }
 
 .page-header__container {
-  @include container(320px, 20px);
+  @include container(320px, 20px, 0, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
-    padding-top: 22px;
+    @include container($tablet-width, $tablet-padding, 22px, 0);
+    /* padding-top: 22px; */
 
     display: flex;
     justify-content: space-between;
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 53px;
+    @include container($desktop-width, $desktop-padding, 53px, 0);
+    /* padding-top: 53px; */
   }
 }
 

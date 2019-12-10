@@ -23,7 +23,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__container {
-  @include container(100%, 0);
+  @include container(100%, 0, 0, 0);
 
   @include tablet-width() {
     height: $slider-total-height;
