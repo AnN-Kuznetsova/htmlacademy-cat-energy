@@ -16,7 +16,7 @@
 
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding);
-    padding-top: 24px;
+    padding-top: 22px;
 
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@
 
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding);
-    padding-top: 55px;
+    padding-top: 53px;
   }
 }
 

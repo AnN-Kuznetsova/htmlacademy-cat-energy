@@ -36,7 +36,6 @@ $input-height-tablet: 52px;
   margin-bottom: 33px;
 
   @include tablet-width() {
-    padding: 0;
     margin-bottom: 76px;
   }
 

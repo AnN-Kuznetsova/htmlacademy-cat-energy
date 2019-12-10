@@ -1,16 +1,5 @@
 /*  logo  */
 
-/* .logo {
-  &:hover .logo__image,
-  &:focus .logo__image {
-    opacity: 0.8;
-  }
-
-  &:active .logo__image {
-    opacity: 0.6;
-  }
-} */
-
 .logo__image {
   width: 191px;
   height: 38px;
@@ -24,4 +13,12 @@
     width: 202px;
     height: 59px;
   }
+}
+
+.logo[href]:focus .logo__image {
+  @include focus();
+}
+
+.logo[href]:active .logo__image {
+  box-shadow: none;
 }

@@ -20,13 +20,21 @@
 
 .additional-catalog__title {
   @include sub-title();
+
+  @include tablet-width() {
+    margin-left: 0;
+  }
+
+  @include desktop-width() {
+    margin-left: -$desktop-padding;
+  }
 }
 
 .additional-catalog__wrapper {
   margin-top: 33px;
 
   @include tablet-width() {
-    margin-top: 79px;
+    margin-top: 76px;
   }
 
   @include desktop-width() {
@@ -69,7 +77,7 @@
 }
 
 .additional-catalog__promo {
-  margin-top: 38px;
+  margin-top: 39px;
 
   @include tablet-width() {
     margin-top: 70px;

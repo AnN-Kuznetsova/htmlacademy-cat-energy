@@ -11,12 +11,12 @@
   overflow: hidden;
 }
 
-@mixin container($container-width: 320px, $container-padding: 20px) {
+@mixin container($container-width: 320px, $container-padding: 20px, $container-padding-top: 0, $container-padding-bottom: 0) {
   min-width: $container-width;
   max-width: 1300px;
   //width: $container-width;
   margin: 0 auto;
-  padding: 0 $container-padding;
+  padding: $container-padding-top $container-padding $container-padding-bottom;
 }
 
 @mixin mobile-width-only() {
@@ -53,23 +53,50 @@
 
 //  sub-title
 @mixin sub-title() {
-  display: block;
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
 
   margin: 0;
+  margin-left: -$mobile-padding;
+  padding: 0 $mobile-padding;
 
   @include font-options(inherit, 24px, 24px, $header-color);
   font-weight: normal;
   text-transform: none;
 
+  background-color: $bg-color-base;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 12px; //50%;
+    left: 0;
+
+    width: 100vw;
+    height: 3px;
+
+    background-color: $bg-color-third;
+  }
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
+
   @include tablet-width() {
-    padding: 0 40px;
+    margin-left: -$desktop-padding;
+    padding: 0 $desktop-padding; //40px;
 
     font-size: 36px;
     line-height: 36px;
-  }
 
-  @include desktop-width() {
-    padding-left: 0;
+    &::before,
+    &::after {
+      top: 22px;
+    }
   }
 }
 
@@ -98,6 +125,7 @@
   }
 }
 
+// :focus
 @mixin focus($shadow-color: $bg-color-third, $background-color: $bg-color-base) {
   outline: none;
   border-radius: 1px;
@@ -106,6 +134,7 @@
     0 0 0 6px $shadow-color;
 }
 
+// :focus кнопки
 @mixin focus-button($shadow-color: $btn-text-color-hover, $background-color: $btn-color-base-hover) {
   outline: none;
   box-shadow:

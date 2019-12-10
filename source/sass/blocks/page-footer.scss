@@ -50,6 +50,11 @@
 
   @include tablet-width() {
     width: 162px;
-    margin: auto 0;
+    margin: 3px 0 auto;
   }
+
+  @include desktop-width() {
+    margin-top: 5px;
+  }
+
 }
