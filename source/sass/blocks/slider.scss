@@ -4,8 +4,6 @@ $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
 $slider-total-height-tablet: 631px; // высота слайдера
 $slider-total-height-desktop: 651px;
-/* $slider-width: 320px; // ширина слайдов
-$slider-height: 240px; // высота слайдов */
 $slider-rate: 100%;  //  процент смены кадров слайдера
 
 .slider {
@@ -24,7 +22,6 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 }
 
 .slider__container {
-  //@include container(100%, 0, 0, 0);
   width: $mobile-width;
   padding: 0;
   margin: 0 auto;
@@ -35,12 +32,8 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    //display: flex;
-    //flex-wrap: wrap;
-    //position: relative; */
-
     width: 690px;
-    height: $slider-total-height-desktop; //auto;
+    height: $slider-total-height-desktop;
   }
 
   outline: 2px solid green;
@@ -58,9 +51,9 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
 
-    width: 650px; //690px;
+    width: 650px;
     height: 100%;
-    margin-left: auto; //40px;
+    margin-left: auto;
 
     overflow: hidden;
   }
@@ -94,8 +87,6 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    //display: flex;
-    //height: 100%;
     &--after {
       margin-top: -$slider-total-height-desktop;
     }
@@ -106,22 +97,14 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 
 .slider__item-inner {
   @include tablet-width() {
-    width: $tablet-width; //100%;
+    width: $tablet-width;
     height: $slider-total-height-tablet;
 
     &--before {
-      //width: $slider-rate;
-
       background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
     }
 
     &--after {
-      /* width: $slider-rate;
-      overflow: hidden;
-      position: relative;
-      right: -100%;
-      transform: translateX(-100%); */
-
       background-image: linear-gradient($bg-color-base 170px, $bg-slider-after 170px);
     }
   }
@@ -144,17 +127,15 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 }
 
 .slider__photo-wrapper {
-  width: 320px; //$slider-width;
-  height: 240px; //$slider-height;
+  width: 320px;
+  height: 240px;
   margin: 0 auto;
 
   @include tablet-width() {
     position: relative;
-    /* $slider-width: 690px;
-    $slider-height: 517px; */
 
-    width: 690px; //$slider-width;
-    height: 517px; //$slider-height;
+    width: 690px;
+    height: 517px;
 
     outline: 6px solid deeppink;
   }
@@ -167,8 +148,8 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 .slider__photo {
   display: block;
 
-  width: auto; //100%;
-  height: 100%; //auto;
+  width: auto;
+  height: 100%;
 
   object-fit: contain;
 
@@ -207,15 +188,8 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     justify-content: flex-end;
+
     margin-right: $desktop-padding;
-    /* position: absolute;
-    left: auto;
-    right: $desktop-padding;
-    top: 652px; */
-
-    //margin-top: -100px;
-
-    //padding-left: 20px;
   }
 }
 
