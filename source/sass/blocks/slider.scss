@@ -16,9 +16,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include desktop-width() {
     display: flex;
 
-    background-color: $bg-color-second;
-    background-image:
-      linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px);
+    background-color: transparent;
+    background-image: none;
   }
 }
 
