@@ -3,14 +3,12 @@ $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
 $slider-total-height-tablet: 631px; // высота слайдера
-$slider-total-height-desktop: 631px;
+$slider-total-height-desktop: 650px;
 $slider-width: 320px; // ширина слайдов
 $slider-height: 240px; // высота слайдов
 $slider-rate: 50%;  //  процент смены кадров слайдера
 
 .slider {
-//overflow: hidden;
-
   @include tablet-width() {
     background-image:
       linear-gradient(to bottom, $bg-color-base 170px, rgba($bg-color-base, 0) 170px),
@@ -42,7 +40,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     //position: relative; */
 
     width: 690px;
-    height: $slider-total-height-desktop; //auto;
+    height: 100%; //$slider-total-height-desktop; //auto;
   }
 
   outline: 2px solid green;
@@ -63,8 +61,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     width: 650px; //690px;
     margin-left: auto; //40px;
 
-    /*display: flex;
-    height: auto; */
+    overflow: hidden;
   }
 
   outline: 3px solid red;
@@ -86,16 +83,12 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
       width: $slider-rate;
 
       overflow: hidden;
-
-      //transform: translateX(50%);
     }
 
     &--after {
       z-index: 1;
 
       margin-top: -$slider-total-height-tablet;
-
-      //transform: translateX(-50%);
     }
   }
 
@@ -134,7 +127,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     width: 690px;
-    height: 100%; //auto;
+    height: 100%;
     margin-left: -40px;
 
     &--before {
@@ -162,26 +155,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     width: $slider-width;
     height: $slider-height;
 
-    /* &--after {
-      right: $slider-width;
-      transform: translateX($slider-rate);
-    } */
-
     outline: 6px solid deeppink;
   }
 
   @include desktop-width() {
-    /* $slider-width: 690px; //650px;
-    width: $slider-width; */
     margin: 0;
-    //margin-left: -40px;
-
-    /* &--after {
-      right: $slider-width;
-
-      margin: 0;
-      margin-left: -20px;
-    } */
   }
 }
 
@@ -199,8 +177,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     margin-left: 0;
-
-    //transform: translateX(0);
   }
 }
 
@@ -229,15 +205,12 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    //justify-content: space-between;
     position: absolute;
-    left: auto; //50%;
+    left: auto;
     right: $desktop-padding;
     top: 652px;
 
-    padding-left: 20px;
-
-    //transform: translateX(calc(-50% + 20px));
+    //padding-left: 20px;
   }
 }
 
@@ -263,8 +236,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     height: 25px;
     padding: 0;
     margin: auto 0;
-
-    //border-bottom: 1px dotted rgba($header-small-color, 0.23);
 
     &::before,
     &::after {
