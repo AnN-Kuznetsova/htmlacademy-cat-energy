@@ -3,7 +3,7 @@ $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
 $slider-total-height-tablet: 631px; // высота слайдера
-$slider-total-height-desktop: 650px;
+$slider-total-height-desktop: 651px;
 $slider-width: 320px; // ширина слайдов
 $slider-height: 240px; // высота слайдов
 $slider-rate: 50%;  //  процент смены кадров слайдера
@@ -40,7 +40,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     //position: relative; */
 
     width: 690px;
-    height: 100%; //$slider-total-height-desktop; //auto;
+    height: $slider-total-height-desktop; //auto;
   }
 
   outline: 2px solid green;
