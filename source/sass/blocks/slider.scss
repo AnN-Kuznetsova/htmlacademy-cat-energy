@@ -23,20 +23,26 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__container {
-  @include container(100%, 0, 0, 0);
+  //@include container(100%, 0, 0, 0);
+  width: $mobile-width;
+  padding: 0;
+  margin: 0 auto;
 
   @include tablet-width() {
+    width: $tablet-width;
     height: $slider-total-height;
   }
 
-  @include desktop-width() {
+  /* @include desktop-width() {
     display: flex;
     flex-wrap: wrap;
     position: relative;
 
     width: 690px;
     height: auto;
-  }
+  } */
+
+  outline: 1px solid green;
 }
 
 .slider__list {
@@ -44,16 +50,21 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include tablet-width() {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    //justify-content: center;
+
+    width: 100%;
   }
 
-  @include desktop-width() {
+  /* @include desktop-width() {
     width: 650px; //690px;
     margin-left: 40px;
 
     display: flex;
     height: auto;
-  }
+  } */
+
+  outline: 3px solid red;
 }
 
 .slider__item {
@@ -66,43 +77,56 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     position: relative;
 
     &--before {
-      z-index: 1; //10;
+      z-index: 10;
 
-      transform: translateX(50%);
+      width: $slider-rate;
+
+      overflow: hidden;
+
+      //transform: translateX(50%);
     }
 
     &--after {
-      z-index: 10; //1;
+      z-index: 1;
 
-      transform: translateX(-50%);
+      margin-top: -$slider-total-height;
+
+      //transform: translateX(-50%);
     }
   }
 
-  @include desktop-width() {
+ /*  @include desktop-width() {
     display: flex;
-  }
+  } */
+
+  outline: 2px solid aqua;
 }
 
 .slider__item-inner {
   @include tablet-width() {
+    width: $tablet-width; //100%;
     height: $slider-total-height;
 
     &--before {
+      //width: $slider-rate;
+
       background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
     }
 
     &--after {
-      width: $slider-rate;
+      /* width: $slider-rate;
       overflow: hidden;
       position: relative;
       right: -100%;
-      transform: translateX(-100%);
+      transform: translateX(-100%); */
 
       background-image: linear-gradient($bg-color-base 170px, $bg-slider-after 170px);
     }
+
+    outline: 4px solid darkslategrey;
   }
 
-  @include desktop-width() {
+  /* @include desktop-width() {
     height: auto;
 
     &--before {
@@ -112,7 +136,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     &--after {
       background-image: linear-gradient($bg-color-base 190px, $bg-slider-after 190px);
     }
-  }
+  } */
 
   //outline: 2px solid orange;
 }
@@ -126,16 +150,19 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     position: relative;
     $slider-width: 690px;
     $slider-height: 517px;
+
     width: $slider-width;
     height: $slider-height;
 
-    &--after {
+    /* &--after {
       right: $slider-width;
       transform: translateX($slider-rate);
-    }
+    } */
+
+    outline: 6px solid deeppink;
   }
 
-  @include desktop-width() {
+  /* @include desktop-width() {
     $slider-width: 690px; //650px;
     width: $slider-width;
     margin: 0;
@@ -147,7 +174,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
       margin: 0;
       margin-left: -20px;
     }
-  }
+  } */
 }
 
 .slider__photo {
@@ -159,14 +186,14 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   object-fit: contain;
 
   @include tablet-width() {
-    transform: translateX(7px);
+    margin-left: 7px;
   }
 
-  @include desktop-width() {
+ /*  @include desktop-width() {
     width: 690px;
 
     transform: translateX(0);
-  }
+  } */
 }
 
 //  Контроллеры
@@ -180,8 +207,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include font-options(inherit, 16px, 20px, $header-color);
   text-transform: uppercase;
 
-  //overflow: hidden;
-
   @include tablet-width() {
     position: relative;
     z-index: 20;
@@ -192,7 +217,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     font-size: 20px;
 
-    //overflow: visible;
+    outline: 2px solid orange;
   }
 
   @include desktop-width() {
@@ -331,6 +356,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     display: block;
 
     width: 428px;
-    margin: 0 23px;
+    margin: 0 23px 0 26px;
   }
+
+  outline: 1px solid red;
 }

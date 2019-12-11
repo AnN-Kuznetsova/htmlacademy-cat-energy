@@ -51,21 +51,21 @@
 }
 
 .product__title-link:hover .product__title {
-    opacity: 0.6;
-  }
+  opacity: 0.6;
+}
 
-  .product__title-link:focus .product__title {
-    @include focus();
+.product__title-link:focus .product__title {
+  @include focus();
 
-    @include tablet-width() {
-      @include focus($bg-color-third, $bg-color-second);
-    }
+  @include tablet-width() {
+    @include focus($bg-color-third, $bg-color-second);
   }
+}
 
 .product__title-link:active .product__title {
-    box-shadow: none;
-    opacity: 0.3;
-  }
+  box-shadow: none;
+  opacity: 0.3;
+}
 
 .product__photo-wrapper {
   flex-shrink: 0;
