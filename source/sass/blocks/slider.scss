@@ -4,9 +4,9 @@ $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
 $slider-total-height-tablet: 631px; // высота слайдера
 $slider-total-height-desktop: 651px;
-$slider-width: 320px; // ширина слайдов
-$slider-height: 240px; // высота слайдов
-$slider-rate: 50%;  //  процент смены кадров слайдера
+/* $slider-width: 320px; // ширина слайдов
+$slider-height: 240px; // высота слайдов */
+$slider-rate: 100%;  //  процент смены кадров слайдера
 
 .slider {
   @include tablet-width() {
@@ -35,8 +35,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    display: flex;
-    /*flex-wrap: wrap;
+    //display: flex;
+    //flex-wrap: wrap;
     //position: relative; */
 
     width: 690px;
@@ -59,6 +59,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include desktop-width() {
 
     width: 650px; //690px;
+    height: 100%;
     margin-left: auto; //40px;
 
     overflow: hidden;
@@ -143,17 +144,17 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__photo-wrapper {
-  width: $slider-width;
-  height: $slider-height;
+  width: 320px; //$slider-width;
+  height: 240px; //$slider-height;
   margin: 0 auto;
 
   @include tablet-width() {
     position: relative;
-    $slider-width: 690px;
-    $slider-height: 517px;
+    /* $slider-width: 690px;
+    $slider-height: 517px; */
 
-    width: $slider-width;
-    height: $slider-height;
+    width: 690px; //$slider-width;
+    height: 517px; //$slider-height;
 
     outline: 6px solid deeppink;
   }
@@ -205,10 +206,14 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
-    position: absolute;
+    justify-content: flex-end;
+    margin-right: $desktop-padding;
+    /* position: absolute;
     left: auto;
     right: $desktop-padding;
-    top: 652px;
+    top: 652px; */
+
+    //margin-top: -100px;
 
     //padding-left: 20px;
   }
