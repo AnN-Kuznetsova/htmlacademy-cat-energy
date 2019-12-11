@@ -4,7 +4,7 @@ $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
 $slider-total-height-tablet: 631px; // высота слайдера
 $slider-total-height-desktop: 651px;
-$slider-rate: 100%;  //  процент смены кадров слайдера
+$slider-rate: 50%;  //  процент смены кадров слайдера
 
 .slider {
   @include tablet-width() {
@@ -17,7 +17,8 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
     display: flex;
 
     background-color: $bg-color-second;
-    background-image: linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px);
+    background-image:
+      linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px);
   }
 }
 
@@ -33,10 +34,10 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     width: 690px;
-    height: $slider-total-height-desktop;
+    height: 100%; //$slider-total-height-desktop;
   }
 
-  outline: 2px solid green;
+  //outline: 2px solid green;
 }
 
 .slider__list {
@@ -50,6 +51,7 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
+    flex-direction: row;
 
     width: 650px;
     height: 100%;
@@ -58,7 +60,7 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
     overflow: hidden;
   }
 
-  outline: 3px solid red;
+  //outline: 3px solid red;
 }
 
 .slider__item {
@@ -87,12 +89,21 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
   }
 
   @include desktop-width() {
+    flex-shrink: 0;
+
+    &--before {
+      margin-left: -650px;
+    }
+
     &--after {
-      margin-top: -$slider-total-height-desktop;
+      order: -1;
+      //margin-top: -$slider-total-height-desktop;
+      margin-top: 0;
+      //margin-left: -325px;
     }
   }
 
-  outline: 2px solid aqua;
+  //outline: 2px solid aqua;
 }
 
 .slider__item-inner {
@@ -123,7 +134,7 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
     }
   }
 
-  outline: 4px solid darkslategrey;
+  //outline: 4px solid darkslategrey;
 }
 
 .slider__photo-wrapper {
@@ -137,7 +148,7 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
     width: 690px;
     height: 517px;
 
-    outline: 6px solid deeppink;
+    //outline: 6px solid deeppink;
   }
 
   @include desktop-width() {
@@ -183,12 +194,18 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
 
     font-size: 20px;
 
-    outline: 2px solid orange;
+    //outline: 2px solid orange;
   }
 
   @include desktop-width() {
-    justify-content: flex-end;
+    //justify-content: flex-end;
 
+    position: absolute;
+    top: 552px;
+    left: auto;
+    right: 0;
+
+    margin-top: 0;
     margin-right: $desktop-padding;
   }
 }
@@ -324,5 +341,5 @@ $slider-rate: 100%;  //  процент смены кадров слайдера
     margin: 0 20px 0 25px;
   }
 
-  outline: 1px solid red;
+  //outline: 1px solid red;
 }

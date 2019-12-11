@@ -135,6 +135,7 @@
 
   &:active {
     opacity: 0.3;
+    box-shadow: none;
   }
 
   @include tablet-width() {
