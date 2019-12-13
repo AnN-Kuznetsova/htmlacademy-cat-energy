@@ -159,7 +159,12 @@ $input-height-tablet: 52px;
     outline: 2px solid $border-color-input-active;
   }
 
-  &--error {
+  /* &--error {
+    border-color: $border-color-input-error;
+    border-width: 2px;
+  } */
+
+  &[required]:invalid {
     border-color: $border-color-input-error;
     border-width: 2px;
   }
@@ -217,7 +222,8 @@ $input-height-tablet: 52px;
   fill: $bg-color-third;
 }
 
-.form-fieldset__input--error + .form-fieldset__input-icon {
+//.form-fieldset__input--error + .form-fieldset__input-icon
+.form-fieldset__input:invalid + .form-fieldset__input-icon {
   fill: $border-color-input-error;
 }
 
