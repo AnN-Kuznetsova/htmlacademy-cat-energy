@@ -140,33 +140,28 @@ $input-height-tablet: 52px;
   text-transform: uppercase;
 
   background: none;
-  border: 1px solid $border-color-var;
-
-  outline: none;
+  border: none;
+  outline: 1px solid $border-color-var;
 
   &--email,
   &--tel {
     padding-right: $input-height;
   }
 
-  &:hover {
-    border-color: $border-color-fourth;
+  &[required]:invalid {
+    outline: 2px solid $border-color-input-error;
+  }
+
+  &:hover,
+  &[required]:hover {
+    outline: 1px solid $border-color-fourth;
   }
 
   &:focus,
-  &:active {
-    border-color: transparent;
+  &[required]:focus,
+  &:active,
+  &[required]:active {
     outline: 2px solid $border-color-input-active;
-  }
-
-  /* &--error {
-    border-color: $border-color-input-error;
-    border-width: 2px;
-  } */
-
-  &[required]:invalid {
-    border-color: $border-color-input-error;
-    border-width: 2px;
   }
 
   @include tablet-width() {
@@ -213,6 +208,10 @@ $input-height-tablet: 52px;
   }
 }
 
+.form-fieldset__input:invalid + .form-fieldset__input-icon {
+  fill: $border-color-input-error;
+}
+
 .form-fieldset__input:hover + .form-fieldset__input-icon {
   fill: $header-small-color;
 }
@@ -220,11 +219,6 @@ $input-height-tablet: 52px;
 .form-fieldset__input:focus + .form-fieldset__input-icon,
 .form-fieldset__input:active + .form-fieldset__input-icon {
   fill: $bg-color-third;
-}
-
-//.form-fieldset__input--error + .form-fieldset__input-icon
-.form-fieldset__input:invalid + .form-fieldset__input-icon {
-  fill: $border-color-input-error;
 }
 
 .form-fieldset__textarea {
