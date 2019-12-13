@@ -130,8 +130,8 @@
   outline: none;
   border-radius: 1px;
   box-shadow:
-    0 0 0 5px $background-color,
-    0 0 0 6px $shadow-color;
+    0 0 0 7px $background-color,
+    0 0 0 8px $shadow-color;
 }
 
 // :focus кнопки
@@ -147,6 +147,7 @@
 
 @mixin custom-choice($choice-size: 40px) {
   position: relative;
+
   padding-left: $choice-size +  16px;
 
   &::before {
@@ -181,10 +182,25 @@
   }
 }
 
-//  фокус
-@mixin custom-choice--focus() {
+//  hover
+@mixin custom-choice--hover() {
   &::before {
     border-color: $border-color-fifth;
+  }
+}
+
+//  фокус
+@mixin custom-choice--focus() {
+  outline: none;
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 10px $bg-color-base,
+    0 0 0 11px $bg-color-third;
+
+  @include tablet-width() {
+    box-shadow:
+    0 0 0 15px $bg-color-base,
+    0 0 0 16px $bg-color-third;
   }
 }
 

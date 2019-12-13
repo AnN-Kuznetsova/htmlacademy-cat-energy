@@ -16,14 +16,14 @@
 }
 
 .profile-form__container {
-  @include container($mobile-width, $mobile-padding, 14px, 31px);
+  @include container($mobile-width, $mobile-padding, 40px, 31px);
 
   @include tablet-width() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include container($tablet-width, 70px, 40px, 72px);
+    @include container($tablet-width, 70px, 66px, 72px);
   }
 
   @include desktop-width() {
@@ -35,7 +35,7 @@
 
 .profile-form__cat-details {
   width: 100%;
-  margin-top: 25px;
+  //margin-top: 25px;
 
   @include desktop-width() {
     width: 570px;
@@ -59,7 +59,7 @@
 
 .profile-form__cat-owner {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 31px;
 
   @include tablet-width() {
     margin-top: 77px;
@@ -79,7 +79,7 @@
 
 .profile-form__comment {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 29px;
 
   @include tablet-width() {
     margin-top: 65px;
@@ -91,7 +91,7 @@
 }
 
 .profile-form__additionally {
-  margin-top: 28px;
+  margin-top: 29px;
 
   @include tablet-width() {
     margin-top: 65px;
