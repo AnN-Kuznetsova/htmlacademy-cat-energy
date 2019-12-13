@@ -1,0 +1,14 @@
+/*  site-wrapper  */
+
+.site-wrapper {
+  @include desktop-width() {
+    width: 100%;
+    height: auto;
+
+    background-color: $bg-color-third;
+    background-image: linear-gradient(to left, $bg-color-promo 50%, $bg-color-base 50%);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+  }
+}

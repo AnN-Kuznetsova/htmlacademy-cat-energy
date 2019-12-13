@@ -5,8 +5,6 @@
     padding: 0 37px 42px;
 
     background-color: $bg-color-second;
-
-    outline: 1px solid red;
   }
 }
 
@@ -48,6 +46,27 @@
   }
 }
 
+.product__title-link {
+  outline: none;
+}
+
+.product__title-link:hover .product__title {
+  opacity: 0.6;
+}
+
+.product__title-link:focus .product__title {
+  @include focus();
+
+  @include tablet-width() {
+    @include focus($bg-color-third, $bg-color-second);
+  }
+}
+
+.product__title-link:active .product__title {
+  box-shadow: none;
+  opacity: 0.3;
+}
+
 .product__photo-wrapper {
   flex-shrink: 0;
   display: flex;
@@ -67,12 +86,24 @@
     transform: translateX(-50%) translateY(-83px);
 
     outline: 2px solid green;
-    opacity: 0.3;
   }
 
   @include desktop-width() {
     width: 245px;
     height: 208px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    @include focus();
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 0.3;
   }
 }
 

@@ -1,6 +1,8 @@
 /*  Преимущества  */
 
 .advantages {
+  background-color: $bg-color-base;
+
   @include tablet-width() {
     @include decorative-border();
   }
@@ -13,20 +15,14 @@
 }
 
 .advantages__container {
-  @include container(320px, 20px);
-  padding-top: 17px;
-  padding-bottom: 42px;
+  @include container(320px, 20px, 17px, 42px);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
-    padding-top: 47px;
-    padding-bottom: 58px;
+    @include container($tablet-width, $tablet-padding, 47px, 58px);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 75px;
-    padding-bottom: 27px;
+    @include container($desktop-width, $desktop-padding, 44px, 27px);
   }
 }
 
@@ -55,6 +51,10 @@
 
     counter-reset: advantagesCounter;
   }
+
+  @include desktop-width() {
+    margin-top: 72px;
+  }
 }
 
 .advantages__item {
@@ -80,14 +80,25 @@
     margin-right: 20px;
 
     background-color: $bg-color-third;
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
   }
 
-  /*&--leaf::before {
-    background-image: url(../../img/advantage-leaf@1x.png);
-    background-repeat: no-repeat;
-    background-size:
-    background-position: center center;
-  }*/
+  &--leaf::before {
+    background-position: -5px -145px;
+  }
+
+  &--water::before {
+    background-position: -5px -215px;
+  }
+
+  &--cutlery::before {
+    background-position: -5px -75px;
+  }
+
+  &--clock::before {
+    background-position: -5px -5px;
+  }
 
   @include tablet-width() {
     flex-direction: column;
@@ -128,16 +139,37 @@
 
       transform: translate(113px, -39px);
     }
+
+    &--leaf::before {
+      background-position: 5px -135px;
+    }
+
+    &--water::before {
+      background-position: 5px -205px;
+    }
+
+    &--cutlery::before {
+      background-position: 5px -65px;
+    }
+
+    &--clock::before {
+      background-position: 5px 5px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @include desktop-width() {
     width: 20.08%;
     padding-right: 0;
-    margin-bottom: 0;
-  }
+    //margin-bottom: 40px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 89px;
+    }
   }
 }
 

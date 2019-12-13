@@ -12,7 +12,7 @@
 }
 
 .contacts-info__container {
-  @include container(320px, 20px);
+  @include container(320px, 20px, 0, 0);
 
   display: flex;
   flex-wrap: wrap;
@@ -21,14 +21,12 @@
   padding-bottom: 24px;
 
   @include tablet-width() {
-    @include container($tablet-width, 71px);
-    padding-top: 63px;
-    padding-bottom: 58px;
+    @include container($tablet-width, 71px, 63px, 58px);
   }
 
   @include desktop-width() {
-    min-width: 57px;
-    width: 570px;
+    min-width: 570px;
+    //width: 570px;
     padding: 63px 74px 58px 76px;
     margin: 0;
   }
@@ -45,6 +43,8 @@
   text-transform: uppercase;
 
   @include tablet-width() {
+    min-width: 210px;
+    padding: 0;
     margin: auto 0;
 
     font-size: 20px;
@@ -63,7 +63,7 @@
   @include font-options($font-text, 14px, 20px, inherit);
 
   @include tablet-width() {
-    width: 170px;
+    min-width: 170px;
 
     font-size: 16px;
     text-align: right;

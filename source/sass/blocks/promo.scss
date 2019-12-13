@@ -4,7 +4,7 @@
   background-color: $bg-color-third;
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient($bg-color-promo 305px, $bg-color-base 305px);
+    linear-gradient(to top, $bg-color-base 197px, $bg-color-promo 197px);
   background-position:
     center top,
     center top;
@@ -16,25 +16,21 @@
     auto auto;
 
   @include tablet-width() {
-    position: relative;
-
-    margin-bottom: -49px;
+    //position: relative;
 
     background-color: $bg-color-base;
     background-image: none;
   }
 
   @include desktop-width() {
-    top: -117px;
     margin: 0;
-    margin-bottom: -117px;
+    margin-top: -117px;
 
     background-color: $bg-color-third;
     background-image:
       url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to left, $bg-color-promo 50%, $bg-color-base 50%);
     background-position:
-      //($desktop-width / 2) top,
       calc(50% + 720px / 2) top,
       center top;
     background-repeat:
@@ -47,21 +43,19 @@
 }
 
 .promo__container {
-  @include container(320px, 20px);
-  padding-top: 26px;
-  padding-bottom: 21px;
+  @include container(320px, 20px, 27px, 21px);
 
   @include tablet-width() {
-    @include container($tablet-width, 117px);
-    padding-top: 53px;
+    display: flex;
+    flex-direction: column;
+
+    @include container($tablet-width, $tablet-padding, 52px, 0);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, 120px);
-    padding-top: 140px;
+    @include container($desktop-width, 120px, 140px, 30px);
 
-    height: 696px;
-    overflow: hidden;
+    min-height: 696px;
   }
 }
 
@@ -76,15 +70,15 @@
 
   @include tablet-width() {
     @include font-options(inherit, 60px, 60px, $header-color);
-    width: 490px;
-    margin: 0;
+    width: 530px;
+    margin: 0 auto 0 86px;
     padding: 0;
 
     text-align: left;
   }
 
   @include desktop-width() {
-    margin-top: 80px;
+    margin: 80px auto 0 0;
   }
 }
 
@@ -102,13 +96,14 @@
   @include tablet-width() {
     @include font-options(inherit, 20px, 20px, $header-color);
     padding: 0;
-    margin: 42px 0 16px;
+    margin: 42px 87px 0;
 
     text-align: left;
   }
 
   @include desktop-width() {
-    //margin: 42px 0 50px;
+    width: 500px;
+    margin: 42px auto 0 0;
   }
 }
 
@@ -121,19 +116,21 @@
   margin: auto;
 
   @include tablet-width() {
-    //src: url("../img/index-can-tablet@1x.jpg");
+    position: relative;
+    z-index: 0;
+    order: 4;
+
     width: 709px;
     height: 609px;
+    margin-top: -79px;
   }
 
   @include desktop-width() {
-    position: relative;
-    top: -280px;
     left: 140px;
 
-    //src: url("../img/index-can-tablet@1x.jpg");
     width: 552px;
     height: 499px;
+    margin-top: -370px;
   }
 }
 
@@ -145,17 +142,18 @@
   line-height: 18px;
 
   @include tablet-width() {
+    position: relative;
+    z-index: 5;
+
     @include button-big();
 
-    position: relative;
-
-    top: -578px;
-    left: 0;
-
     width: 245px;
+    margin-top: 47px;
+    margin-left: 87px;
   }
 
   @include desktop-width() {
-    top: -462px;
+    margin-top: 52px;
+    margin-left: 0;
   }
 }

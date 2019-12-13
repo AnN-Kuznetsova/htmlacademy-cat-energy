@@ -21,9 +21,15 @@
     color: $btn-text-color-hover;
   }
 
+  &:focus {
+    @include focus-button();
+  }
+
   &:active {
     background-color: $btn-color-base-active;
     color: $btn-text-color-active;
+
+    box-shadow: none;
   }
 
   &--grey {
@@ -35,6 +41,10 @@
   &--grey:focus {
     background-color: $btn-color-second-hover;
     color: $btn-text-color-second-hover;
+  }
+
+  &--grey:focus {
+    @include focus-button($btn-text-color-second-hover, $btn-color-second-hover);
   }
 
   &--grey:active {

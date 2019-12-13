@@ -27,6 +27,7 @@
   width: 34px;
   height: 34px;
   padding: 0;
+  margin: 0;
 
   background-color: $bg-color-base;
   border: 1px solid $border-color-fourth;
@@ -34,7 +35,7 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
-  transform: translateX(calc(-50% + 2px)) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
   &::after {
     position: absolute;
@@ -55,6 +56,11 @@
   &:focus {
     outline: none;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:focus {
+    @include focus();
+    border-radius: 50%;
   }
 
   &:active {

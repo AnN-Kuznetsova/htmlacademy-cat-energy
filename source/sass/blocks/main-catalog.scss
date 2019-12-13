@@ -9,12 +9,12 @@
 }
 
 .main-catalog__container {
-  @include container(320px, 20px);
+  @include container(320px, 20px, 0, 0);
 
   border: 1px solid $border-color-third;
 
   @include tablet-width() {
-    @include container($tablet-width, 0);
+    @include container($tablet-width, 0, 0, 0);
 
     border: none;
   }

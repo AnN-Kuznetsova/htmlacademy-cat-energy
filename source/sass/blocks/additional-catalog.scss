@@ -1,32 +1,34 @@
 /*  Дополнительные товары  */
 
 .additional-catalog__container {
-  @include container(320px, 20px);
-  padding-top: 29px;
-  padding-bottom: 35px;
+  @include container(320px, 20px, 29px, 35px);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding);
-    padding-top: 65px;
-    padding-bottom: 75px;
+    @include container($tablet-width, $tablet-padding, 65px, 75px);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding);
-    padding-top: 73px;
-    padding-bottom: 86px;
+    @include container($desktop-width, $desktop-padding, 73px, 86px);
   }
 }
 
 .additional-catalog__title {
   @include sub-title();
+
+  @include tablet-width() {
+    margin-left: 0;
+  }
+
+  @include desktop-width() {
+    margin-left: -$desktop-padding;
+  }
 }
 
 .additional-catalog__wrapper {
   margin-top: 33px;
 
   @include tablet-width() {
-    margin-top: 79px;
+    margin-top: 76px;
   }
 
   @include desktop-width() {
@@ -69,7 +71,7 @@
 }
 
 .additional-catalog__promo {
-  margin-top: 38px;
+  margin-top: 39px;
 
   @include tablet-width() {
     margin-top: 70px;

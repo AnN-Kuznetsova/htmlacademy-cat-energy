@@ -2,9 +2,8 @@
 $radio-width: 42px;
 $radio-height: 14px;
 $slider-controls-width: 280px; // ширина контроллеров слайдера при радиопереключателях
-$slider-total-height: 631px; // высота слайдера
-$slider-width: 320px; // ширина слайдов
-$slider-height: 240px; // высота слайдов
+$slider-total-height-tablet: 631px; // высота слайдера
+$slider-total-height-desktop: 651px;
 $slider-rate: 50%;  //  процент смены кадров слайдера
 
 .slider {
@@ -17,26 +16,27 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include desktop-width() {
     display: flex;
 
-    background-color: $bg-color-second;
-    background-image: linear-gradient(to bottom, $bg-color-base 190px, rgba($bg-color-base, 0) 190px);
+    background-color: transparent;
+    background-image: none;
   }
 }
 
 .slider__container {
-  @include container(100%, 0);
+  width: $mobile-width;
+  padding: 0;
+  margin: 0 auto;
 
   @include tablet-width() {
-    height: $slider-total-height;
+    width: $tablet-width;
+    height: $slider-total-height-tablet;
   }
 
   @include desktop-width() {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-
     width: 690px;
-    height: auto;
+    height: 100%; //$slider-total-height-desktop;
   }
+
+  //outline: 2px solid green;
 }
 
 .slider__list {
@@ -44,66 +44,85 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include tablet-width() {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
   }
 
   @include desktop-width() {
-    width: 650px; //690px;
-    margin-left: 40px;
+    flex-direction: row;
 
-    display: flex;
-    height: auto;
+    width: 650px;
+    height: 100%;
+    margin-left: auto;
+
+    overflow: hidden;
   }
+
+  //outline: 3px solid red;
 }
 
 .slider__item {
   display: none;
 
   width: 100%;
+  height: 100%;
 
   @include tablet-width() {
     display: block;
     position: relative;
 
     &--before {
-      z-index: 1; //10;
+      z-index: 10;
 
-      transform: translateX(50%);
+      width: $slider-rate;
+
+      overflow: hidden;
     }
 
     &--after {
-      z-index: 10; //1;
+      z-index: 1;
 
-      transform: translateX(-50%);
+      margin-top: -$slider-total-height-tablet;
     }
   }
 
   @include desktop-width() {
-    display: flex;
+    flex-shrink: 0;
+
+    &--before {
+      margin-left: -650px;
+    }
+
+    &--after {
+      order: -1;
+      //margin-top: -$slider-total-height-desktop;
+      margin-top: 0;
+      //margin-left: -325px;
+    }
   }
+
+  //outline: 2px solid aqua;
 }
 
 .slider__item-inner {
   @include tablet-width() {
-    height: $slider-total-height;
+    width: $tablet-width;
+    height: $slider-total-height-tablet;
 
     &--before {
       background-image: linear-gradient($bg-color-base 170px, $bg-color-second 170px);
     }
 
     &--after {
-      width: $slider-rate;
-      overflow: hidden;
-      position: relative;
-      right: -100%;
-      transform: translateX(-100%);
-
       background-image: linear-gradient($bg-color-base 170px, $bg-slider-after 170px);
     }
   }
 
   @include desktop-width() {
-    height: auto;
+    width: 690px;
+    height: 100%;
+    margin-left: -40px;
 
     &--before {
       background-image: linear-gradient($bg-color-base 190px, $bg-color-second 190px);
@@ -114,58 +133,42 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     }
   }
 
-  //outline: 2px solid orange;
+  //outline: 4px solid darkslategrey;
 }
 
 .slider__photo-wrapper {
-  width: $slider-width;
-  height: $slider-height;
+  width: 320px;
+  height: 240px;
   margin: 0 auto;
 
   @include tablet-width() {
     position: relative;
-    $slider-width: 690px;
-    $slider-height: 517px;
-    width: $slider-width;
-    height: $slider-height;
 
-    &--after {
-      right: $slider-width;
-      transform: translateX($slider-rate);
-    }
+    width: 690px;
+    height: 517px;
+
+    //outline: 6px solid deeppink;
   }
 
   @include desktop-width() {
-    $slider-width: 690px; //650px;
-    width: $slider-width;
     margin: 0;
-    margin-left: -40px;
-
-    &--after {
-      right: $slider-width;
-
-      margin: 0;
-      margin-left: -20px;
-    }
   }
 }
 
 .slider__photo {
   display: block;
 
-  width: auto; //100%;
-  height: 100%; //auto;
+  width: auto;
+  height: 100%;
 
   object-fit: contain;
 
   @include tablet-width() {
-    transform: translateX(7px);
+    margin-left: 7px;
   }
 
   @include desktop-width() {
-    width: 690px;
-
-    transform: translateX(0);
+    margin-left: 0;
   }
 }
 
@@ -180,8 +183,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include font-options(inherit, 16px, 20px, $header-color);
   text-transform: uppercase;
 
-  //overflow: hidden;
-
   @include tablet-width() {
     position: relative;
     z-index: 20;
@@ -192,16 +193,19 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     font-size: 20px;
 
-    //overflow: visible;
+    //outline: 2px solid orange;
   }
 
   @include desktop-width() {
-    justify-content: space-between;
-    position: absolute;
-    left: 50%;
-    top: 652px;
+    //justify-content: flex-end;
 
-    transform: translateX(calc(-50% + 20px));
+    position: absolute;
+    top: 552px;
+    left: auto;
+    right: 0;
+
+    margin-top: 0;
+    margin-right: $desktop-padding;
   }
 }
 
@@ -228,12 +232,23 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     padding: 0;
     margin: auto 0;
 
-    border-bottom: 1px dotted rgba($header-color, 0.23);
-
     &::before,
     &::after {
       display: none;
     }
+  }
+}
+
+.slider__label-text {
+  border-bottom: 1px dotted rgba($header-small-color, 0.23);
+
+  &:hover {
+    border-bottom: 1px solid rgba($header-small-color, 0.4);
+  }
+
+  &:active {
+    border: none;
+    opacity: 1;
   }
 }
 
@@ -260,6 +275,19 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 .slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before,
 .slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after {
   @include custom-choice--focus();
+}
+
+.slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before .slider__label-text,
+.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after .slider__label-text {
+  border-bottom: 1px solid rgba($header-small-color, 0.4);
+
+  @include focus($bg-color-third, $bg-color-second);
+}
+
+.slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after .slider__label-text {
+  @include tablet-width() {
+    @include focus($bg-color-third, $bg-slider-after);
+  }
 }
 
 //  активный
@@ -305,6 +333,12 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     display: block;
 
     width: 428px;
-    margin: 0 23px;
+    margin: 0 23px 0 26px;
   }
+
+  @include desktop-width() {
+    margin: 0 20px 0 25px;
+  }
+
+  //outline: 1px solid red;
 }
