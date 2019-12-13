@@ -86,7 +86,7 @@
   }
 
   @include desktop-width() {
-    margin-top: 67px;
+    margin-top: 47px;
   }
 }
 
@@ -94,11 +94,11 @@
   margin-top: 29px;
 
   @include tablet-width() {
+    width: 100%;
     margin-top: 65px;
   }
 
   @include desktop-width() {
-    width: 100%;
     margin-top: 67px;
   }
 }

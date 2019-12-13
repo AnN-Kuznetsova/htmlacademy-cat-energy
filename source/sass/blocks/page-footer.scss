@@ -12,11 +12,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include container($tablet-width, $tablet-padding, 52px, 55px);
+    @include container($tablet-width, $tablet-padding, 51px, 55px);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 55px, 55px);
+    @include container($desktop-width, $desktop-padding, 51px, 55px);
   }
 }
 
@@ -48,6 +48,6 @@
   }
 
   @include desktop-width() {
-    margin-top: 5px;
+    margin-top: 7px;
   }
 }

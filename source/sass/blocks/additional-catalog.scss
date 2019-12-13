@@ -1,5 +1,9 @@
 /*  Дополнительные товары  */
 
+.additional-catalog {
+  overflow-x: hidden;
+}
+
 .additional-catalog__container {
   @include container(320px, 20px, 29px, 35px);
 
