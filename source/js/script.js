@@ -22,75 +22,57 @@ navToggle.addEventListener('click', function() {
 /*  Форма  */
 var profileForm = document.querySelector('.profile-form');
 if (profileForm) {
-  var requiredInputs = profileForm.querySelectorAll('.form-fieldset__input[required]');
-  console.log(requiredInputs);
   var catNameInput = profileForm.querySelector('#cat-name');
+  var catWeightInput = profileForm.querySelector('#cat-weight');
+  var catAgeInput = profileForm.querySelector('#cat-age');
+  var ownerEmailInput = profileForm.querySelector('#owner-email');
+  var ownerTelInput = profileForm.querySelector('#owner-tel');
 
   //  Local Storage
   var isStorageSupport = true;
-  var storageCatName = "";
+  var storageCatName = '';
+  var storageCatWeight = '';
+  var storageCatAge = '';
+  var storageOwnerEmail = '';
+  var storageOwnerTtel = '';
 
-}
-
-//  Проверка заполнения обязательных полей
-/* var verificationRequiredFields = function (requiredField) {
-  if (!requiredField.value) {
-    requiredField.classList.add('form-fieldset__input--error');
-  } else {
-    requiredField.classList.remove('form-fieldset__input--error');
+  try {
+    storageCatName = localStorage.getItem('catName');
+    storageCatWeight = localStorage.getItem('catWeight');
+    storageCatAge = localStorage.getItem('catAge');
+    storageOwnerEmail = localStorage.getItem('ownerEmail');
+    storageOwnerTel = localStorage.getItem('ownerTel');
+  } catch (err) {
+    isStorageSupport = false;
   }
-} */
 
+  if (storageCatName) {
+    catNameInput.value = storageCatName;
+  }
+  if (storageCatWeight) {
+    catWeightInput.value = storageCatWeight;
+  }
+  if (storageCatAge) {
+    catAgeInput.value = storageCatAge;
+  }
+  if (storageOwnerEmail) {
+    ownerEmailInput.value = storageOwnerEmail;
+  }
+  if (storageOwnerTel) {
+    ownerTelInput.value = storageOwnerTel;
+  }
 
-
-//console.log(catNameInput.value);
-
-
-/* //  Проверка Local Storage
-try {
-  storageCatName = localStorage.getItem("catName");
-} catch (err) {
-  isStorageSupport = false;
-}
-
-if (storageCatName) {
-  catNameInput.value = storageCatName;
-} */
-
-
-
-//  Проверка обязательных полей
-/* for (var i=0; i<requiredInputs.length; i++) {
-  verificationRequiredFields(requiredInputs[i]);
-
-  requiredInputs[i].onblur = function() {
-    //console.log('Потеря фокуса');
-    console.log(this.value);
-    verificationRequiredFields(this);
-  };
-} */
-
-
-
-//verificationRequiredInputs();
-
-
-
-/* //  Проверка отправки формы
-profileForm.addEventListener("submit", function (evt) {
-  if (!catNameInput.value) {
-    console.log("Нужно что-то ввести");
-    evt.preventDefault();
-    catNameInput.classList.add("form-fieldset__input--error");
-    /* modalSearch.classList.remove("modal-search-error");
-    modalSearch.offsetWidth = modalSearch.offsetWidth;
-    modalSearch.classList.add("modal-search-error"); *//*
-  } else {
-    if (isStorageSupport) {
-      //modalSearch.classList.remove("modal-search-error");
-  if (!catNameInput.value) {
-      localStorage.setItem("catName", catNameInput.value);
-      //catNameInput.classList.remove("form-fieldset__input--error");
+  profileForm.addEventListener("submit", function (evt) {
+    if (!catNameInput.value || !catWeightInput.value || !ownerEmailInput.value || !ownerTelInput.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('catName', catNameInput.value);
+        localStorage.setItem('catWeight', catWeightInput.value);
+        localStorage.setItem('catAge', catAgeInput.value);
+        localStorage.setItem('ownerEmail', ownerEmailInput.value);
+        localStorage.setItem('ownerTel', ownerTelInput.value);
+      }
     }
-  }
-}); */
+  });
+}
