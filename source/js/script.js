@@ -34,7 +34,7 @@ if (profileForm) {
   var storageCatWeight = '';
   var storageCatAge = '';
   var storageOwnerEmail = '';
-  var storageOwnerTtel = '';
+  var storageOwnerTel = '';
 
   try {
     storageCatName = localStorage.getItem('catName');
