@@ -201,8 +201,8 @@
 
   @include tablet-width() {
     box-shadow:
-    0 0 0 15px $bg-color-base,
-    0 0 0 16px $bg-color-third;
+      0 0 0 15px $bg-color-base,
+      0 0 0 16px $bg-color-third;
   }
 }
 
