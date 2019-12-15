@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 
   outline: none;
 
@@ -34,6 +35,7 @@
 .copyright__name {
   display: block;
 
+  height: auto;
   margin-top: 8px;
 
   @include font-options($font-text, 16px, 16px, $text-base-color);

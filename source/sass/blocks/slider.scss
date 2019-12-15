@@ -275,6 +275,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 .slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before,
 .slider__toggle:nth-of-type(2):focus ~ .slider__controls .slider__label--after {
   @include custom-choice--focus();
+  box-shadow: none;
+
+  @include tablet-width() {
+    box-shadow: none;
+  }
 }
 
 .slider__toggle:first-of-type:focus ~ .slider__controls .slider__label--before .slider__label-text,
