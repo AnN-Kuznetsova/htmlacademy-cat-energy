@@ -15,9 +15,13 @@
     320px 305px,
     auto auto;
 
-  @include tablet-width() {
-    //position: relative;
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, $bg-color-base 197px, $bg-color-promo 197px);
+  }
 
+  @include tablet-width() {
     background-color: $bg-color-base;
     background-image: none;
   }
@@ -39,6 +43,12 @@
     background-size:
       720px 696px,
       auto auto;
+
+    @include retina-2x() {
+      background-image:
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to left, $bg-color-promo 50%, $bg-color-base 50%);
+    }
   }
 }
 
@@ -126,11 +136,11 @@
   }
 
   @include desktop-width() {
-    left: 140px;
+    left: 115px;
 
     width: 552px;
     height: 499px;
-    margin-top: -370px;
+    margin-top: -365px;
   }
 }
 
@@ -142,6 +152,7 @@
   line-height: 18px;
 
   @include tablet-width() {
+    order: 2;
     position: relative;
     z-index: 5;
 

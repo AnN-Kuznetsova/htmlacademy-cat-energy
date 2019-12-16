@@ -113,7 +113,10 @@
   margin: auto;
 
   @include tablet-width() {
-    //margin-bottom: 0;
+    position: relative;
+    top: 100%;
+
+    transform: translateY(-100%);
   }
 }
 
