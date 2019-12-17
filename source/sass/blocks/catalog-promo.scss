@@ -19,8 +19,8 @@
 
   @include retina-2x() {
     background-image:
-    url("../img/icon-gift.svg"),
-    url("../img/gift-photo-mobile@2x.jpg");
+      url("../img/icon-gift.svg"),
+      url("../img/gift-photo-mobile@2x.jpg");
   }
 
   @include tablet-width() {
@@ -38,8 +38,8 @@
 
     @include retina-2x() {
       background-image:
-      url("../img/icon-gift.svg"),
-      url("../img/gift-photo-tablet@2x.jpg");
+        url("../img/icon-gift.svg"),
+        url("../img/gift-photo-tablet@2x.jpg");
     }
   }
 
@@ -58,8 +58,8 @@
 
     @include retina-2x() {
       background-image:
-      url("../img/icon-gift.svg"),
-      url("../img/gift-photo-desktop@2x.jpg");
+        url("../img/icon-gift.svg"),
+        url("../img/gift-photo-desktop@2x.jpg");
     }
   }
 }
