@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -16,7 +20,11 @@
           <!-- Логотип -->
           <div class="page-header__logo-wrapper">
             <a class="page-header__logo  logo">
-              <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип сайта «Кэт энерджи».">
+              </picture>
             </a>
           </div>
 
@@ -54,8 +62,12 @@
           <div class="promo__container">
             <h2 class="promo__title">Функциональное питание для котов</h2>
             <b class="promo__slogan">Занялся собой? Займись котом!</b>
-            <img class="promo__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Фотография функционального питания с
-              курицей.">
+            <picture  class="promo__image">
+              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271"
+                alt="Фотография функционального питания с курицей.">
+            </picture>
             <a class="button promo__button" href="form.html">Подобрать программу</a>
           </div>
         </section>
@@ -140,14 +152,24 @@
                 <li class="slider__item  slider__item--before">
                   <div class="slider__item-inner  slider__item-inner--before">
                     <div class="slider__photo-wrapper  slider__photo-wrapper--before">
-                      <img class="slider__photo" src="img/before-mobile@1x.png" width="320" height="240" alt="Фотография очень пухлого кота.">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                        <img class="slider__photo" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240"
+                          alt="Фотография очень пухлого кота.">
+                      </picture>
                     </div>
                   </div>
                 </li>
                 <li class="slider__item  slider__item--after">
                   <div class="slider__item-inner  slider__item-inner--after">
                     <div class="slider__photo-wrapper  slider__photo-wrapper--after">
-                      <img class="slider__photo" src="img/after-mobile@1x.png" width="320" height="240" alt="Фотография стройного кота.">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                        <img class="slider__photo" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240"
+                          alt="Фотография стройного кота.">
+                      </picture>
                     </div>
                   </div>
                 </li>
@@ -180,8 +202,12 @@
             <h3 class="visually-hidden">Мы на карте</h3>
             <div class="map__wrapper">
               <div class="map__image-wrapper">
-                <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Отображение адреса
-                «Кэт энерджи» на карте.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+                  <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400"
+                    alt="Отображение адреса «Кэт энерджи» на карте.">
+                </picture>
               </div>
               <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6044792522673!2d30.321313!3d59.938705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574077083763!5m2!1sru!2sru" width="1440" height="400" style="border:0;" allowfullscreen="" aria-label="Интерактивная карта." tabindex="-1"></iframe>
             </div>

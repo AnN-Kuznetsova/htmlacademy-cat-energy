@@ -17,6 +17,12 @@
     center 66px,
     center center;
 
+  @include retina-2x() {
+    background-image:
+      url("../img/icon-gift.svg"),
+      url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @include tablet-width() {
     padding: 72px 120px 68px 59.75%;
 
@@ -29,6 +35,12 @@
     background-position:
       14% 65px,
       center center;
+
+    @include retina-2x() {
+      background-image:
+        url("../img/icon-gift.svg"),
+        url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include desktop-width() {
@@ -43,6 +55,12 @@
     background-position:
       center 65px,
       center center;
+
+    @include retina-2x() {
+      background-image:
+        url("../img/icon-gift.svg"),
+        url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
