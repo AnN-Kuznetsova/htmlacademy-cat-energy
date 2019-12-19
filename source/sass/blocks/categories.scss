@@ -217,8 +217,6 @@
   @include font-options($font-base, 16px, 16px, $header-color);
   text-transform: uppercase;
 
-  //outline: none;
-
   &::after {
     position: absolute;
     content: "";
@@ -236,10 +234,10 @@
 
   &:hover::after,
   &:focus::after {
-    width: 33px;
+    width: 32px;
 
     background-image: url("../img/icon-right-arrow-verylong.svg");
-    background-size: 33px 11px;
+    background-size: 32px 11px;
   }
 
   &:focus {

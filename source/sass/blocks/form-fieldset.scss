@@ -142,6 +142,7 @@ $input-height-tablet: 52px;
   background: none;
   border: none;
   outline: 1px solid $border-color-var;
+  outline-offset: 1px;
 
   &--email,
   &--tel {
@@ -150,11 +151,13 @@ $input-height-tablet: 52px;
 
   &[required]:invalid {
     outline: 2px solid $border-color-input-error;
+    outline-offset: 0;
   }
 
   &:hover,
   &[required]:hover {
     outline: 1px solid $border-color-fourth;
+    outline-offset: 1px;
   }
 
   &:focus,
@@ -162,6 +165,7 @@ $input-height-tablet: 52px;
   &:active,
   &[required]:active {
     outline: 2px solid $border-color-input-active;
+    outline-offset: 0;
   }
 
   @include tablet-width() {
