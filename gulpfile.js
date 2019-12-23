@@ -19,6 +19,7 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin");
 
+// CSS
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -32,6 +33,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+//  Сервер
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -56,7 +58,7 @@ gulp.task("refresh", function (done) {
 
 //  Оптимизация изображений
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
