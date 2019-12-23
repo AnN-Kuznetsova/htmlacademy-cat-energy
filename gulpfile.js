@@ -33,6 +33,19 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+//  Минификация JS
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(uglify())
+    .pipe(rename(function (path) {
+      path.extname = ".min.js";
+    }))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"))
+});
+
 //  Сервер
 gulp.task("server", function () {
   server.init({
@@ -44,7 +57,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/js/**/*.js", gulp.series("js-copy", "js-min"));
+  gulp.watch("source/js/**/*.js", gulp.series("js"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -99,7 +112,6 @@ gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
-      "source/js/*.min.js",
       "source/*.ico"
     ], {
       base: "source"
@@ -112,32 +124,12 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-//  Минификация JS
-gulp.task("js-min", function () {
-  return gulp.src("source/js/script.js")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(uglify())
-    .pipe(rename("script.min.js"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/js"))
-});
-
-gulp.task("js-copy", function () {
-  return gulp.src([
-      "source/js/*.min.js"
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
-
 
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "js-min",
+  "js",
   "images",
   "webp",
   "sprite",
