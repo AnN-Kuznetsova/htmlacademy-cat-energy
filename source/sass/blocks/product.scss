@@ -84,8 +84,6 @@
     height: 208px;
 
     transform: translateX(-50%) translateY(-83px);
-
-    //outline: 2px solid green;
   }
 
   @include desktop-width() {
@@ -105,6 +103,8 @@
     box-shadow: none;
     opacity: 0.3;
   }
+
+  @include after-for-ie();
 }
 
 .product__photo {
