@@ -80,11 +80,11 @@
     }
 
     &--slim::before {
-      @include categories-icon-img(140px, 194px, "../img/icon-cat-slim.svg", 80px, "", 92px);
+      @include categories-icon-img(140px, 194px, "../img/icon-cat-slim.svg", 80px, auto, 92px);
     }
 
     &--pro::before {
-      @include categories-icon-img(268px, 112px, "../img/icon-cat-pro.svg", 135px, "", 28px);
+      @include categories-icon-img(268px, 112px, "../img/icon-cat-pro.svg", 135px, auto, 28px);
     }
   }
 
@@ -151,11 +151,11 @@
   }
 
   &--slim::after {
-    @include categories-icon-img(35px, 49px, "../img/icon-cat-slim.svg", -3px, 9px, "");
+    @include categories-icon-img(35px, 49px, "../img/icon-cat-slim.svg", -3px, 9px, auto);
   }
 
   &--pro::after {
-    @include categories-icon-img(67px, 28px, "../img/icon-cat-pro.svg", 11px, -8px, "");
+    @include categories-icon-img(67px, 28px, "../img/icon-cat-pro.svg", 11px, -8px, auto);
   }
 
   @include tablet-width() {
@@ -178,12 +178,12 @@
     }
 
     &--slim::after {
-      @include categories-icon-img(70px, 97px, "../img/icon-cat-slim.svg", -6px, 14px, "");
+      @include categories-icon-img(70px, 97px, "../img/icon-cat-slim.svg", -6px, 14px, auto);
       display: block;
     }
 
     &--pro::after {
-      @include categories-icon-img(134px, 56px, "../img/icon-cat-pro.svg", 22px, -18px, "");
+      @include categories-icon-img(134px, 56px, "../img/icon-cat-pro.svg", 22px, -18px, auto);
       display: block;
     }
   }

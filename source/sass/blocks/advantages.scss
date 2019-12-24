@@ -154,7 +154,7 @@
       height: 228px;
 
       @include font-options($font-base, 281px, 281px, $bg-color-second);
-      font-weight: 400px;
+      font-weight: 400;
 
       transform: translate(113px, -39px);
     }

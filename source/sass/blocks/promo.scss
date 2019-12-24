@@ -15,7 +15,7 @@
     320px 305px,
     auto auto;
 
-  @media (min-resolution: $retina-dppx) {
+  @include retina-2x() {
     background-image:
       url("../img/index-background-mobile@2x.jpg"),
       linear-gradient(to top, $bg-color-base 197px, $bg-color-promo 197px);

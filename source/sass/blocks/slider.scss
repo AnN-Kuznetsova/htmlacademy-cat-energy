@@ -226,6 +226,10 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     border-right: none;
   }
 
+  &:active {
+    opacity: 1;
+  }
+
   @include tablet-width() {
     width: auto;
     height: 25px;
@@ -253,7 +257,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   &:active {
     border: none;
-    opacity: 1;
   }
 }
 
