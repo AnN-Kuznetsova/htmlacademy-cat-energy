@@ -115,6 +115,7 @@
   @include tablet-width() {
     position: relative;
     top: 100%;
+    display: block;
 
     transform: translateY(-100%);
   }
