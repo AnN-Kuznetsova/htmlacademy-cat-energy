@@ -88,6 +88,8 @@
       color: $text-second-color;
     }
   }
+
+  @include after-for-ie();
 }
 
 .main-nav__link[href]:focus .main-nav__link-text {
