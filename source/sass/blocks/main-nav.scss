@@ -63,7 +63,6 @@
   cursor: default;
   outline: none;
 
-
   &[href]:hover,
   &[href]:focus {
     opacity: 0.6;
@@ -107,7 +106,9 @@
 }
 
 .main-nav__link-text {
-  padding-bottom: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 3px;
 }
 
 .main-nav__toggle {

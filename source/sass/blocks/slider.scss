@@ -240,6 +240,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__label-text {
+  display: inline-block;
+  vertical-align: middle;
+
+  padding-bottom: 5px;
+
   border-bottom: 1px dotted rgba($header-small-color, 0.23);
 
   &:hover {

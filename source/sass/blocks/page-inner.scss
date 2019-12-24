@@ -1,15 +1,14 @@
 /*  page-inner  */
 
 .page-inner__container {
-  @include container(320px, 20px, 15px, 0);
-  /* padding-top: 15px; */
+  @include container(320px, 20px, 17px, 0);
 
   @include tablet-width() {
-    @include container($tablet-width, $tablet-padding, 53px, 0);
+    @include container($tablet-width, $tablet-padding, 48px, 0);
   }
 
   @include desktop-width() {
-    @include container($desktop-width, $desktop-padding, 70px, 0);
+    @include container($desktop-width, $desktop-padding, 65px, 0);
   }
 }
 
