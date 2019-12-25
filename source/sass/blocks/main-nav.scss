@@ -109,6 +109,8 @@
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 3px;
+
+  border-bottom: 2px solid rgba($bg-color-third, 0);
 }
 
 .main-nav__toggle {
