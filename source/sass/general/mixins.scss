@@ -147,6 +147,34 @@
     inset 0 -9px 0 0 $shadow-color;
 }
 
+//  :focus картинки
+@mixin focus-img($shadow-color: $bg-color-third) {
+  position: relative;
+  outline: none;
+  overflow: visible;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5%;
+    left: 5%;
+
+    width: 90%;
+    height: 90%;
+
+    border-radius: 10px;
+    border: 1px solid $shadow-color;
+
+    @include tablet-width() {
+      top: -2.5%;
+      left: -2.5%;
+
+      width: 105%;
+      height: 105%;
+    }
+  }
+}
+
 //  ::after для корректной работы IE
 @mixin after-for-ie() {
   position: relative;

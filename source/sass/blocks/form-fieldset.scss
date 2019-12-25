@@ -207,7 +207,7 @@ $input-height-tablet: 52px;
     height: 20px;
   }
 
-  @include tablet-width {
+  @include desktop-width {
     transform: translateX(-38px) translateY(-50%);
   }
 }
