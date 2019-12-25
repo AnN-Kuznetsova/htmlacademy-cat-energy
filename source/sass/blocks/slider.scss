@@ -256,7 +256,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   &:active {
-    border: none;
+    border-color: rgba($header-small-color, 0);
   }
 }
 
