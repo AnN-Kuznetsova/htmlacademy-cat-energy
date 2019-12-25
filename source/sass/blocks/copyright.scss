@@ -8,6 +8,8 @@
 
   outline: none;
 
+  @include after-for-ie();
+
   &:hover .copyright__name,
   &:focus .copyright__name {
     color: $text-base-color;
@@ -23,7 +25,7 @@
   }
 
   &:active .copyright__name {
-    opacity: 0.3;
+    color: rgba($text-base-color, 0.3);
     box-shadow: none;
   }
 
@@ -39,6 +41,10 @@
   margin-top: 8px;
 
   @include font-options($font-text, 16px, 16px, $text-base-color);
+}
+
+.copyright__logo {
+  margin-left: auto;
 }
 
 .copyright__image {

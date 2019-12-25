@@ -63,7 +63,6 @@
   cursor: default;
   outline: none;
 
-
   &[href]:hover,
   &[href]:focus {
     opacity: 0.6;
@@ -88,6 +87,8 @@
       color: $text-second-color;
     }
   }
+
+  @include after-for-ie();
 }
 
 .main-nav__link[href]:focus .main-nav__link-text {
@@ -105,7 +106,11 @@
 }
 
 .main-nav__link-text {
-  padding-bottom: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 3px;
+
+  border-bottom: 2px solid rgba($bg-color-third, 0);
 }
 
 .main-nav__toggle {

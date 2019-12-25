@@ -226,6 +226,10 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     border-right: none;
   }
 
+  &:active {
+    opacity: 1;
+  }
+
   @include tablet-width() {
     width: auto;
     height: 25px;
@@ -240,6 +244,11 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 }
 
 .slider__label-text {
+  display: inline-block;
+  vertical-align: middle;
+
+  padding-bottom: 5px;
+
   border-bottom: 1px dotted rgba($header-small-color, 0.23);
 
   &:hover {
@@ -247,8 +256,7 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   }
 
   &:active {
-    border: none;
-    opacity: 1;
+    border-color: rgba($header-small-color, 0);
   }
 }
 

@@ -19,6 +19,7 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin");
 
+// CSS
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -32,6 +33,20 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+//  Минификация JS
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(uglify())
+    .pipe(rename(function (path) {
+      path.extname = ".min.js";
+    }))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"))
+});
+
+//  Сервер
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -42,7 +57,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/js/**/*.js", gulp.series("js-copy", "js-min"));
+  gulp.watch("source/js/**/*.js", gulp.series("js"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -56,7 +71,7 @@ gulp.task("refresh", function (done) {
 
 //  Оптимизация изображений
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -96,8 +111,7 @@ gulp.task("html", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/js/*.min.js",
+      "source/img/**/*.{png,jpg,svg}",
       "source/*.ico"
     ], {
       base: "source"
@@ -110,32 +124,12 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-//  Минификация JS
-gulp.task("js-min", function () {
-  return gulp.src("source/js/script.js")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(uglify())
-    .pipe(rename("script.min.js"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/js"))
-});
-
-gulp.task("js-copy", function () {
-  return gulp.src([
-      "source/js/*.min.js"
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
-
 
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "js-min",
+  "js",
   "images",
   "webp",
   "sprite",
