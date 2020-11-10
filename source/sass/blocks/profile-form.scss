@@ -11,8 +11,6 @@
     font-size: 20px;
     line-height: 20px;
   }
-
-  //outline: 1px solid red;
 }
 
 .profile-form__container {
@@ -29,13 +27,10 @@
   @include desktop-width() {
     @include container($desktop-width, $desktop-padding, 66px, 82px);
   }
-
-  //outline: 1px solid green;
 }
 
 .profile-form__cat-details {
   width: 100%;
-  //margin-top: 25px;
 
   @include desktop-width() {
     width: 570px;

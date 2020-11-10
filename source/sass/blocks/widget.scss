@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
 
-  width: 43.93%; //123px;
+  width: 43.93%;
   margin: 0;
 
   @include tablet-width() {
@@ -36,8 +36,8 @@
   display: block;
 
   padding: 0 16px;
-  margin: 0 auto; //18px;
-  width: 87px; //70.73%;
+  margin: 0 auto;
+  width: 87px;
 
   @include font-options($font-text, 12px, 12px, inherit);
   text-align: center;

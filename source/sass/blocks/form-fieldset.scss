@@ -5,7 +5,7 @@ $form-choice-size: 30px;
 $form-choice-size-tablet: 40px;
 
 //  высота инпутов
-$input-height: 43px;//45px;
+$input-height: 43px;
 $input-height-tablet: 52px;
 
 @mixin flex-row() {
@@ -41,7 +41,7 @@ $input-height-tablet: 52px;
   margin-bottom: 33px;
 
   @include tablet-width() {
-    width: fit-content; //auto;
+    width: fit-content;
     margin-bottom: 76px;
   }
 }
@@ -282,7 +282,6 @@ $input-height-tablet: 52px;
 }
 
 //  фокус
-//.form-fieldset__choice-input:hover ~ .form-fieldset__choice-label,
 .form-fieldset__choice-input:focus ~ .form-fieldset__choice-label {
   @include custom-choice--focus();
 }

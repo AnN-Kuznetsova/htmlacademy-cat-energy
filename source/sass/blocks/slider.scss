@@ -33,10 +33,8 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
   @include desktop-width() {
     width: 690px;
-    height: 100%; //$slider-total-height-desktop;
+    height: 100%;
   }
-
-  //outline: 2px solid green;
 }
 
 .slider__list {
@@ -58,8 +56,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     overflow: hidden;
   }
-
-  //outline: 3px solid red;
 }
 
 .slider__item {
@@ -96,13 +92,9 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     &--after {
       order: -1;
-      //margin-top: -$slider-total-height-desktop;
       margin-top: 0;
-      //margin-left: -325px;
     }
   }
-
-  //outline: 2px solid aqua;
 }
 
 .slider__item-inner {
@@ -132,8 +124,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
       background-image: linear-gradient($bg-color-base 190px, $bg-slider-after 190px);
     }
   }
-
-  //outline: 4px solid darkslategrey;
 }
 
 .slider__photo-wrapper {
@@ -146,8 +136,6 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
 
     width: 690px;
     height: 517px;
-
-    //outline: 6px solid deeppink;
   }
 
   @include desktop-width() {
@@ -192,13 +180,9 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
     margin-top: -100px;
 
     font-size: 20px;
-
-    //outline: 2px solid orange;
   }
 
   @include desktop-width() {
-    //justify-content: flex-end;
-
     position: absolute;
     top: 552px;
     left: auto;
@@ -352,6 +336,4 @@ $slider-rate: 50%;  //  процент смены кадров слайдера
   @include desktop-width() {
     margin: 0 20px 0 25px;
   }
-
-  //outline: 1px solid red;
 }

@@ -93,7 +93,7 @@
   }
 
   @include desktop-width() {
-    width: 46.72%; //570px;
+    width: 46.72%;
 
     &::after,
     &::before {

@@ -22,7 +22,6 @@
   }
 
   &:focus {
-    //@include focus-button();
     @include focus();
   }
 
@@ -45,7 +44,6 @@
   }
 
   &--grey:focus {
-    //@include focus-button($btn-text-color-second-hover, $btn-color-second-hover);
     @include focus();
   }
 
